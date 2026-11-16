@@ -1,0 +1,165 @@
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
+  "use strict";
+
+  var _reporterNs, _cclegacy, Bullet, TurretSystem, _crd;
+
+  function _reportPossibleCrUseOfSystem(extras) {
+    _reporterNs.report("System", "../../Engine/System", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWorld(extras) {
+    _reporterNs.report("World", "../../Engine/World", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBoss(extras) {
+    _reporterNs.report("Boss", "../Entity/Boss", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfTurretData(extras) {
+    _reporterNs.report("TurretData", "../Entity/TurretData", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPlane(extras) {
+    _reporterNs.report("Plane", "../Entity/Plane", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBullet(extras) {
+    _reporterNs.report("Bullet", "../Entity/Bullet", _context.meta, extras);
+  }
+
+  _export("TurretSystem", void 0);
+
+  return {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
+      _cclegacy = _cc.cclegacy;
+    }, function (_unresolved_2) {
+      Bullet = _unresolved_2.Bullet;
+    }],
+    execute: function () {
+      _crd = true;
+
+      _cclegacy._RF.push({}, "9845a3KA7VEoaIx22xJUuIm", "TurretSystem", undefined);
+
+      _export("TurretSystem", TurretSystem = class TurretSystem {
+        onTick(world, dt) {
+          for (const boss of world.query('boss')) {
+            if (boss.hp <= 0) continue;
+
+            for (const turret of boss.turrets) {
+              this._tickAim(world, boss, turret, dt);
+
+              this._tickFire(world, boss, turret, dt);
+            }
+          }
+        } // ===== 瞄准 =====
+
+
+        _tickAim(world, boss, turret, dt) {
+          const c = turret.config;
+
+          switch (c.aimMode) {
+            case 'fixed':
+              turret.aimAngle = c.baseAngle;
+              break;
+
+            case 'target':
+              this._aimAtPlayer(world, boss, turret, dt);
+
+              break;
+
+            case 'spin':
+              turret.aimAngle = (turret.aimAngle + c.aimSpeed * dt) % 360;
+              break;
+
+            case 'oscillate':
+              turret.oscPhase += c.aimSpeed * Math.PI / 180 * dt;
+              turret.aimAngle = c.baseAngle + Math.sin(turret.oscPhase) * c.oscRange;
+              break;
+          }
+        }
+
+        _aimAtPlayer(world, boss, turret, dt) {
+          const player = this._findPlayer(world);
+
+          if (!player) return;
+          const c = turret.config;
+          const turretX = boss.x + c.offsetX;
+          const turretY = boss.y + c.offsetY;
+          const targetAngle = Math.atan2(player.y - turretY, player.x - turretX) * 180 / Math.PI; // 平滑旋转：diff 归一到 [-180, 180]，每帧最多转 aimSpeed * dt
+
+          let diff = targetAngle - turret.aimAngle;
+          diff = ((diff + 180) % 360 + 360) % 360 - 180;
+          const maxStep = c.aimSpeed * dt;
+
+          if (Math.abs(diff) <= maxStep) {
+            turret.aimAngle = targetAngle;
+          } else {
+            turret.aimAngle += Math.sign(diff) * maxStep;
+          }
+        }
+
+        _findPlayer(world) {
+          for (const p of world.query('player')) return p;
+
+          return null;
+        } // ===== 开火 =====
+
+
+        _tickFire(world, boss, turret, dt) {
+          const c = turret.config;
+          turret.cooldownTimer += dt;
+          let guard = 0;
+
+          while (turret.cooldownTimer >= c.fireInterval && guard++ < 16) {
+            turret.cooldownTimer -= c.fireInterval;
+
+            this._fire(world, boss, turret);
+          }
+        }
+
+        _fire(world, boss, turret) {
+          const c = turret.config;
+          const x = boss.x + c.offsetX;
+          const y = boss.y + c.offsetY;
+
+          if (c.spreadCount <= 1 || c.spreadAngle <= 0) {
+            this._spawnBullet(world, x, y, turret.aimAngle, c);
+
+            return;
+          } // 扇形：以 aimAngle 为中心向左右散开
+
+
+          const step = c.spreadAngle / (c.spreadCount - 1);
+          const start = turret.aimAngle - c.spreadAngle / 2;
+
+          for (let i = 0; i < c.spreadCount; i++) {
+            this._spawnBullet(world, x, y, start + step * i, c);
+          }
+        }
+
+        _spawnBullet(world, x, y, angleDeg, c) {
+          const rad = angleDeg * Math.PI / 180;
+          const b = new (_crd && Bullet === void 0 ? (_reportPossibleCrUseOfBullet({
+            error: Error()
+          }), Bullet) : Bullet)();
+          b.x = x;
+          b.y = y;
+          b.dirX = Math.cos(rad);
+          b.dirY = Math.sin(rad);
+          b.speed = c.bulletSpeed;
+          b.damage = c.bulletDamage;
+          b.isPlayerBullet = false;
+          world.add(b);
+        }
+
+      });
+
+      _cclegacy._RF.pop();
+
+      _crd = false;
+    }
+  };
+});
+//# sourceMappingURL=e58fb546562ea859e4244a02dd8aeed4ef6c2323.js.map

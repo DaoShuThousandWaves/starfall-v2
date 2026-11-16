@@ -1,0 +1,401 @@
+{
+  "b180ad9f-63cb-4176-8ba9-30ce556c5180": {
+    "url": "db://assets/scripts",
+    "value": {}
+  },
+  "6f31170d-15ec-4171-a89b-b28835d3b566": {
+    "url": "db://assets/scripts/Engine",
+    "value": {}
+  },
+  "8f06e7f7-a179-4000-9dc5-8380aad4fc84": {
+    "url": "db://assets/scripts/Core",
+    "value": {}
+  },
+  "47ec9675-316d-41a7-89da-5e2dce048920": {
+    "url": "db://assets/scripts/UI",
+    "value": {}
+  },
+  "9bc2d96b-5f35-443e-9af1-020c6db9b91a": {
+    "url": "db://assets/scripts/Meta",
+    "value": {}
+  },
+  "f595fd8b-3acb-4904-b67f-7fdb9ba6b3ea": {
+    "url": "db://assets/scripts/Hall",
+    "value": {}
+  },
+  "bf9f85aa-a9f6-44dc-8872-aefd5cb808b8": {
+    "url": "db://assets/scripts/Battle",
+    "value": {}
+  },
+  "760fdc0d-97b5-48a2-abc6-38dbc91525ac": {
+    "url": "db://assets/scripts/folder",
+    "value": {}
+  },
+  "2a2f81e9-c2fc-478c-b33b-4707675bbec9": {
+    "url": "db://assets/scripts/Engine/Entity.ts",
+    "value": {}
+  },
+  "ad993be9-c07b-48b8-8b89-ffbbcfd8b20d": {
+    "url": "db://assets/scripts/Engine/Bus.ts",
+    "value": {}
+  },
+  "e7824408-b935-400c-bcbf-e5f31686d936": {
+    "url": "db://assets/scene",
+    "value": {}
+  },
+  "77cf1abd-9c99-45b5-b768-81706fff2b1a": {
+    "url": "db://assets/scene/test.scene",
+    "value": {
+      "depends": [
+        "77cf1abd-9c99-45b5-b768-81706fff2b1a",
+        "20835ba4-6145-4fbc-a58a-051ce700aa3e@f9941",
+        "544e49d6-3f05-4fa8-9a9e-091f98fc2ce8@f9941",
+        "951249e0-9f16-456d-8b85-a6ca954da16b@f9941",
+        "24a704da-2867-446d-8d1a-5e920c75e09d@f9941",
+        "9fd900dd-221b-4f89-8f2c-fba34243c835@f9941"
+      ],
+      "dependScripts": [
+        "55357677-2153-4564-8237-c8964591b343",
+        "0486da40-6570-4fa2-b531-85bea03c3ce5",
+        "7053ef68-da2a-479f-85f8-49c151daa07c",
+        "18358549-557a-4658-aadb-99d0ba74bbae",
+        "350cf875-fa63-4b14-bd3c-359388d90613",
+        "9c9a728e-5c9a-4b21-94b8-1ab7a463a7b3",
+        "c0ecfe63-53a3-4abe-932b-d8c343557d28"
+      ]
+    }
+  },
+  "818e8f0b-8c5f-45db-a76c-f293936ebebd": {
+    "url": "db://assets/scripts/TestRunner.ts",
+    "value": {}
+  },
+  "a87e6db2-cc33-46ee-b1ab-3e261e0e2df2": {
+    "url": "db://assets/scripts/Engine/System.ts",
+    "value": {}
+  },
+  "dfbb144b-b06c-4f94-8edb-f789e51e115b": {
+    "url": "db://assets/scripts/Engine/World.ts",
+    "value": {}
+  },
+  "747a0d80-46c0-449d-be6c-7e99404ffd18": {
+    "url": "db://assets/scripts/Engine/ViewRegistry.ts",
+    "value": {}
+  },
+  "d8d011db-989b-40e6-98c8-3b11835fe72b": {
+    "url": "db://assets/scripts/TestView.ts",
+    "value": {}
+  },
+  "d9b7a528-77fa-4a8a-bae1-565e7aa626e1": {
+    "url": "db://assets/scripts/Engine/Tick.ts",
+    "value": {}
+  },
+  "bf641e4c-f8e8-4529-b4c3-eb3368f158b3": {
+    "url": "db://assets/scripts/Battle/Entity",
+    "value": {}
+  },
+  "3fc35f85-1671-4fd7-8348-b7c4cb03da6e": {
+    "url": "db://assets/scripts/Battle/Entity/Bullet.ts",
+    "value": {}
+  },
+  "4af04ef0-d6a7-4c4c-a80f-fffdf486c139": {
+    "url": "db://assets/scripts/Battle/System",
+    "value": {}
+  },
+  "99150354-e7db-455a-b566-d8c9de760b06": {
+    "url": "db://assets/scripts/Battle/System/MovementSystem.ts",
+    "value": {}
+  },
+  "78abba7b-f7cb-47eb-a05e-5fa2d95e786d": {
+    "url": "db://assets/scripts/Battle/View",
+    "value": {}
+  },
+  "7b76884d-bca6-49d6-94b8-4a5cd71034d2": {
+    "url": "db://assets/scripts/Battle/View/BulletView.ts",
+    "value": {}
+  },
+  "bb4c673c-3a2e-40da-96d1-2e87a5cfc5b3": {
+    "url": "db://assets/scripts/Core/Data",
+    "value": {}
+  },
+  "fb5921d5-e96f-4dd5-9d00-bdfa1c32c471": {
+    "url": "db://assets/scripts/Core/Data/GameData.ts",
+    "value": {}
+  },
+  "9c042697-f62b-47ec-91b5-a8e8e9b27d37": {
+    "url": "db://assets/scripts/Battle/System/OutOfBoundsSystem.ts",
+    "value": {}
+  },
+  "041e6541-7da1-4950-8718-52e92861a19b": {
+    "url": "db://assets/scripts/Battle/Entity/Plane.ts",
+    "value": {}
+  },
+  "62d935be-bb19-491a-b1e9-46832ec4ba33": {
+    "url": "db://assets/scripts/Battle/Config",
+    "value": {}
+  },
+  "9c05ba0e-366d-468e-93a7-8761708d9aaa": {
+    "url": "db://assets/scripts/Battle/Config/WeaponConfig.ts",
+    "value": {}
+  },
+  "916eff54-5058-49e0-88b7-d23716ca5af4": {
+    "url": "db://assets/scripts/Battle/BattleEvents.ts",
+    "value": {}
+  },
+  "c048d764-d4ca-43e4-852e-84049c8fa32e": {
+    "url": "db://assets/scripts/Battle/System/FireSystem.ts",
+    "value": {}
+  },
+  "24e20ffe-e632-4e4a-b440-95d95235832e": {
+    "url": "db://assets/scripts/Battle/System/BulletSpawnSystem.ts",
+    "value": {}
+  },
+  "afd8df7a-3618-445b-8b80-93096225aa27": {
+    "url": "db://assets/scripts/Battle/View/PlayerView.ts",
+    "value": {}
+  },
+  "21d45283-1e9d-4fc5-8e4c-f70670fb41b0": {
+    "url": "db://assets/scripts/Battle/BattleInputHandler.ts",
+    "value": {}
+  },
+  "8b54f33b-2a41-43b4-af93-a753b79ef305": {
+    "url": "db://assets/scripts/Battle/System/PlayerControlSystem.ts",
+    "value": {}
+  },
+  "be5fe68c-92d9-47ad-bad5-79fddc94ee05": {
+    "url": "db://assets/scripts/Battle/System/CombatSystem.ts",
+    "value": {}
+  },
+  "fc21dab5-45b9-40ac-9a37-88b134a897bc": {
+    "url": "db://assets/scripts/Battle/System/DamageSystem.ts",
+    "value": {}
+  },
+  "5180b713-521f-4aba-ab5d-5a037f7e87fe": {
+    "url": "db://assets/scripts/Battle/View/EnemyView.ts",
+    "value": {}
+  },
+  "eea5ab7f-f078-43c8-933e-5f35e2d9adc2": {
+    "url": "db://assets/scripts/Battle/System/EnemySpawnSystem.ts",
+    "value": {}
+  },
+  "5080bfe7-a291-44ed-900b-2af99709053e": {
+    "url": "db://assets/scripts/Battle/System/BattleStateSystem.ts",
+    "value": {}
+  },
+  "55357677-2153-4564-8237-c8964591b343": {
+    "url": "db://assets/scripts/Battle/BattleScene.ts",
+    "value": {}
+  },
+  "dd61e193-c12a-4d22-997d-4d2994f3c512": {
+    "url": "db://assets/scripts/UI/Common",
+    "value": {}
+  },
+  "0486da40-6570-4fa2-b531-85bea03c3ce5": {
+    "url": "db://assets/scripts/UI/Common/PauseButton.ts",
+    "value": {}
+  },
+  "ba17a0f0-a6eb-4883-92b9-cdea6da553f1": {
+    "url": "db://assets/scripts/UI/Common/RestartButton.ts",
+    "value": {}
+  },
+  "2010aca7-75c2-46f7-86c9-f6155cafd2ad": {
+    "url": "db://assets/scripts/repomix-output.xml",
+    "value": {
+      "depends": [
+        "ad993be9-c07b-48b8-8b89-ffbbcfd8b20d",
+        "2a2f81e9-c2fc-478c-b33b-4707675bbec9",
+        "a87e6db2-cc33-46ee-b1ab-3e261e0e2df2",
+        "d9b7a528-77fa-4a8a-bae1-565e7aa626e1",
+        "747a0d80-46c0-449d-be6c-7e99404ffd18",
+        "dfbb144b-b06c-4f94-8edb-f789e51e115b"
+      ]
+    }
+  },
+  "8ee6fc40-e675-4cb7-8a5e-aace1d5405b9": {
+    "url": "db://assets/scripts/Battle/Config/BossConfig.ts",
+    "value": {}
+  },
+  "c5c85156-b49c-495f-a8ec-c9425f4e1d35": {
+    "url": "db://assets/scripts/Battle/Entity/Boss.ts",
+    "value": {}
+  },
+  "6f787971-e9b1-4c42-8bb0-8ea598ce24a9": {
+    "url": "db://assets/scripts/Battle/View/BossView.ts",
+    "value": {}
+  },
+  "72eab709-eec9-4964-b84b-587c9872ea3d": {
+    "url": "db://assets/scripts/Battle/System/BossStageSystem.ts",
+    "value": {}
+  },
+  "71168fd7-6fc1-4175-a5df-d6e3d972bfd6": {
+    "url": "db://assets/scripts/Battle/System/InvincibleSystem.ts",
+    "value": {}
+  },
+  "faa92e13-68f3-4a7a-9b6b-bc3fcf44c883": {
+    "url": "db://assets/scripts/Battle/Config/TurretConfig.ts",
+    "value": {}
+  },
+  "19a2a76a-f6df-41f5-bcc1-040c7fb7f3d0": {
+    "url": "db://assets/scripts/Battle/Entity/TurretData.ts",
+    "value": {}
+  },
+  "9845adca-03b5-44a1-a231-db6c4952e226": {
+    "url": "db://assets/scripts/Battle/System/TurretSystem.ts",
+    "value": {}
+  },
+  "d9d8db47-27e8-4213-841b-c9c344235a19": {
+    "url": "db://assets/scripts/Battle/Entity/TurretSchedule.ts",
+    "value": {}
+  },
+  "5a758f7a-1152-41de-aebc-c4c1ee3399c3": {
+    "url": "db://assets/scripts/UI/Battle",
+    "value": {}
+  },
+  "7053ef68-da2a-479f-85f8-49c151daa07c": {
+    "url": "db://assets/scripts/UI/Battle/BossHealthUI.ts",
+    "value": {}
+  },
+  "ec853638-ba8d-45cc-80e3-5e127612dcdb": {
+    "url": "db://assets/scripts/Battle/Config/LevelConfig.ts",
+    "value": {}
+  },
+  "79a04a0f-cfca-4868-b0a8-baf031a5144c": {
+    "url": "db://assets/scripts/Battle/Config/ExpConfig.ts",
+    "value": {}
+  },
+  "59bbb166-36a7-4393-8926-d17a90af4386": {
+    "url": "db://assets/scripts/Battle/System/ExpSystem.ts",
+    "value": {}
+  },
+  "243fedcb-4561-435a-a218-d61178422ab5": {
+    "url": "db://assets/scripts/Battle/System/CardApplySystem.ts",
+    "value": {}
+  },
+  "1f7da245-d35f-4d86-b8c7-02b2826cb61f": {
+    "url": "db://assets/scripts/Battle/Config/CardConfig.ts",
+    "value": {}
+  },
+  "c038929a-7138-4f1b-ac7b-b09ca6210952": {
+    "url": "db://assets/scripts/Battle/Entity/CardState.ts",
+    "value": {}
+  },
+  "bfa8add5-3801-473b-91b5-2ac5107fbb24": {
+    "url": "db://assets/scripts/Battle/System/CardSystem.ts",
+    "value": {}
+  },
+  "9c9a728e-5c9a-4b21-94b8-1ab7a463a7b3": {
+    "url": "db://assets/scripts/UI/Battle/UpgradePanel.ts",
+    "value": {}
+  },
+  "348e372b-1372-497c-ac4c-823394849343": {
+    "url": "db://assets/scripts/Battle/System/WaveSystem.ts",
+    "value": {}
+  },
+  "18358549-557a-4658-aadb-99d0ba74bbae": {
+    "url": "db://assets/scripts/UI/Battle/PlayerHealthUI.ts",
+    "value": {}
+  },
+  "350cf875-fa63-4b14-bd3c-359388d90613": {
+    "url": "db://assets/scripts/UI/Battle/ExpBarUI.ts",
+    "value": {}
+  },
+  "9bd0939a-985a-4fbb-9feb-31df1d851dff": {
+    "url": "db://assets/scripts/Battle/Config/EmitterConfig.ts",
+    "value": {}
+  },
+  "2f26123c-78d5-41e8-a897-99a56ea880bb": {
+    "url": "db://assets/scripts/Battle/Entity/WeaponData.ts",
+    "value": {}
+  },
+  "7023f77a-db42-47b0-9bb5-22082a4cbf77": {
+    "url": "db://assets/scripts/Battle/Entity/EmitterRuntime.ts",
+    "value": {}
+  },
+  "545410f8-256c-4589-a503-6295d5aa7d46": {
+    "url": "db://assets/scripts/Battle/Entity/Turret.ts",
+    "value": {}
+  },
+  "c7a3f82a-be5e-49ca-b47e-29d39f68c230": {
+    "url": "db://assets/scripts/Battle/System/FireCooldown.ts",
+    "value": {}
+  },
+  "8dad98eb-c040-46b0-b288-90592addfa58": {
+    "url": "db://assets/scripts/Battle/System/TurretAimSystem.ts",
+    "value": {}
+  },
+  "924a2f0c-ec3d-466d-974c-80db00b3ed02": {
+    "url": "db://assets/scripts/Battle/System/TurretScheduleSystem.ts",
+    "value": {}
+  },
+  "421c241f-c35e-4ef9-88b7-227b68eb8b82": {
+    "url": "db://assets/scripts/Battle/System/TurretSpawnSystem.ts",
+    "value": {}
+  },
+  "7eaef9ae-6e64-4d9e-a4ef-f3bb85e82f87": {
+    "url": "db://assets/scripts/Battle/View/TurretView.ts",
+    "value": {}
+  },
+  "ebc7e0bf-e10c-4f20-af0f-9240d63f7976": {
+    "url": "db://assets/scripts/Battle/ViewModel",
+    "value": {}
+  },
+  "e96e375f-bf37-43a7-9c65-0fa86514f56e": {
+    "url": "db://assets/scripts/Battle/ViewModel/BattleViewModel.ts",
+    "value": {}
+  },
+  "c0ecfe63-53a3-4abe-932b-d8c343557d28": {
+    "url": "db://assets/scripts/UI/Battle/ResultPanel.ts",
+    "value": {}
+  },
+  "c2347d2a-47c2-4e8b-8f28-de1dee99f11b": {
+    "url": "db://assets/scripts/Battle/Entity/Components",
+    "value": {}
+  },
+  "26779d1c-03ef-4818-a251-eead65721143": {
+    "url": "db://assets/scripts/Battle/Entity/Components/HealthComp.ts",
+    "value": {}
+  },
+  "371963a2-11d9-43a2-8398-7d3b2dbb719e": {
+    "url": "db://assets/scripts/Battle/Entity/Components/WeaponComp.ts",
+    "value": {}
+  },
+  "0fff28b4-ad5e-4e6b-ae7f-b9ae0603254b": {
+    "url": "db://assets/scripts/Battle/Entity/Components/MoveComp.ts",
+    "value": {}
+  },
+  "e25883cf-6388-4dd8-a11b-02dd5d788160": {
+    "url": "db://assets/scripts/Battle/Entity/Components/ExpComp.ts",
+    "value": {}
+  },
+  "391253ee-7d65-41e9-a818-5455bf2c59d8": {
+    "url": "db://assets/scripts/Battle/Entity/Components/AimComp.ts",
+    "value": {}
+  },
+  "6c370501-7639-4e73-be72-88e34496dacb": {
+    "url": "db://assets/scripts/Battle/Entity/PlayerEntity.ts",
+    "value": {}
+  },
+  "19383f8c-dcf5-4513-97d3-4ab752179a8f": {
+    "url": "db://assets/scripts/Battle/Entity/EnemyEntity.ts",
+    "value": {}
+  },
+  "168d1a25-d7f9-43e6-8ebc-237e494f326d": {
+    "url": "db://assets/scripts/Battle/Entity/BossEntity.ts",
+    "value": {}
+  },
+  "8398ead3-d0c2-4ab7-aef7-28dc6eab2fdf": {
+    "url": "db://assets/scripts/Battle/Entity/TurretEntity.ts",
+    "value": {}
+  },
+  "b1b260a4-c858-421d-9bdd-9fdf90677b5d": {
+    "url": "db://assets/scripts/Core/Pool",
+    "value": {}
+  },
+  "6b1f1c34-b025-4a3b-83c5-fa6544dfc8e5": {
+    "url": "db://assets/scripts/Core/Pool/EntityPool.ts",
+    "value": {}
+  },
+  "6d92ff60-d67d-4c5a-8d6b-ea19c1271f02": {
+    "url": "db://assets/scripts/Engine/ViewPool.ts",
+    "value": {}
+  }
+}

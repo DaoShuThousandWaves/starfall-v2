@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"],"names":["BATTLE_EVENT","WEAPON_FIRE"],"mappings":";;;;;;;;;;;;;;8BAAaA,Y,GAAe;AACxBC,QAAAA,WAAW,EAAE;AADW,O","sourcesContent":["export const BATTLE_EVENT = {\r\n    WEAPON_FIRE: 'weapon-fire',\r\n} as const;"]}

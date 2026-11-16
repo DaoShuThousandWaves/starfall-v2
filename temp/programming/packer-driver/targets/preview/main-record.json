@@ -1,0 +1,6544 @@
+{
+  "modules": {
+    "cce:/internal/x/cc": {
+      "mTimestamp": 900216.1315000057,
+      "chunkId": "24da15e04e82e6a8c330e4cf358e73f916919fc1",
+      "imports": [
+        {
+          "value": "cce:/internal/x/cc-fu/2d",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/sorting",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/animation",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 14
+            },
+            "end": {
+              "line": 3,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/audio",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 14
+            },
+            "end": {
+              "line": 4,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/base",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 14
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/gfx-webgl",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 14
+            },
+            "end": {
+              "line": 6,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/gfx-webgl2",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 14
+            },
+            "end": {
+              "line": 7,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/profiler",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 14
+            },
+            "end": {
+              "line": 8,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/tween",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 14
+            },
+            "end": {
+              "line": 9,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/ui",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 14
+            },
+            "end": {
+              "line": 10,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/video",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 14
+            },
+            "end": {
+              "line": 11,
+              "column": 43
+            }
+          }
+        },
+        {
+          "value": "cce:/internal/x/cc-fu/webview",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 14
+            },
+            "end": {
+              "line": 12,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/2d"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/sorting"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/animation"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/audio"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/base"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/gfx-webgl2"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/profiler"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/tween"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/ui"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/video"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "external",
+            "specifierOrURL": "cce:/internal/x/cc-fu/webview"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/x/prerequisite-imports": {
+      "mTimestamp": 204780749.2224,
+      "chunkId": "63b2b601dbb652f55c8ec4e517366ac1f64b34f3",
+      "imports": [
+        {
+          "value": "file:///D:/cocosEdit/Creator/3.8.0/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts",
+          "resolved": "__unresolved_0",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 7
+            },
+            "end": {
+              "line": 4,
+              "column": 123
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 7
+            },
+            "end": {
+              "line": 5,
+              "column": 87
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 7
+            },
+            "end": {
+              "line": 6,
+              "column": 93
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleScene.ts",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 7
+            },
+            "end": {
+              "line": 7,
+              "column": 86
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/BossConfig.ts",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 7
+            },
+            "end": {
+              "line": 8,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/CardConfig.ts",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 7
+            },
+            "end": {
+              "line": 9,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/EmitterConfig.ts",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 7
+            },
+            "end": {
+              "line": 10,
+              "column": 95
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/ExpConfig.ts",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 7
+            },
+            "end": {
+              "line": 11,
+              "column": 91
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/LevelConfig.ts",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 7
+            },
+            "end": {
+              "line": 12,
+              "column": 93
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/TurretConfig.ts",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 7
+            },
+            "end": {
+              "line": 13,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/WeaponConfig.ts",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 7
+            },
+            "end": {
+              "line": 14,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/BossEntity.ts",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 7
+            },
+            "end": {
+              "line": 15,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Bullet.ts",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 7
+            },
+            "end": {
+              "line": 16,
+              "column": 88
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/AimComp.ts",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 7
+            },
+            "end": {
+              "line": 17,
+              "column": 100
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/ExpComp.ts",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 7
+            },
+            "end": {
+              "line": 18,
+              "column": 100
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 7
+            },
+            "end": {
+              "line": 19,
+              "column": 103
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/MoveComp.ts",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 20,
+              "column": 7
+            },
+            "end": {
+              "line": 20,
+              "column": 101
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/WeaponComp.ts",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 21,
+              "column": 7
+            },
+            "end": {
+              "line": 21,
+              "column": 103
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EnemyEntity.ts",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 7
+            },
+            "end": {
+              "line": 22,
+              "column": 93
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/PlayerEntity.ts",
+          "resolved": "__unresolved_19",
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 7
+            },
+            "end": {
+              "line": 23,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretEntity.ts",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 24,
+              "column": 7
+            },
+            "end": {
+              "line": 24,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretSchedule.ts",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 7
+            },
+            "end": {
+              "line": 25,
+              "column": 96
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/WeaponData.ts",
+          "resolved": "__unresolved_22",
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 7
+            },
+            "end": {
+              "line": 26,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BattleStateSystem.ts",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 7
+            },
+            "end": {
+              "line": 27,
+              "column": 99
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BossStageSystem.ts",
+          "resolved": "__unresolved_24",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 7
+            },
+            "end": {
+              "line": 28,
+              "column": 97
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BulletSpawnSystem.ts",
+          "resolved": "__unresolved_25",
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 7
+            },
+            "end": {
+              "line": 29,
+              "column": 99
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardApplySystem.ts",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 7
+            },
+            "end": {
+              "line": 30,
+              "column": 97
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardSystem.ts",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 7
+            },
+            "end": {
+              "line": 31,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts",
+          "resolved": "__unresolved_28",
+          "loc": {
+            "start": {
+              "line": 32,
+              "column": 7
+            },
+            "end": {
+              "line": 32,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts",
+          "resolved": "__unresolved_29",
+          "loc": {
+            "start": {
+              "line": 33,
+              "column": 7
+            },
+            "end": {
+              "line": 33,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts",
+          "resolved": "__unresolved_30",
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 7
+            },
+            "end": {
+              "line": 34,
+              "column": 98
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/ExpSystem.ts",
+          "resolved": "__unresolved_31",
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 7
+            },
+            "end": {
+              "line": 35,
+              "column": 91
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireCooldown.ts",
+          "resolved": "__unresolved_32",
+          "loc": {
+            "start": {
+              "line": 36,
+              "column": 7
+            },
+            "end": {
+              "line": 36,
+              "column": 94
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireSystem.ts",
+          "resolved": "__unresolved_33",
+          "loc": {
+            "start": {
+              "line": 37,
+              "column": 7
+            },
+            "end": {
+              "line": 37,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/InvincibleSystem.ts",
+          "resolved": "__unresolved_34",
+          "loc": {
+            "start": {
+              "line": 38,
+              "column": 7
+            },
+            "end": {
+              "line": 38,
+              "column": 98
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/MovementSystem.ts",
+          "resolved": "__unresolved_35",
+          "loc": {
+            "start": {
+              "line": 39,
+              "column": 7
+            },
+            "end": {
+              "line": 39,
+              "column": 96
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts",
+          "resolved": "__unresolved_36",
+          "loc": {
+            "start": {
+              "line": 40,
+              "column": 7
+            },
+            "end": {
+              "line": 40,
+              "column": 99
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/PlayerControlSystem.ts",
+          "resolved": "__unresolved_37",
+          "loc": {
+            "start": {
+              "line": 41,
+              "column": 7
+            },
+            "end": {
+              "line": 41,
+              "column": 101
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretAimSystem.ts",
+          "resolved": "__unresolved_38",
+          "loc": {
+            "start": {
+              "line": 42,
+              "column": 7
+            },
+            "end": {
+              "line": 42,
+              "column": 97
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretScheduleSystem.ts",
+          "resolved": "__unresolved_39",
+          "loc": {
+            "start": {
+              "line": 43,
+              "column": 7
+            },
+            "end": {
+              "line": 43,
+              "column": 102
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretSpawnSystem.ts",
+          "resolved": "__unresolved_40",
+          "loc": {
+            "start": {
+              "line": 44,
+              "column": 7
+            },
+            "end": {
+              "line": 44,
+              "column": 99
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/WaveSystem.ts",
+          "resolved": "__unresolved_41",
+          "loc": {
+            "start": {
+              "line": 45,
+              "column": 7
+            },
+            "end": {
+              "line": 45,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BossView.ts",
+          "resolved": "__unresolved_42",
+          "loc": {
+            "start": {
+              "line": 46,
+              "column": 7
+            },
+            "end": {
+              "line": 46,
+              "column": 88
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BulletView.ts",
+          "resolved": "__unresolved_43",
+          "loc": {
+            "start": {
+              "line": 47,
+              "column": 7
+            },
+            "end": {
+              "line": 47,
+              "column": 90
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/EnemyView.ts",
+          "resolved": "__unresolved_44",
+          "loc": {
+            "start": {
+              "line": 48,
+              "column": 7
+            },
+            "end": {
+              "line": 48,
+              "column": 89
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/PlayerView.ts",
+          "resolved": "__unresolved_45",
+          "loc": {
+            "start": {
+              "line": 49,
+              "column": 7
+            },
+            "end": {
+              "line": 49,
+              "column": 90
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/TurretView.ts",
+          "resolved": "__unresolved_46",
+          "loc": {
+            "start": {
+              "line": 50,
+              "column": 7
+            },
+            "end": {
+              "line": 50,
+              "column": 90
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/ViewModel/BattleViewModel.ts",
+          "resolved": "__unresolved_47",
+          "loc": {
+            "start": {
+              "line": 51,
+              "column": 7
+            },
+            "end": {
+              "line": 51,
+              "column": 100
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts",
+          "resolved": "__unresolved_48",
+          "loc": {
+            "start": {
+              "line": 52,
+              "column": 7
+            },
+            "end": {
+              "line": 52,
+              "column": 86
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts",
+          "resolved": "__unresolved_49",
+          "loc": {
+            "start": {
+              "line": 53,
+              "column": 7
+            },
+            "end": {
+              "line": 53,
+              "column": 88
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts",
+          "resolved": "__unresolved_50",
+          "loc": {
+            "start": {
+              "line": 54,
+              "column": 7
+            },
+            "end": {
+              "line": 54,
+              "column": 78
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts",
+          "resolved": "__unresolved_51",
+          "loc": {
+            "start": {
+              "line": 55,
+              "column": 7
+            },
+            "end": {
+              "line": 55,
+              "column": 81
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/System.ts",
+          "resolved": "__unresolved_52",
+          "loc": {
+            "start": {
+              "line": 56,
+              "column": 7
+            },
+            "end": {
+              "line": 56,
+              "column": 81
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts",
+          "resolved": "__unresolved_53",
+          "loc": {
+            "start": {
+              "line": 57,
+              "column": 7
+            },
+            "end": {
+              "line": 57,
+              "column": 79
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts",
+          "resolved": "__unresolved_54",
+          "loc": {
+            "start": {
+              "line": 58,
+              "column": 7
+            },
+            "end": {
+              "line": 58,
+              "column": 83
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts",
+          "resolved": "__unresolved_55",
+          "loc": {
+            "start": {
+              "line": 59,
+              "column": 7
+            },
+            "end": {
+              "line": 59,
+              "column": 87
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts",
+          "resolved": "__unresolved_56",
+          "loc": {
+            "start": {
+              "line": 60,
+              "column": 7
+            },
+            "end": {
+              "line": 60,
+              "column": 80
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/BossHealthUI.ts",
+          "resolved": "__unresolved_57",
+          "loc": {
+            "start": {
+              "line": 61,
+              "column": 7
+            },
+            "end": {
+              "line": 61,
+              "column": 90
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ExpBarUI.ts",
+          "resolved": "__unresolved_58",
+          "loc": {
+            "start": {
+              "line": 62,
+              "column": 7
+            },
+            "end": {
+              "line": 62,
+              "column": 86
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/PlayerHealthUI.ts",
+          "resolved": "__unresolved_59",
+          "loc": {
+            "start": {
+              "line": 63,
+              "column": 7
+            },
+            "end": {
+              "line": 63,
+              "column": 92
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ResultPanel.ts",
+          "resolved": "__unresolved_60",
+          "loc": {
+            "start": {
+              "line": 64,
+              "column": 7
+            },
+            "end": {
+              "line": 64,
+              "column": 89
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/UpgradePanel.ts",
+          "resolved": "__unresolved_61",
+          "loc": {
+            "start": {
+              "line": 65,
+              "column": 7
+            },
+            "end": {
+              "line": 65,
+              "column": 90
+            }
+          }
+        },
+        {
+          "value": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Common/PauseButton.ts",
+          "resolved": "__unresolved_62",
+          "loc": {
+            "start": {
+              "line": 66,
+              "column": 7
+            },
+            "end": {
+              "line": 66,
+              "column": 89
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/3.8.0/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleScene.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/BossConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/CardConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/EmitterConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/ExpConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/LevelConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/TurretConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/WeaponConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/BossEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Bullet.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/AimComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/ExpComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/MoveComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/WeaponComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EnemyEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/PlayerEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretSchedule.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/WeaponData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BattleStateSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BossStageSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BulletSpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardApplySystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/ExpSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireCooldown.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/InvincibleSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/MovementSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/PlayerControlSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretAimSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretScheduleSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretSpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/WaveSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BossView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BulletView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/EnemyView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/PlayerView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/TurretView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/ViewModel/BattleViewModel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/System.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/BossHealthUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ExpBarUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/PlayerHealthUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ResultPanel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/UpgradePanel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Common/PauseButton.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/3.8.0/resources/resources/3d/engine/editor/assets/tools/debug-view-runtime-control.ts": {
+      "mTimestamp": {
+        "mtime": 1792399555387.718,
+        "uuid": "b2bd1fa7-8d7c-49c5-a158-df29a6d3a594"
+      },
+      "chunkId": "9318932b0be8d1b836504e462160df7a25f32788",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 220
+            },
+            "end": {
+              "line": 1,
+              "column": 224
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts": {
+      "mTimestamp": {
+        "mtime": 1794768562665.8389,
+        "uuid": "2a2f81e9-c2fc-478c-b33b-4707675bbec9"
+      },
+      "chunkId": "c6aee05344d533dd44f2f715952903e7c585f69c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts": {
+      "mTimestamp": {
+        "mtime": 1794566395024.1086,
+        "uuid": "ad993be9-c07b-48b8-8b89-ffbbcfd8b20d"
+      },
+      "chunkId": "7a3bb2699ad2c46ada58d2a3db53473ca9f2c4da",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 27
+            },
+            "end": {
+              "line": 1,
+              "column": 31
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/TestRunner.ts": {
+      "mTimestamp": {
+        "mtime": 1794586019022.2246,
+        "uuid": "818e8f0b-8c5f-45db-a76c-f293936ebebd"
+      },
+      "chunkId": "232090aaa4afc1374e5399faed3ac98ff89b7042",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./Engine/Bus",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "line": 2,
+              "column": 34
+            }
+          }
+        },
+        {
+          "value": "./Engine/World",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 38
+            }
+          }
+        },
+        {
+          "value": "./Engine/ViewRegistry",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Engine/Tick",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 26
+            },
+            "end": {
+              "line": 5,
+              "column": 41
+            }
+          }
+        },
+        {
+          "value": "./Core/Data/GameData",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 25
+            },
+            "end": {
+              "line": 6,
+              "column": 47
+            }
+          }
+        },
+        {
+          "value": "./Battle/Entity/Plane",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 22
+            },
+            "end": {
+              "line": 7,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/MovementSystem",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 31
+            },
+            "end": {
+              "line": 8,
+              "column": 63
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/OutOfBoundsSystem",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 34
+            },
+            "end": {
+              "line": 9,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/FireSystem",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 27
+            },
+            "end": {
+              "line": 10,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/BulletSpawnSystem",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 34
+            },
+            "end": {
+              "line": 11,
+              "column": 69
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/PlayerControlSystem",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 36
+            },
+            "end": {
+              "line": 12,
+              "column": 73
+            }
+          }
+        },
+        {
+          "value": "./Battle/View/BulletView",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 27
+            },
+            "end": {
+              "line": 13,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./Battle/View/PlayerView",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 27
+            },
+            "end": {
+              "line": 14,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./Battle/BattleInputHandler",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 35
+            },
+            "end": {
+              "line": 15,
+              "column": 64
+            }
+          }
+        },
+        {
+          "value": "./Battle/View/EnemyView",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 26
+            },
+            "end": {
+              "line": 16,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/CombatSystem",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 29
+            },
+            "end": {
+              "line": 17,
+              "column": 59
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/DamageSystem",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 29
+            },
+            "end": {
+              "line": 18,
+              "column": 59
+            }
+          }
+        },
+        {
+          "value": "./Battle/System/EnemySpawnSystem",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 33
+            },
+            "end": {
+              "line": 19,
+              "column": 67
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Plane.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/MovementSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BulletSpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/PlayerControlSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BulletView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/PlayerView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/EnemyView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "cce:/internal/code-quality/cr.mjs": {
+      "mTimestamp": 1794565998281,
+      "chunkId": "cceb4f795e6e637cc67c120b5b44ef3a584b486a",
+      "imports": [],
+      "type": "esm",
+      "resolutions": []
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/System.ts": {
+      "mTimestamp": {
+        "mtime": 1794634173989.587,
+        "uuid": "a87e6db2-cc33-46ee-b1ab-3e261e0e2df2"
+      },
+      "chunkId": "df24f951914f33a36a348fa5abb48ce4537b203e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts": {
+      "mTimestamp": {
+        "mtime": 1794770467001.574,
+        "uuid": "dfbb144b-b06c-4f94-8edb-f789e51e115b"
+      },
+      "chunkId": "f46e9c16f603c232026aed8234f13ceb1a8780f2",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts": {
+      "mTimestamp": {
+        "mtime": 1794770754087.2104,
+        "uuid": "747a0d80-46c0-449d-be6c-7e99404ffd18"
+      },
+      "chunkId": "eb60042687649dd71ce877a471c92d92c7f281c3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "./ViewPool",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 25
+            },
+            "end": {
+              "line": 3,
+              "column": 37
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/TestView.ts": {
+      "mTimestamp": {
+        "mtime": 1794573810836.5066,
+        "uuid": "d8d011db-989b-40e6-98c8-3b11835fe72b"
+      },
+      "chunkId": "c52f206e49bbfc6764497e9a321dcb74a99399e9",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 61
+            },
+            "end": {
+              "line": 1,
+              "column": 65
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts": {
+      "mTimestamp": {
+        "mtime": 1794764885799.2422,
+        "uuid": "d9b7a528-77fa-4a8a-bae1-565e7aa626e1"
+      },
+      "chunkId": "28d6adbcb020e95221846814cbe7b8c5e703dd92",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 38
+            },
+            "end": {
+              "line": 1,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Bullet.ts": {
+      "mTimestamp": {
+        "mtime": 1794769013601.5786,
+        "uuid": "3fc35f85-1671-4fd7-8348-b7c4cb03da6e"
+      },
+      "chunkId": "d314ec17ee0f07abf7cc42928f712c8ac54bdab4",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/MovementSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767517704.579,
+        "uuid": "99150354-e7db-455a-b566-d8c9de760b06"
+      },
+      "chunkId": "d5079b172babeb80336c4e074c82bf6342e14ce1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BulletView.ts": {
+      "mTimestamp": {
+        "mtime": 1794769476258.5068,
+        "uuid": "7b76884d-bca6-49d6-94b8-4a5cd71034d2"
+      },
+      "chunkId": "74abea7269a0ee078c42447eb9078272af174ffb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 55
+            },
+            "end": {
+              "line": 1,
+              "column": 59
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts": {
+      "mTimestamp": {
+        "mtime": 1794577229337.527,
+        "uuid": "fb5921d5-e96f-4dd5-9d00-bdfa1c32c471"
+      },
+      "chunkId": "f0de74b08fc378f4afed0c6ee244303c57c4d2b7",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 20
+            },
+            "end": {
+              "line": 1,
+              "column": 24
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794635249013.5417,
+        "uuid": "9c042697-f62b-47ec-91b5-a8e8e9b27d37"
+      },
+      "chunkId": "5f865ed9c2ace14cf98d8d459fb9b200fd7fcce2",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 25
+            },
+            "end": {
+              "line": 1,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Plane.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "b71e68476d1a3a13f6602a2869d803627ea9dd5a"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/WeaponConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794741029846.96,
+        "uuid": "9c05ba0e-366d-468e-93a7-8761708d9aaa"
+      },
+      "chunkId": "453cd420e2767c72fc150bb403a05f8d03c9ecaf",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts": {
+      "mTimestamp": {
+        "mtime": 1794768862699.716,
+        "uuid": "916eff54-5058-49e0-88b7-d23716ca5af4"
+      },
+      "chunkId": "b6fde78c7131ec21a61428c6b50030f9d4e9ef52",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794769151436.2463,
+        "uuid": "c048d764-d4ca-43e4-852e-84049c8fa32e"
+      },
+      "chunkId": "c3296d42b13e84e0a2569a7909985bc63b535698",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./FireCooldown",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 32
+            },
+            "end": {
+              "line": 8,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireCooldown.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/SpawnSystem.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "4688a7816718277273adb605fc5f1f1b65e948d2"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/PlayerView.ts": {
+      "mTimestamp": {
+        "mtime": 1794767872223.013,
+        "uuid": "afd8df7a-3618-445b-8b80-93096225aa27"
+      },
+      "chunkId": "cd13f67591d7c1466558fc03af58f834ee2ef196",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 55
+            },
+            "end": {
+              "line": 1,
+              "column": 59
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts": {
+      "mTimestamp": {
+        "mtime": 1794730326963.9275,
+        "uuid": "21d45283-1e9d-4fc5-8e4c-f70670fb41b0"
+      },
+      "chunkId": "757aa55a57241f3d52104efce9abf17a98c654eb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 82
+            },
+            "end": {
+              "line": 1,
+              "column": 86
+            }
+          }
+        },
+        {
+          "value": "./BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/PlayerControlSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767843740.121,
+        "uuid": "8b54f33b-2a41-43b4-af93-a753b79ef305"
+      },
+      "chunkId": "a9c569fb2dbb2ee8582f8fdeddd6b6ca11c36203",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 25
+            },
+            "end": {
+              "line": 5,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794769179770.598,
+        "uuid": "be5fe68c-92d9-47ad-bad5-79fddc94ee05"
+      },
+      "chunkId": "971c2c5d15b2fb235462ad381bd597c13ebfc9cc",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 25
+            },
+            "end": {
+              "line": 1,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767261652.4739,
+        "uuid": "fc21dab5-45b9-40ac-9a37-88b134a897bc"
+      },
+      "chunkId": "702446f8a83f49270dbbb10e285b0bdc71437f1a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/EnemyView.ts": {
+      "mTimestamp": {
+        "mtime": 1794767941182.648,
+        "uuid": "5180b713-521f-4aba-ab5d-5a037f7e87fe"
+      },
+      "chunkId": "516101859d36ebd1a5eb9e7ee5cdab3bae853000",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 61
+            },
+            "end": {
+              "line": 1,
+              "column": 65
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794770202383.0994,
+        "uuid": "eea5ab7f-f078-43c8-933e-5f35e2d9adc2"
+      },
+      "chunkId": "8ac55880d4e01d9abd55813a07395ff03ca5b531",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 25
+            },
+            "end": {
+              "line": 1,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../Config/BossConfig",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 28
+            },
+            "end": {
+              "line": 5,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../Entity/BossEntity",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 27
+            },
+            "end": {
+              "line": 7,
+              "column": 49
+            }
+          }
+        },
+        {
+          "value": "../Entity/EnemyEntity",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 28
+            },
+            "end": {
+              "line": 8,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/BossConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/BossEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EnemyEntity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BulletSpawnSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794769946114.647,
+        "uuid": "24e20ffe-e632-4e4a-b440-95d95235832e"
+      },
+      "chunkId": "848f4cfd54d54d9bba14bcfd142a25b4af4c8d21",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../Entity/Bullet",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 23
+            },
+            "end": {
+              "line": 5,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Bullet.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BattleStateSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794768790819.2593,
+        "uuid": "5080bfe7-a291-44ed-900b-2af99709053e"
+      },
+      "chunkId": "ad60036b0ace7870370ddd6d0067ea07226fe908",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleScene.ts": {
+      "mTimestamp": {
+        "mtime": 1794770777706.4275,
+        "uuid": "55357677-2153-4564-8237-c8964591b343"
+      },
+      "chunkId": "2b0af697652eff0de45a4619bdb547e717ca93ce",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "../Engine/World",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Engine/Bus",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 20
+            },
+            "end": {
+              "line": 3,
+              "column": 35
+            }
+          }
+        },
+        {
+          "value": "../Engine/ViewRegistry",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "../Engine/Tick",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 26
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../Core/Data/GameData",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 25
+            },
+            "end": {
+              "line": 6,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./View/BulletView",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 27
+            },
+            "end": {
+              "line": 8,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./View/PlayerView",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 9,
+              "column": 27
+            },
+            "end": {
+              "line": 9,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./View/EnemyView",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 26
+            },
+            "end": {
+              "line": 10,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./View/BossView",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 25
+            },
+            "end": {
+              "line": 11,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "./View/TurretView",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 27
+            },
+            "end": {
+              "line": 12,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./System/BattleStateSystem",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 45
+            },
+            "end": {
+              "line": 14,
+              "column": 73
+            }
+          }
+        },
+        {
+          "value": "./System/BossStageSystem",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 32
+            },
+            "end": {
+              "line": 15,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "./System/TurretSpawnSystem",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 34
+            },
+            "end": {
+              "line": 16,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "./System/TurretScheduleSystem",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 37
+            },
+            "end": {
+              "line": 17,
+              "column": 68
+            }
+          }
+        },
+        {
+          "value": "./System/TurretAimSystem",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 32
+            },
+            "end": {
+              "line": 18,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "./System/FireSystem",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 27
+            },
+            "end": {
+              "line": 19,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./System/BulletSpawnSystem",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 20,
+              "column": 34
+            },
+            "end": {
+              "line": 20,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "./System/PlayerControlSystem",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 21,
+              "column": 36
+            },
+            "end": {
+              "line": 21,
+              "column": 66
+            }
+          }
+        },
+        {
+          "value": "./System/EnemySpawnSystem",
+          "resolved": "__unresolved_19",
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 33
+            },
+            "end": {
+              "line": 22,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "./System/WaveSystem",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 27
+            },
+            "end": {
+              "line": 23,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./System/MovementSystem",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 24,
+              "column": 31
+            },
+            "end": {
+              "line": 24,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "./System/CombatSystem",
+          "resolved": "__unresolved_22",
+          "loc": {
+            "start": {
+              "line": 25,
+              "column": 29
+            },
+            "end": {
+              "line": 25,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./System/DamageSystem",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 26,
+              "column": 29
+            },
+            "end": {
+              "line": 26,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./System/InvincibleSystem",
+          "resolved": "__unresolved_24",
+          "loc": {
+            "start": {
+              "line": 27,
+              "column": 33
+            },
+            "end": {
+              "line": 27,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "./System/ExpSystem",
+          "resolved": "__unresolved_25",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 26
+            },
+            "end": {
+              "line": 28,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "./System/CardApplySystem",
+          "resolved": "__unresolved_26",
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 32
+            },
+            "end": {
+              "line": 29,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "./System/CardSystem",
+          "resolved": "__unresolved_27",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 27
+            },
+            "end": {
+              "line": 30,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./System/OutOfBoundsSystem",
+          "resolved": "__unresolved_28",
+          "loc": {
+            "start": {
+              "line": 31,
+              "column": 34
+            },
+            "end": {
+              "line": 31,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "./Config/ExpConfig",
+          "resolved": "__unresolved_29",
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 28
+            },
+            "end": {
+              "line": 34,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./BattleEvents",
+          "resolved": "__unresolved_30",
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 29
+            },
+            "end": {
+              "line": 35,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./BattleInputHandler",
+          "resolved": "__unresolved_31",
+          "loc": {
+            "start": {
+              "line": 36,
+              "column": 35
+            },
+            "end": {
+              "line": 36,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "./ViewModel/BattleViewModel",
+          "resolved": "__unresolved_32",
+          "loc": {
+            "start": {
+              "line": 37,
+              "column": 32
+            },
+            "end": {
+              "line": 37,
+              "column": 61
+            }
+          }
+        },
+        {
+          "value": "../UI/Common/PauseButton",
+          "resolved": "__unresolved_33",
+          "loc": {
+            "start": {
+              "line": 39,
+              "column": 28
+            },
+            "end": {
+              "line": 39,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "../UI/Battle/BossHealthUI",
+          "resolved": "__unresolved_34",
+          "loc": {
+            "start": {
+              "line": 40,
+              "column": 29
+            },
+            "end": {
+              "line": 40,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../UI/Battle/PlayerHealthUI",
+          "resolved": "__unresolved_35",
+          "loc": {
+            "start": {
+              "line": 41,
+              "column": 31
+            },
+            "end": {
+              "line": 41,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "../UI/Battle/ExpBarUI",
+          "resolved": "__unresolved_36",
+          "loc": {
+            "start": {
+              "line": 42,
+              "column": 25
+            },
+            "end": {
+              "line": 42,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "../UI/Battle/UpgradePanel",
+          "resolved": "__unresolved_37",
+          "loc": {
+            "start": {
+              "line": 43,
+              "column": 29
+            },
+            "end": {
+              "line": 43,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../UI/Battle/ResultPanel",
+          "resolved": "__unresolved_38",
+          "loc": {
+            "start": {
+              "line": 44,
+              "column": 28
+            },
+            "end": {
+              "line": 44,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./Entity/PlayerEntity",
+          "resolved": "__unresolved_39",
+          "loc": {
+            "start": {
+              "line": 45,
+              "column": 29
+            },
+            "end": {
+              "line": 45,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../Core/Pool/EntityPool",
+          "resolved": "__unresolved_40",
+          "loc": {
+            "start": {
+              "line": 46,
+              "column": 27
+            },
+            "end": {
+              "line": 46,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../Engine/ViewPool",
+          "resolved": "__unresolved_41",
+          "loc": {
+            "start": {
+              "line": 47,
+              "column": 25
+            },
+            "end": {
+              "line": 47,
+              "column": 45
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BulletView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/PlayerView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/EnemyView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BossView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/TurretView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BattleStateSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BossStageSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretSpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretScheduleSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretAimSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BulletSpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/PlayerControlSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/WaveSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/MovementSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/InvincibleSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/ExpSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardApplySystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/ExpConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/ViewModel/BattleViewModel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Common/PauseButton.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/BossHealthUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/PlayerHealthUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ExpBarUI.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/UpgradePanel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ResultPanel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/PlayerEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Common/PauseButton.ts": {
+      "mTimestamp": {
+        "mtime": 1794762793873.1409,
+        "uuid": "0486da40-6570-4fa2-b531-85bea03c3ce5"
+      },
+      "chunkId": "38be87a2d35b6ddf5186e040a8f8432103961683",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 53
+            },
+            "end": {
+              "line": 1,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Common/RestartButton.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "c1f620524d487a17c06d1294e3645c0327fd5b94"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/BossConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794745370851.793,
+        "uuid": "8ee6fc40-e675-4cb7-8a5e-aace1d5405b9"
+      },
+      "chunkId": "392db3059dd13cac231546cc9537fb5f331ab64a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Boss.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "a5c2bd92e1179dd0fbe95d73f5cae07a46e3e3c4"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/BossView.ts": {
+      "mTimestamp": {
+        "mtime": 1794767891176.1265,
+        "uuid": "6f787971-e9b1-4c42-8bb0-8ea598ce24a9"
+      },
+      "chunkId": "87539d0e3acd35f85651e29ee738dd4eb17ea243",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 57
+            },
+            "end": {
+              "line": 1,
+              "column": 61
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BossStageSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767745473.3047,
+        "uuid": "72eab709-eec9-4964-b84b-587c9872ea3d"
+      },
+      "chunkId": "a147198d8845e57a76e19bd4a3f4a6925646b998",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/InvincibleSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767559088.7798,
+        "uuid": "71168fd7-6fc1-4175-a5df-d6e3d972bfd6"
+      },
+      "chunkId": "9969dca47de9f524925c00c1f928dd8fcc55c132",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/TurretConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794745231870.569,
+        "uuid": "faa92e13-68f3-4a7a-9b6b-bc3fcf44c883"
+      },
+      "chunkId": "155ff5768a33f9b60869f077b6d30cd870386323",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretData.ts": {
+      "mTimestamp": {
+        "mtime": 1794743601684.5042,
+        "uuid": "19a2a76a-f6df-41f5-bcc1-040c7fb7f3d0"
+      },
+      "chunkId": "5391390abca78e48a10672cc636689899f4c0008",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretSystem.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "5d82095fec88538f627c2e40c586a642d8aa299e"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretSchedule.ts": {
+      "mTimestamp": {
+        "mtime": 1794767419020.8142,
+        "uuid": "d9d8db47-27e8-4213-841b-c9c344235a19"
+      },
+      "chunkId": "f74ee9d8f966f52333463c827fa29623c34821ae",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/BossHealthUI.ts": {
+      "mTimestamp": {
+        "mtime": 1794761046129.9988,
+        "uuid": "7053ef68-da2a-479f-85f8-49c151daa07c"
+      },
+      "chunkId": "ae0247f748db25944952b658a072aabef1ba07ca",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 64
+            },
+            "end": {
+              "line": 1,
+              "column": 68
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/LevelConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794738577373.5388,
+        "uuid": "ec853638-ba8d-45cc-80e3-5e127612dcdb"
+      },
+      "chunkId": "7d70160b30e02d29533678395ecb319db2162650",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/ExpConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794734816174.6882,
+        "uuid": "79a04a0f-cfca-4868-b0a8-baf031a5144c"
+      },
+      "chunkId": "0c6c9945adfdfab294e054f01eb1d57807622771",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/ExpSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767810054.3735,
+        "uuid": "59bbb166-36a7-4393-8926-d17a90af4386"
+      },
+      "chunkId": "d215eb53815c1bc52a70e9c2f2577ea0f61d29d6",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../Config/ExpConfig",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 40
+            },
+            "end": {
+              "line": 5,
+              "column": 61
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/ExpConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardApplySystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767834659.156,
+        "uuid": "243fedcb-4561-435a-a218-d61178422ab5"
+      },
+      "chunkId": "2b78026b62518242c3d29120395574b456179e02",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/CardConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794757320363.0266,
+        "uuid": "1f7da245-d35f-4d86-b8c7-02b2826cb61f"
+      },
+      "chunkId": "8014df73b02dc5d7ba8e5ca52d55e6998804be38",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/CardState.ts": {
+      "mTimestamp": {
+        "mtime": 1794736529916.9956,
+        "uuid": "c038929a-7138-4f1b-ac7b-b09ca6210952"
+      },
+      "chunkId": "7c7865e43a723ab37bd9e7bb15376b7dea38d130",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767824824.7383,
+        "uuid": "bfa8add5-3801-473b-91b5-2ac5107fbb24"
+      },
+      "chunkId": "093031dd68d605ff148a6a1c45ef035fe6632be1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../Config/CardConfig",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 47
+            },
+            "end": {
+              "line": 5,
+              "column": 69
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/CardConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/UpgradePanel.ts": {
+      "mTimestamp": {
+        "mtime": 1794760914407.6572,
+        "uuid": "9c9a728e-5c9a-4b21-94b8-1ab7a463a7b3"
+      },
+      "chunkId": "d30795f36c2cf03b65792ec3c5e45ce92c85bc74",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 51
+            },
+            "end": {
+              "line": 1,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/WaveSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794768967506.2583,
+        "uuid": "348e372b-1372-497c-ac4c-823394849343"
+      },
+      "chunkId": "fce5839a854dd65393b317ecc0f878873bc10f4b",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 46
+            }
+          }
+        },
+        {
+          "value": "../Config/LevelConfig",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 68
+            },
+            "end": {
+              "line": 4,
+              "column": 91
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/LevelConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/PlayerHealthUI.ts": {
+      "mTimestamp": {
+        "mtime": 1794760815299.3794,
+        "uuid": "18358549-557a-4658-aadb-99d0ba74bbae"
+      },
+      "chunkId": "baf766dfc0e72709da2f6bf0d008ec756d98b3fa",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 51
+            },
+            "end": {
+              "line": 1,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ExpBarUI.ts": {
+      "mTimestamp": {
+        "mtime": 1794739063099.4038,
+        "uuid": "350cf875-fa63-4b14-bd3c-359388d90613"
+      },
+      "chunkId": "b7fe0e93e8efa72f2858d5d5b6eb31a946edcc8a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 58
+            },
+            "end": {
+              "line": 1,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/EmitterConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794741006830.5437,
+        "uuid": "9bd0939a-985a-4fbb-9feb-31df1d851dff"
+      },
+      "chunkId": "4fbd001e45280bacd34efc045b10e672d2ae173a",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/WeaponData.ts": {
+      "mTimestamp": {
+        "mtime": 1794766892616.8435,
+        "uuid": "2f26123c-78d5-41e8-a897-99a56ea880bb"
+      },
+      "chunkId": "dc5c4ee4aa350b4d3761320b6f79eb92a827fd36",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EmitterRuntime.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "2a50bbb96b47fb3d401905c3c5d9f9969acd1132"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Turret.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "178c8bd1cd004883567919ae6d6956802a4f8759"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/FireCooldown.ts": {
+      "mTimestamp": {
+        "mtime": 1794746274637.6975,
+        "uuid": "c7a3f82a-be5e-49ca-b47e-29d39f68c230"
+      },
+      "chunkId": "bdba3508c0c38360b22085f58e7a361c8a04f01d",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretAimSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767789954.881,
+        "uuid": "8dad98eb-c040-46b0-b288-90592addfa58"
+      },
+      "chunkId": "07e8945035765f359e301440ecf4afbf36230a63",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretScheduleSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767780813.629,
+        "uuid": "924a2f0c-ec3d-466d-974c-80db00b3ed02"
+      },
+      "chunkId": "10d1cbf5e0df620bf7c1969ae35b6263d81ee103",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/View/TurretView.ts": {
+      "mTimestamp": {
+        "mtime": 1794767985178.111,
+        "uuid": "7eaef9ae-6e64-4d9e-a4ef-f3bb85e82f87"
+      },
+      "chunkId": "49e63c4c564a5d1b53e6460657bd2d3522c653d3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 61
+            },
+            "end": {
+              "line": 1,
+              "column": 65
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/TurretSpawnSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794767766557.014,
+        "uuid": "421c241f-c35e-4ef9-88b7-227b68eb8b82"
+      },
+      "chunkId": "4ff3a06a9bea8e35ca1071b735668d6418c7aeb8",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Entity/TurretEntity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretEntity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/ViewModel/BattleViewModel.ts": {
+      "mTimestamp": {
+        "mtime": 1794760347847.404,
+        "uuid": "e96e375f-bf37-43a7-9c65-0fa86514f56e"
+      },
+      "chunkId": "2045645f18660cc8ed4a351cbf9ea702e55657d0",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/UI/Battle/ResultPanel.ts": {
+      "mTimestamp": {
+        "mtime": 1794761242449.3848,
+        "uuid": "c0ecfe63-53a3-4abe-932b-d8c343557d28"
+      },
+      "chunkId": "997dc6cb8cdf4c0616f4b70332a67895b443bbc8",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 51
+            },
+            "end": {
+              "line": 1,
+              "column": 55
+            }
+          }
+        },
+        {
+          "value": "../../Battle/BattleEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 29
+            },
+            "end": {
+              "line": 3,
+              "column": 56
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts": {
+      "mTimestamp": {
+        "mtime": 1794766605204.34,
+        "uuid": "26779d1c-03ef-4818-a251-eead65721143"
+      },
+      "chunkId": "e46db12a9b1d86f458167b2fee40e215b43eb1b7",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/WeaponComp.ts": {
+      "mTimestamp": {
+        "mtime": 1794766624645.6958,
+        "uuid": "371963a2-11d9-43a2-8398-7d3b2dbb719e"
+      },
+      "chunkId": "5aa9b7866eb2c3545ec64f941643709fa9bdfc09",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/MoveComp.ts": {
+      "mTimestamp": {
+        "mtime": 1794766639903.0195,
+        "uuid": "0fff28b4-ad5e-4e6b-ae7f-b9ae0603254b"
+      },
+      "chunkId": "a56c8dffe805aa1371267a2103399d3282ceac78",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/ExpComp.ts": {
+      "mTimestamp": {
+        "mtime": 1794766660049.4192,
+        "uuid": "e25883cf-6388-4dd8-a11b-02dd5d788160"
+      },
+      "chunkId": "ff57ec0ccf9d1321bca3bcb211b3dfa9c9a710b0",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/AimComp.ts": {
+      "mTimestamp": {
+        "mtime": 1794766672787.2007,
+        "uuid": "391253ee-7d65-41e9-a818-5455bf2c59d8"
+      },
+      "chunkId": "86aeb750fc4ed6aa5600674131defcf9790e2789",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/PlayerEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794766747419.7566,
+        "uuid": "6c370501-7639-4e73-be72-88e34496dacb"
+      },
+      "chunkId": "9331890c016332a663496d0a92de1abd4e3bcdcb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./Components/HealthComp",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Components/WeaponComp",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Components/ExpComp",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/WeaponComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/ExpComp.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EnemyEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794766771641.325,
+        "uuid": "19383f8c-dcf5-4513-97d3-4ab752179a8f"
+      },
+      "chunkId": "9cc9fdea735a541a5e346f3a08179f93aaedd1e3",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./Components/HealthComp",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Components/WeaponComp",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Components/MoveComp",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 25
+            },
+            "end": {
+              "line": 4,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/WeaponComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/MoveComp.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/BossEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794766797737.2505,
+        "uuid": "168d1a25-d7f9-43e6-8ebc-237e494f326d"
+      },
+      "chunkId": "e0104a3f0f45e8cb4ba983d88c1b0ddf4deaf528",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./Components/HealthComp",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/TurretEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794767416203.9102,
+        "uuid": "8398ead3-d0c2-4ab7-aef7-28dc6eab2fdf"
+      },
+      "chunkId": "3aa79d17a78ba2775f5af92b66a037032af4111f",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./Components/HealthComp",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "./Components/AimComp",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 46
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/HealthComp.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/Components/AimComp.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts": {
+      "mTimestamp": {
+        "mtime": 1794769832156.8784,
+        "uuid": "6b1f1c34-b025-4a3b-83c5-fa6544dfc8e5"
+      },
+      "chunkId": "6fcd7d2103d7bca3b43230b2255027f096b56fe1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts": {
+      "mTimestamp": {
+        "mtime": 1794770663817.668,
+        "uuid": "6d92ff60-d67d-4c5a-8d6b-ea19c1271f02"
+      },
+      "chunkId": "d8ca0b7207837b45c9b3f095f5114ef4ee793ee7",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    }
+  }
+}

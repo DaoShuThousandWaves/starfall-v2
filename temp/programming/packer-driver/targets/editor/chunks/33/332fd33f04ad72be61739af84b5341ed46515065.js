@@ -1,0 +1,124 @@
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+  "use strict";
+
+  var _reporterNs, _cclegacy, BATTLE_EVENT, Bullet, BulletSpawnSystem, _crd;
+
+  function _reportPossibleCrUseOfSystem(extras) {
+    _reporterNs.report("System", "../../Engine/System", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWorld(extras) {
+    _reporterNs.report("World", "../../Engine/World", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBATTLE_EVENT(extras) {
+    _reporterNs.report("BATTLE_EVENT", "../BattleEvents", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBullet(extras) {
+    _reporterNs.report("Bullet", "../Entity/Bullet", _context.meta, extras);
+  }
+
+  _export("BulletSpawnSystem", void 0);
+
+  return {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
+      _cclegacy = _cc.cclegacy;
+    }, function (_unresolved_2) {
+      BATTLE_EVENT = _unresolved_2.BATTLE_EVENT;
+    }, function (_unresolved_3) {
+      Bullet = _unresolved_3.Bullet;
+    }],
+    execute: function () {
+      _crd = true;
+
+      _cclegacy._RF.push({}, "24e20/+5jJOSrRAldlSNYMu", "BulletSpawnSystem", undefined);
+
+      _export("BulletSpawnSystem", BulletSpawnSystem = class BulletSpawnSystem {
+        constructor() {
+          this._world = null;
+        }
+
+        onStart(world) {
+          this._world = world;
+          world.bus.on((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).WEAPON_FIRE, this._onWeaponFire, this);
+        }
+
+        onDestroy(world) {
+          world.bus.off((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).WEAPON_FIRE, this._onWeaponFire, this);
+          this._world = null;
+        } // 事件驱动的，不需要每帧遍历
+
+
+        onTick(world, dt) {// 留空
+        }
+
+        _onWeaponFire(req) {
+          const b = new (_crd && Bullet === void 0 ? (_reportPossibleCrUseOfBullet({
+            error: Error()
+          }), Bullet) : Bullet)();
+          b.x = req.x + req.dirX * 20;
+          b.y = req.y + req.dirY * 20;
+          b.dirX = req.dirX;
+          b.dirY = req.dirY;
+          b.speed = req.bulletSpeed;
+          b.damage = req.bulletDamage;
+          b.isPlayerBullet = req.isPlayerBullet;
+
+          this._world.add(b);
+        }
+
+        _onFire(req) {
+          var _req$spreadCount, _req$spreadAngle;
+
+          const count = (_req$spreadCount = req.spreadCount) != null ? _req$spreadCount : 1;
+          const spreadDeg = (_req$spreadAngle = req.spreadAngle) != null ? _req$spreadAngle : 0;
+
+          if (count <= 1 || spreadDeg <= 0) {
+            this._spawnOne(req.x, req.y, req.dirX, req.dirY, req);
+
+            return;
+          }
+
+          const baseRad = Math.atan2(req.dirY, req.dirX);
+          const totalRad = spreadDeg * Math.PI / 180;
+          const step = totalRad / (count - 1);
+          const start = baseRad - totalRad / 2;
+
+          for (let i = 0; i < count; i++) {
+            const a = start + step * i;
+
+            this._spawnOne(req.x, req.y, Math.cos(a), Math.sin(a), req);
+          }
+        }
+
+        _spawnOne(x, y, dirX, dirY, req) {
+          const b = new (_crd && Bullet === void 0 ? (_reportPossibleCrUseOfBullet({
+            error: Error()
+          }), Bullet) : Bullet)();
+          b.x = x;
+          b.y = y;
+          b.dirX = dirX;
+          b.dirY = dirY;
+          b.speed = req.bulletSpeed;
+          b.damage = req.bulletDamage;
+          b.isPlayerBullet = req.isPlayerBullet;
+
+          this._world.add(b);
+        }
+
+      });
+
+      _cclegacy._RF.pop();
+
+      _crd = false;
+    }
+  };
+});
+//# sourceMappingURL=332fd33f04ad72be61739af84b5341ed46515065.js.map

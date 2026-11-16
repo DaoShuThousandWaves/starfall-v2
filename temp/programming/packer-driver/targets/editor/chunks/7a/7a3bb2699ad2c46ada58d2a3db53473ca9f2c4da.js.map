@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts"],"names":["Bus","EventTarget"],"mappings":";;;+EAGaA,G;;;;;;;;;AAHJC,MAAAA,W,OAAAA,W;;;;;;;;;qBAGID,G,GAAN,MAAMA,GAAN,SAAkBC,WAAlB,CAA6B,E","sourcesContent":["import { EventTarget} from 'cc';\r\n\r\n\r\nexport class Bus extends EventTarget{\r\n\r\n}\r\n\r\n\r\n"]}
