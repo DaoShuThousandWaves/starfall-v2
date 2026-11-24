@@ -25,13 +25,15 @@ export class DamageSystem implements System {
     }
 
     private _onBulletHit(bullet: Bullet, target: Entity): void {
+        if (!target.alive) return;
+        const dmg = bullet.damage;
         this._world.remove(bullet);
 
         const health = target.health;
         if (!health) return;
         if (health.invincibleTimer > 0) return;
 
-        health.hp -= bullet.damage;
+        health.hp -= dmg;
 
         if (target.kind === 'boss') {
             this._world.bus.emit(BATTLE_EVENT.BOSS_HP_CHANGED, health.hp / health.maxHp);

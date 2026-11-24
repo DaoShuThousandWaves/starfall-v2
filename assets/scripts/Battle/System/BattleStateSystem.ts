@@ -25,7 +25,6 @@ export class BattleStateSystem implements System {
         world.bus.on(BATTLE_EVENT.LEVEL_CLEAR, this._onLevelClear, this);
         world.bus.on(BATTLE_EVENT.PAUSE_TOGGLE_REQUEST, this._onPauseToggle, this);
         world.bus.on(BATTLE_EVENT.UPGRADE_FINISHED, this._onUpgradeFinished, this);
-        world.bus.emit(BATTLE_EVENT.GAME_STATE_CHANGED, this._state);
     }
 
     onDestroy(world: World): void {
@@ -63,10 +62,6 @@ export class BattleStateSystem implements System {
 
     private _onCardsDrawn(): void {
         if (this._state === 'game_over' || this._state === 'level_clear') return;
-
-        // 兜底：即使WaveSystem信号迟到，这里也直接拦截
-        const hasEnemies = this._world.hasAny('enemy') || this._world.hasAny('boss');
-        if (!hasEnemies) return; // 不进入upgrading状态
 
         this._changeState('upgrading');
     }

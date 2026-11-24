@@ -2,6 +2,7 @@ import { GameData } from '../../Core/Data/GameData';
 import type { Entity } from '../../Engine/Entity';
 import type { System } from '../../Engine/System';
 import type { World } from '../../Engine/World';
+import { BATTLE_EVENT } from '../BattleEvents';
 
 
 
@@ -22,6 +23,10 @@ export class OutOfBoundsSystem implements System{
     private _checkKind(world: World, kind: string, halfW: number, halfH: number): void {
         for (const e of world.query<Entity>(kind)) {
             if (this._isOutOfBounds(e, halfW, halfH)) {
+                if(e.kind === 'enemy'){
+                    world.bus.emit(BATTLE_EVENT.ENEMY_ESCAPED);
+                }
+               
                 world.remove(e);
             }
         }

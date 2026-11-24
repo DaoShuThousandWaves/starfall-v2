@@ -1,10 +1,10 @@
-import { view} from 'cc';
+import { view } from 'cc';
 
 
-
-export class GameData  {
+export class GameData {
     public static viewW: number = 720;
     public static viewH: number = 1280;
+
 
     public static init(): void {
         const size = view.getVisibleSize();
@@ -12,5 +12,3 @@ export class GameData  {
         this.viewH = size.height;
     }
 }
-
-

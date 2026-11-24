@@ -5,7 +5,8 @@
         "version": "Windows 10 Pro"
     },
     "sceneListMap": {
-        "77cf1abd-9c99-45b5-b768-81706fff2b1a": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\test.scene"
+        "77cf1abd-9c99-45b5-b768-81706fff2b1a": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\test.scene",
+        "f0aa2601-aee0-4e17-8317-fb9b924f24fd": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\Hall.scene"
     },
     "deviceMd5": "88e5e7660adf202c569c29cc964088e9"
 }

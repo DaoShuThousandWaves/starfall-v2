@@ -20,6 +20,7 @@ export const BATTLE_EVENT = {
     // ==========================================
     BULLET_HIT: 'bullet-hit',                       // (bullet: Bullet, target: Plane | Turret)
     ENEMY_KILLED: 'enemy-killed',                   // (enemy: Plane)
+    ENEMY_ESCAPED:'ENEMY_ESCAPED',
     BOSS_KILLED: 'boss-killed',                     // (boss: Boss)
     TURRET_KILLED: 'turret-killed',                 // (turret: Turret)
     PLAYER_DIED: 'player-died',                     // ()

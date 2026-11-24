@@ -30,33 +30,11 @@ export class EnemySpawnSystem implements System {
 
     private _onSpawnEnemy(enemyType: EnemyType, spawnSide: SpawnSide): void {
         const e = this._world.acquire('enemy', () => new EnemyEntity());
-        this._resetEnemy(e);
         this._setSpawnPosition(e, spawnSide);
         e.move.originX = e.x;
         e.move.originY = e.y;
         this._configureEnemy(e, enemyType, spawnSide);
         this._world.add(e);
-    }
-
-    private _resetEnemy(e: EnemyEntity): void {
-        e.alive = true;
-        // health
-        e.health.hp = 100;
-        e.health.maxHp = 100;
-        e.health.invincibleTimer = 0;
-        e.health.hitInvincibleDuration = 0;
-        // move
-        e.move.pattern = 'none';
-        e.move.dirX = 0;
-        e.move.dirY = 0;
-        e.move.speed = 100;
-        e.move.originX = 0;
-        e.move.originY = 0;
-        e.move.phase = 0;
-        e.move.frequency = 3;
-        e.move.amplitude = 80;
-        // weapon：清空，_configureEnemy 会重新 push
-        e.weapon.weapons.length = 0;
     }
 
     private _setSpawnPosition(e: EnemyEntity, side: SpawnSide): void {

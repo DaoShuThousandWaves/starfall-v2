@@ -1,0 +1,1 @@
+{"version":3,"sources":["file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Rules/PlaceRule.ts"],"names":["canPlace","gridX","gridY"],"mappings":";;;;;AAGO,WAASA,QAAT,CAAkBC,KAAlB,EAAiCC,KAAjC,EAA+C,CAGrD;;sBAHeF,Q","sourcesContent":["\r\n\r\n\r\nexport function canPlace(gridX: number, gridY: number){\r\n\r\n\r\n}\r\n\r\n\r\n"]}

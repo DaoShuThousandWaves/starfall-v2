@@ -8,7 +8,6 @@ import type { Bullet } from "../Entity/Bullet";
 
 
 interface GridCell {
-    bullets: Bullet[];
     planes: Entity[];
     dirty: boolean;
 }
@@ -28,6 +27,11 @@ export class CombatSystem implements System {
     private _cells: GridCell[][] = [];
     private _dirtyCells: GridCell[] = [];
 
+    private _minCol = 0;
+    private _maxCol = 0;
+    private _minRow = 0;
+    private _maxRow = 0;
+
     onStart(world: World): void {
         this._halfW = GameData.viewW / 2;
         this._halfH = GameData.viewH / 2;
@@ -39,7 +43,7 @@ export class CombatSystem implements System {
         for (let c = 0; c < this._cols; c++) {
             this._cells[c] = [];
             for (let r = 0; r < this._rows; r++) {
-                this._cells[c][r] = { bullets: [], planes: [], dirty: false };
+                this._cells[c][r] = {  planes: [], dirty: false };
             }
         }
     }
@@ -49,7 +53,6 @@ export class CombatSystem implements System {
         // 1. 清理上一帧用过的 cell（只清 dirty 的）
         for (let i = 0; i < this._dirtyCells.length; i++) {
             const cell = this._dirtyCells[i];
-            cell.bullets.length = 0;
             cell.planes.length = 0;
             cell.dirty = false;
         }
@@ -63,25 +66,13 @@ export class CombatSystem implements System {
 
         //3.检测子弹碰撞
         for (const bullet of world.query<Bullet>('bullet')) {
-            this._insertBullet(bullet);
             const targetFaction = bullet.faction === 'player' ? 'enemy' : 'player';
-            this._detectBulletCollision(bullet, targetFaction, 
-                (target) => {world.bus.emit(BATTLE_EVENT.BULLET_HIT,bullet,target);}
-            );
+            const target = this._detectBulletCollision(bullet, targetFaction);
+            if (target) world.bus.emit(BATTLE_EVENT.BULLET_HIT, bullet, target);
         }
 
    }
 
-    private _insertBullet(bullet: Bullet): void{
-        const c = Math.floor((bullet.x + this._halfW) / this._cellSize);
-        const r = Math.floor((bullet.y + this._halfH) / this._cellSize);
-        if(!this._isValidCell(c,r)){
-            return;
-        }
-        const cell = this._cells[c][r];
-        cell.bullets.push(bullet);
-        this._markDirty(cell);
-    }
 
     private _insertAllPlanes(world: World, kind: string): void{
         for(const plane of world.query<Entity>(kind)){
@@ -89,23 +80,28 @@ export class CombatSystem implements System {
         }
     }
 
+    private _calcCellRange(cx: number, cy: number, halfW: number, halfH: number): void {
+        this._minCol = Math.floor((cx - halfW + this._halfW) / this._cellSize);
+        this._maxCol = Math.floor((cx + halfW + this._halfW) / this._cellSize);
+        this._minRow = Math.floor((cy - halfH + this._halfH) / this._cellSize);
+        this._maxRow = Math.floor((cy + halfH + this._halfH) / this._cellSize);
+    }
+
     private _insertPlane(plane: Entity): void {
         if (plane.health && plane.health.hp <= 0) return;
         const radius = plane.collisionRadius;
-        const minC = Math.floor((plane.x - radius + this._halfW) / this._cellSize);
-        const maxC = Math.floor((plane.x + radius + this._halfW) / this._cellSize);
-        const minR = Math.floor((plane.y - radius + this._halfH) / this._cellSize);
-        const maxR = Math.floor((plane.y + radius + this._halfH) / this._cellSize);
+        this._calcCellRange(plane.x, plane.y, radius, radius);
 
-        for (let c = minC; c <= maxC; c++) {
-            for (let r = minR; r <= maxR; r++) {
-                if (!this._isValidCell(c, r)) continue;
-                const cell = this._cells[c][r];
+        for (let col = this._minCol; col <= this._maxCol; col++) {
+            for (let row = this._minRow; row <= this._maxRow; row++) {
+                if (!this._isValidCell(col, row)) continue;
+                const cell = this._cells[col][row];
                 cell.planes.push(plane);
                 this._markDirty(cell);
             }
         }
     }
+    
 
     private _markDirty(cell: GridCell): void{
         if(!cell.dirty){
@@ -114,31 +110,25 @@ export class CombatSystem implements System {
         }
     }
 
-    private _detectBulletCollision(
-        bullet: Bullet, 
-        targetFaction: 'player' | 'enemy',
-        onHit: (target: Entity) => void): void {
+    private _detectBulletCollision(bullet: Bullet, targetFaction: 'player' | 'enemy',): Entity | null {
 
-        const c = Math.floor((bullet.x + this._halfW) / this._cellSize);
-        const r = Math.floor((bullet.y + this._halfH) / this._cellSize);
+        const rad = bullet.collisionRadius;
+        this._calcCellRange(bullet.x, bullet.y, rad, rad);
+    
 
-        for (let dc = -1; dc <= 1; dc++) {
-            for (let dr = -1; dr <= 1; dr++) {
-                const cc = c + dc;
-                const rr = r + dr;
-                if (!this._isValidCell(cc, rr)) continue;
-                const cell = this._cells[cc][rr];
-                for (let i = 0; i < cell.planes.length; i++) {
-                    const plane = cell.planes[i];
+        for (let col = this._minCol; col <= this._maxCol; col++) {
+            for (let row = this._minRow; row <= this._maxRow; row++) {
+                if (!this._isValidCell(col, row)) continue;
+                const planes = this._cells[col][row].planes;
+                for (let i = 0; i < planes.length; i++) {
+                    const plane = planes[i];
                     if (plane.health && plane.health.hp <= 0) continue;
                     if (plane.faction !== targetFaction) continue;
-                    if (this._isCircleOverlap(bullet, plane)) {
-                        onHit(plane);
-                        return;   // 一颗子弹最多命中一个目标
-                    }
+                    if (this._isCircleOverlap(bullet, plane)) return plane;
                 }
             }
         }
+        return null;
     }
 
     private _isCircleOverlap(body1 : CircleBody, body2: CircleBody): boolean{

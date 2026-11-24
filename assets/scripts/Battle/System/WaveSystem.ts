@@ -2,7 +2,7 @@ import type { System } from '../../Engine/System';
 import type { World } from '../../Engine/World';
 import { BATTLE_EVENT } from '../BattleEvents';
 import { LEVELS, type LevelConfigData, type EnemyGroupConfig } from '../Config/LevelConfig';
-import type { GameState } from './BattleStateSystem';
+
 
 type WaveState = 'idle' | 'running' | 'finished';
 
@@ -34,20 +34,20 @@ export class WaveSystem implements System {
     onStart(world: World): void {
         this._world = world;
         this._level = LEVELS['level_1'];
-        world.bus.on(BATTLE_EVENT.GAME_STATE_CHANGED, this._onStateChanged, this);
         world.bus.on(BATTLE_EVENT.ENEMY_KILLED, this._checkClear, this);
+        world.bus.on(BATTLE_EVENT.ENEMY_ESCAPED,this._checkClear,this);
         world.bus.on(BATTLE_EVENT.BOSS_KILLED, this._checkClear, this);
-        this._state = 'idle';
+        this.begin();
     }
 
     onDestroy(world: World): void {
-        world.bus.off(BATTLE_EVENT.GAME_STATE_CHANGED, this._onStateChanged, this);
         world.bus.off(BATTLE_EVENT.ENEMY_KILLED, this._checkClear, this);
+        world.bus.off(BATTLE_EVENT.ENEMY_ESCAPED,this._checkClear,this);
         world.bus.off(BATTLE_EVENT.BOSS_KILLED, this._checkClear, this);
         this._world = null!;
     }
 
-    /** 由 BattleScene 在 tick.begin 之后调 */
+  
     public begin(): void {
         if (this._state !== 'idle') return;
         if (!this._level || this._level.waves.length === 0) {
@@ -101,8 +101,9 @@ export class WaveSystem implements System {
 
             if (!g.started) {
                 g.timer -= dt;
-                if (g.timer <= 0) g.started = true;
-                else continue;
+                if (g.timer > 0) continue; // 还没到时间，跳过
+                g.started = true;
+                g.timer = 0; // 保证归零
             }else{
                 g.timer -= dt;
             }
@@ -143,18 +144,17 @@ export class WaveSystem implements System {
         }
     }
 
-    private _onStateChanged(state: GameState): void {
-        if (state === 'game_over' || state === 'level_clear') {
-            this._state = 'finished';
-        }
-    }
+
 
 
     private _checkClear(): void {
         if (this._state !== 'running') return;
 
-        const allSpawned = this._runningWaves.every(w => w.started && w.groups.length === 0);
-        if (!allSpawned) return;
+        for (const w of this._runningWaves) {
+            if (!w.started) return;
+            if (w.groups.length > 0) return;
+            if (w.bossId && !w.bossSpawned) return;   
+        }
 
         const hasEnemies = this._world.hasAny('enemy') || this._world.hasAny('boss');
         if (!hasEnemies) {

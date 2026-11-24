@@ -1,0 +1,157 @@
+System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2"], function (_export, _context) {
+  "use strict";
+
+  var _reporterNs, _cclegacy, BATTLE_EVENT, CARD_POOL, CardSystem, _crd;
+
+  function _reportPossibleCrUseOfSystem(extras) {
+    _reporterNs.report("System", "../../Engine/System", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfWorld(extras) {
+    _reporterNs.report("World", "../../Engine/World", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfPlayerEntity(extras) {
+    _reporterNs.report("PlayerEntity", "../Entity/PlayerEntity", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfBATTLE_EVENT(extras) {
+    _reporterNs.report("BATTLE_EVENT", "../BattleEvents", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCARD_POOL(extras) {
+    _reporterNs.report("CARD_POOL", "../Config/CardConfig", _context.meta, extras);
+  }
+
+  function _reportPossibleCrUseOfCardConfigData(extras) {
+    _reporterNs.report("CardConfigData", "../Config/CardConfig", _context.meta, extras);
+  }
+
+  _export("CardSystem", void 0);
+
+  return {
+    setters: [function (_unresolved_) {
+      _reporterNs = _unresolved_;
+    }, function (_cc) {
+      _cclegacy = _cc.cclegacy;
+    }, function (_unresolved_2) {
+      BATTLE_EVENT = _unresolved_2.BATTLE_EVENT;
+    }, function (_unresolved_3) {
+      CARD_POOL = _unresolved_3.CARD_POOL;
+    }],
+    execute: function () {
+      _crd = true;
+
+      _cclegacy._RF.push({}, "bfa8a3VOAFHO5G1KsUQf7sk", "CardSystem", undefined);
+
+      _export("CardSystem", CardSystem = class CardSystem {
+        constructor() {
+          this._world = null;
+          this._pendingUpgradeCount = 0;
+        }
+
+        onStart(world) {
+          this._world = world;
+          world.bus.on((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).LEVEL_UP, this._onLevelUp, this);
+          world.bus.on((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).CARD_SELECTED, this._onCardSelected, this);
+        }
+
+        onDestroy(world) {
+          world.bus.off((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).LEVEL_UP, this._onLevelUp, this);
+          world.bus.off((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).CARD_SELECTED, this._onCardSelected, this);
+          this._world = null;
+        }
+
+        onTick(_world, _dt) {}
+
+        _onLevelUp(levelsGained) {
+          this._pendingUpgradeCount += levelsGained;
+
+          this._tryDraw();
+        }
+
+        _onCardSelected(_card) {
+          this._pendingUpgradeCount--;
+
+          if (this._pendingUpgradeCount > 0) {
+            this._tryDraw();
+          } else {
+            this._world.bus.emit((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+              error: Error()
+            }), BATTLE_EVENT) : BATTLE_EVENT).UPGRADE_FINISHED);
+          }
+        }
+
+        _tryDraw() {
+          var player = this._findPlayer();
+
+          if (!player) {
+            this._pendingUpgradeCount = 0;
+
+            this._world.bus.emit((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+              error: Error()
+            }), BATTLE_EVENT) : BATTLE_EVENT).UPGRADE_FINISHED);
+
+            return;
+          }
+
+          var cards = this._drawCards(player, 3);
+
+          if (cards.length === 0) {
+            this._pendingUpgradeCount = 0;
+
+            this._world.bus.emit((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+              error: Error()
+            }), BATTLE_EVENT) : BATTLE_EVENT).UPGRADE_FINISHED);
+
+            return;
+          }
+
+          this._world.bus.emit((_crd && BATTLE_EVENT === void 0 ? (_reportPossibleCrUseOfBATTLE_EVENT({
+            error: Error()
+          }), BATTLE_EVENT) : BATTLE_EVENT).CARDS_DRAWN, cards);
+        }
+
+        _drawCards(player, count) {
+          var available = (_crd && CARD_POOL === void 0 ? (_reportPossibleCrUseOfCARD_POOL({
+            error: Error()
+          }), CARD_POOL) : CARD_POOL).filter(card => {
+            var _player$exp$cardStack, _card$maxStacks;
+
+            var stacks = (_player$exp$cardStack = player.exp.cardStacks.get(card.id)) != null ? _player$exp$cardStack : 0;
+            var max = (_card$maxStacks = card.maxStacks) != null ? _card$maxStacks : Infinity;
+            return stacks < max;
+          });
+          var pool = available.slice();
+
+          for (var i = pool.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [pool[i], pool[j]] = [pool[j], pool[i]];
+          }
+
+          return pool.slice(0, count);
+        }
+
+        _findPlayer() {
+          for (var p of this._world.query('player')) return p;
+
+          return null;
+        }
+
+      });
+
+      _cclegacy._RF.pop();
+
+      _crd = false;
+    }
+  };
+});
+//# sourceMappingURL=c5e505f5c32271fb0d45fb02deaf6ac0d67ae059.js.map

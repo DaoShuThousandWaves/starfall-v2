@@ -11,26 +11,28 @@ export class FixedTick extends Component {
     private _accumulator = 0;
     private _fixedDt = 1 / 60;
     private _running = false;
-    private _started = false; 
+   
 
     public setup(world: World, views: ViewRegistry, hz: number = 60): void {
         this._world = world;
         this._views = views;
-        this._fixedDt = 1 / hz;
-        this._started = false;     
+        this._fixedDt = 1 / hz;   
     }
 
     public begin(): void {
         this._accumulator = 0; 
         this._running = true;
-        if (!this._started) {             
-            this._started = true;
-            this._world.start();
-        }
+        this._world.start();
+   
     }
 
     public stop(): void {
         this._running = false;
+        this._accumulator = 0;
+    }
+
+    public resume(): void{
+        this._running = true;
     }
 
     get isRunning(): boolean {   

@@ -41,6 +41,7 @@ export class World {
     }
 
     public remove(e: Entity): void {
+        if (!e.alive) return;
         e.alive = false;
         this._buckets.get(e.kind)?.delete(e);
         this._views.detach(e);

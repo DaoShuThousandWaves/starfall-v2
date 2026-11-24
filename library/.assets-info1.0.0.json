@@ -5,7 +5,7 @@
       "time": 1794566046974.4143
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts": {
-      "time": 1794633834883.328,
+      "time": 1795069019739.0237,
       "uuid": "b180ad9f-63cb-4176-8ba9-30ce556c5180"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine.meta": {
@@ -19,7 +19,7 @@
       "time": 1794566066173.696
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core": {
-      "time": 1794769791333.438,
+      "time": 1795069128408.9883,
       "uuid": "8f06e7f7-a179-4000-9dc5-8380aad4fc84"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\UI.meta": {
@@ -36,13 +36,6 @@
       "time": 1794566089022.9739,
       "uuid": "9bc2d96b-5f35-443e-9af1-020c6db9b91a"
     },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall.meta": {
-      "time": 1794566116369.6006
-    },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall": {
-      "time": 1794566116365.4526,
-      "uuid": "f595fd8b-3acb-4904-b67f-7fdb9ba6b3ea"
-    },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle.meta": {
       "time": 1794566127845.6216
     },
@@ -54,7 +47,7 @@
       "time": 1794566156958.3901
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\Entity.ts": {
-      "time": 1794768562665.8389,
+      "time": 1794811218355.7048,
       "uuid": "2a2f81e9-c2fc-478c-b33b-4707675bbec9"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\Bus.ts.meta": {
@@ -68,15 +61,8 @@
       "time": 1794566423561.494
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene": {
-      "time": 1794566441972.4692,
+      "time": 1795069023800.0837,
       "uuid": "e7824408-b935-400c-bcbf-e5f31686d936"
-    },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\test.scene.meta": {
-      "time": 1794566441975.7107
-    },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\test.scene": {
-      "time": 1794770778581.7498,
-      "uuid": "77cf1abd-9c99-45b5-b768-81706fff2b1a"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\System.ts.meta": {
       "time": 1794567292236.2087
@@ -89,7 +75,7 @@
       "time": 1794567687004.114
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\World.ts": {
-      "time": 1794770467001.574,
+      "time": 1795075283345.0808,
       "uuid": "dfbb144b-b06c-4f94-8edb-f789e51e115b"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\ViewRegistry.ts.meta": {
@@ -103,7 +89,7 @@
       "time": 1794575126275.7366
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\Tick.ts": {
-      "time": 1794764885799.2422,
+      "time": 1795075993547.7969,
       "uuid": "d9b7a528-77fa-4a8a-bae1-565e7aa626e1"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity.meta": {
@@ -159,14 +145,14 @@
       "time": 1794577194784.1953
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core\\Data\\GameData.ts": {
-      "time": 1794577229337.527,
+      "time": 1795069640842.3667,
       "uuid": "fb5921d5-e96f-4dd5-9d00-bdfa1c32c471"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\OutOfBoundsSystem.ts.meta": {
       "time": 1794577249329.0688
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\OutOfBoundsSystem.ts": {
-      "time": 1794635249013.5417,
+      "time": 1795075455092.1804,
       "uuid": "9c042697-f62b-47ec-91b5-a8e8e9b27d37"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Config.meta": {
@@ -187,7 +173,7 @@
       "time": 1794578358762.6824
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\BattleEvents.ts": {
-      "time": 1794768862699.716,
+      "time": 1795075333738.127,
       "uuid": "916eff54-5058-49e0-88b7-d23716ca5af4"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\FireSystem.ts.meta": {
@@ -208,7 +194,7 @@
       "time": 1794579704231.7522
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\BattleInputHandler.ts": {
-      "time": 1794730326963.9275,
+      "time": 1795074851650.9126,
       "uuid": "21d45283-1e9d-4fc5-8e4c-f70670fb41b0"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\PlayerControlSystem.ts.meta": {
@@ -222,14 +208,14 @@
       "time": 1794580820142.295
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\CombatSystem.ts": {
-      "time": 1794769179770.598,
+      "time": 1795076662291.8884,
       "uuid": "be5fe68c-92d9-47ad-bad5-79fddc94ee05"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\DamageSystem.ts.meta": {
       "time": 1794583593309.3694
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\DamageSystem.ts": {
-      "time": 1794767261652.4739,
+      "time": 1795075226724.3794,
       "uuid": "fc21dab5-45b9-40ac-9a37-88b134a897bc"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\View\\EnemyView.ts.meta": {
@@ -243,7 +229,7 @@
       "time": 1794584794088.764
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\EnemySpawnSystem.ts": {
-      "time": 1794770202383.0994,
+      "time": 1795075035964.956,
       "uuid": "eea5ab7f-f078-43c8-933e-5f35e2d9adc2"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\BulletSpawnSystem.ts.meta": {
@@ -257,14 +243,14 @@
       "time": 1794586708303.7466
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\BattleStateSystem.ts": {
-      "time": 1794768790819.2593,
+      "time": 1795070437166.1777,
       "uuid": "5080bfe7-a291-44ed-900b-2af99709053e"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\BattleScene.ts.meta": {
       "time": 1794586874607.6292
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\BattleScene.ts": {
-      "time": 1794770777706.4275,
+      "time": 1795076891857.941,
       "uuid": "55357677-2153-4564-8237-c8964591b343"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\UI\\Common.meta": {
@@ -280,13 +266,6 @@
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\UI\\Common\\PauseButton.ts": {
       "time": 1794762793873.1409,
       "uuid": "0486da40-6570-4fa2-b531-85bea03c3ce5"
-    },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\repomix-output.xml.meta": {
-      "time": 1794633834893.479
-    },
-    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\repomix-output.xml": {
-      "time": 1794769706550.183,
-      "uuid": "2010aca7-75c2-46f7-86c9-f6155cafd2ad"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Config\\BossConfig.ts.meta": {
       "time": 1794635637918.1562
@@ -348,7 +327,7 @@
       "time": 1794734483134.398
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Config\\LevelConfig.ts": {
-      "time": 1794738577373.5388,
+      "time": 1795071688593.2678,
       "uuid": "ec853638-ba8d-45cc-80e3-5e127612dcdb"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Config\\ExpConfig.ts.meta": {
@@ -383,7 +362,7 @@
       "time": 1794736320391.172
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\CardSystem.ts": {
-      "time": 1794767824824.7383,
+      "time": 1795072961983.4495,
       "uuid": "bfa8add5-3801-473b-91b5-2ac5107fbb24"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\UI\\Battle\\UpgradePanel.ts.meta": {
@@ -397,7 +376,7 @@
       "time": 1794738178778.2568
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\System\\WaveSystem.ts": {
-      "time": 1794768967506.2583,
+      "time": 1795075498074.8462,
       "uuid": "348e372b-1372-497c-ac4c-823394849343"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\UI\\Battle\\PlayerHealthUI.ts.meta": {
@@ -530,21 +509,21 @@
       "time": 1794766731649.0774
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\PlayerEntity.ts": {
-      "time": 1794766747419.7566,
+      "time": 1794810604612.2527,
       "uuid": "6c370501-7639-4e73-be72-88e34496dacb"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\EnemyEntity.ts.meta": {
       "time": 1794766760484.6892
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\EnemyEntity.ts": {
-      "time": 1794766771641.325,
+      "time": 1795072685717.4648,
       "uuid": "19383f8c-dcf5-4513-97d3-4ab752179a8f"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\BossEntity.ts.meta": {
       "time": 1794766782774.609
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\BossEntity.ts": {
-      "time": 1794766797737.2505,
+      "time": 1794810594289.1494,
       "uuid": "168d1a25-d7f9-43e6-8ebc-237e494f326d"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\TurretEntity.ts.meta": {
@@ -565,7 +544,7 @@
       "time": 1794769800625.075
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core\\Pool\\EntityPool.ts": {
-      "time": 1794769832156.8784,
+      "time": 1795075009048.9346,
       "uuid": "6b1f1c34-b025-4a3b-83c5-fa6544dfc8e5"
     },
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\ViewPool.ts.meta": {
@@ -574,6 +553,41 @@
     "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Engine\\ViewPool.ts": {
       "time": 1794770663817.668,
       "uuid": "6d92ff60-d67d-4c5a-8d6b-ea19c1271f02"
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\Battle.scene.meta": {
+      "time": 1794566441975.7107
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\Battle.scene": {
+      "time": 1795077223655.3335,
+      "uuid": "77cf1abd-9c99-45b5-b768-81706fff2b1a"
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\repomix-output.xml.meta": {
+      "time": 1794812999470.7073
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\repomix-output.xml": {
+      "time": 1795072095134.0574,
+      "uuid": "72e1db12-3bc2-490e-8b18-fb7562bb364e"
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\Prefabs.meta": {
+      "time": 1794837486344.0237
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\Prefabs": {
+      "time": 1794837892710.4585,
+      "uuid": "018ed548-0ab2-4ef5-b03e-a418003c0014"
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\textures.meta": {
+      "time": 1794837669503.9646
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\textures": {
+      "time": 1794837678444.613,
+      "uuid": "35c1c1c8-d88d-4c6b-9419-d6fdb2adfdfa"
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\textures\\grid.png.meta": {
+      "time": 1794837678483.0789
+    },
+    "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\textures\\grid.png": {
+      "time": 1794324248140.361,
+      "uuid": "45a80b7e-e71f-4775-889f-b5de80451fe4"
     }
   },
   "missing": {
@@ -651,6 +665,251 @@
       "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Battle\\Entity\\Boss.ts",
       "time": 1794745166028.146,
       "removeTime": 1794766857103
+    },
+    "2010aca7-75c2-46f7-86c9-f6155cafd2ad": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\repomix-output.xml",
+      "time": 1794769706550.183,
+      "removeTime": 1794809938021
+    },
+    "77cf1abd-9c99-45b5-b768-81706fff2b1a": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\test.scene",
+      "time": 1794810401619.5083,
+      "removeTime": 1794810415349
+    },
+    "fbf08bef-bda8-4d83-a1e5-03828e12991a": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\HallInputSystem.ts",
+      "time": 1794828086589.1423,
+      "removeTime": 1794828664031
+    },
+    "aa4da92d-eb4d-457b-be52-bdb90c1446a5": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\GridSystem.ts",
+      "time": 1794829644715.946,
+      "removeTime": 1794830293366
+    },
+    "628f8103-73c9-4bff-9ca2-8b2c47d3d03e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Data\\GhostState.ts",
+      "time": 1794827243658.066,
+      "removeTime": 1794832425336
+    },
+    "49f90bfb-b9f0-4ca3-8b4b-300ce3ef36a8": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Prefabs\\GridView.prefab",
+      "time": 1794837705828.63,
+      "removeTime": 1794837892724
+    },
+    "018ed548-0ab2-4ef5-b03e-a418003c0014": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Prefabs",
+      "time": 1794837892710.4585,
+      "removeTime": 1794837929837
+    },
+    "35c1c1c8-d88d-4c6b-9419-d6fdb2adfdfa": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\textures",
+      "time": 1794837678444.613,
+      "removeTime": 1794837931944
+    },
+    "45a80b7e-e71f-4775-889f-b5de80451fe4": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\textures\\grid.png",
+      "time": 1794324248140.361,
+      "removeTime": 1794837931944
+    },
+    "f595fd8b-3acb-4904-b67f-7fdb9ba6b3ea": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall",
+      "time": 1794998646772.4587,
+      "removeTime": 1795069019753
+    },
+    "807fe9f6-995f-420e-b1d4-dd58ee1c12f0": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Entity",
+      "time": 1794831444015.9934,
+      "removeTime": 1795069019753
+    },
+    "a488d229-0435-463c-8f68-6430beb2c8cf": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System",
+      "time": 1794989538348.9878,
+      "removeTime": 1795069019753
+    },
+    "05d84b89-a96f-4ef3-ba2b-74cc2664501e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View",
+      "time": 1794998710193.809,
+      "removeTime": 1795069019753
+    },
+    "7e2d9f2c-94ac-4923-b678-07c297404d7e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\ViewModel",
+      "time": 1794810759019.932,
+      "removeTime": 1795069019753
+    },
+    "46d85123-5380-41b7-b379-4971cf3de3d4": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Config",
+      "time": 1794815583080.1367,
+      "removeTime": 1795069019753
+    },
+    "0249d547-692c-40a5-90eb-0b8cf5cc47d3": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Entity\\BuildingEntity.ts",
+      "time": 1794833557768.7559,
+      "removeTime": 1795069019753
+    },
+    "7810f683-256f-4064-b6d6-ce8342fd4a8e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\BuildSystem.ts",
+      "time": 1794924449909.4033,
+      "removeTime": 1795069019753
+    },
+    "f02f63cb-b4e5-4111-857c-a164f67ca12e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\EconomySystem.ts",
+      "time": 1794815944245.511,
+      "removeTime": 1795069019753
+    },
+    "0f9d27ed-edb8-41ed-8987-6dbe110ba90e": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\ProduceSystem.ts",
+      "time": 1794833566470.5847,
+      "removeTime": 1795069019753
+    },
+    "ba5358c5-302b-48e3-8b3c-2ddbc5162eca": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View\\GridView.ts",
+      "time": 1794908993212.5146,
+      "removeTime": 1795069019753
+    },
+    "a5f79735-de48-4799-97f3-b36a367627ae": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View\\BuildingView.ts",
+      "time": 1794833695186.5544,
+      "removeTime": 1795069019753
+    },
+    "07f5a8dc-4890-41e1-a9c9-5453753ae91d": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\ViewModel\\HallViewModel.ts",
+      "time": 1794816773689.9734,
+      "removeTime": 1795069019753
+    },
+    "4e7f141b-d487-464f-8846-0055c4d11796": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Config\\BuildingConfig.ts",
+      "time": 1794813163133.7192,
+      "removeTime": 1795069019753
+    },
+    "d3b6a81b-d88a-4ac6-9a76-840888ae2c23": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\HallEvents.ts",
+      "time": 1794988345239.7622,
+      "removeTime": 1795069019753
+    },
+    "4027b3f5-bad5-4492-bbd6-d45f2012e301": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\HallScene.ts",
+      "time": 1794929964599.8003,
+      "removeTime": 1795069019753
+    },
+    "7e424ea8-8ef7-4e97-a8d2-5d6451b8e490": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\UpgradeSystem.ts",
+      "time": 1794813819152.109,
+      "removeTime": 1795069019753
+    },
+    "31c3daa9-8150-4243-bb78-b422333ed9e6": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Config\\SynergyConfig.ts",
+      "time": 1794814363245.4802,
+      "removeTime": 1795069019753
+    },
+    "3e728e42-a89a-4842-8492-0b40bb140347": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\SynergySystem.ts",
+      "time": 1794814681655.7114,
+      "removeTime": 1795069019753
+    },
+    "08637cc4-0275-4bac-9392-d26e605c9dfa": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Config\\QuestConfig.ts",
+      "time": 1794814719389.785,
+      "removeTime": 1795069019753
+    },
+    "5d82d559-1f89-497b-9e14-23c431c497ed": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\QuestSystem.ts",
+      "time": 1794814766638.8733,
+      "removeTime": 1795069019753
+    },
+    "3e239969-2710-4427-8b74-59bc83dc7267": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\SettlementSystem.ts",
+      "time": 1794814949407.6746,
+      "removeTime": 1795069019753
+    },
+    "972a361a-3d42-4e01-8171-c328c537b3fb": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Config\\GridConfig.ts",
+      "time": 1795000444027.0022,
+      "removeTime": 1795069019753
+    },
+    "977b233e-234b-4abc-89dd-8aec33e1ce67": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\MonthClockSystem.ts",
+      "time": 1794816154995.6582,
+      "removeTime": 1795069019753
+    },
+    "f19a573c-9209-47ff-af70-0dc7240a3f1a": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View\\GhostView.ts",
+      "time": 1794914676495.6064,
+      "removeTime": 1795069019753
+    },
+    "42f3bee7-30b0-4639-9df9-fe687096b6f1": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\GhostSystem.ts",
+      "time": 1794915977619.0518,
+      "removeTime": 1795069019753
+    },
+    "736918d3-35a3-484d-9a2a-542ae9c652d2": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Data",
+      "time": 1794832425325.0732,
+      "removeTime": 1795069019753
+    },
+    "ce3d249f-c466-45c2-a365-8eab22008ccf": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\HallInputHandler.ts",
+      "time": 1794988903599.868,
+      "removeTime": 1795069019753
+    },
+    "fa67821b-3712-42db-a10f-093a89090c9b": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Data\\GridMap.ts",
+      "time": 1794990719662.6875,
+      "removeTime": 1795069019753
+    },
+    "9470f2a7-6429-468b-be69-4ee7959dcfae": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Entity\\GhostEntity.ts",
+      "time": 1794831784030.204,
+      "removeTime": 1795069019753
+    },
+    "c0c94804-ca1d-4dbe-afe5-cd3c36fffdf6": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\GridSyncSystem.ts",
+      "time": 1794833238130.1191,
+      "removeTime": 1795069019753
+    },
+    "360803ab-4995-4d69-8949-47e43db24705": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View\\WorldViewController.ts",
+      "time": 1794989021227.563,
+      "removeTime": 1795069019753
+    },
+    "1a7f4bf9-f70b-481c-ad67-b38059fa2198": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\System\\HallClickSystem.ts",
+      "time": 1794992995757.2222,
+      "removeTime": 1795069019753
+    },
+    "31e729d6-e5d0-4c1d-b0f0-81577cca2d8f": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Rules",
+      "time": 1794998656542.7507,
+      "removeTime": 1795069019753
+    },
+    "ceb97acb-ba99-4464-9108-9a0561e7c238": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\Rules\\PlaceRule.ts",
+      "time": 1794998873237.7324,
+      "removeTime": 1795069019754
+    },
+    "46cfb3c9-4317-46ca-b40e-d474629bb114": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Hall\\View\\ShapePainter.ts",
+      "time": 1794998710190.5625,
+      "removeTime": 1795069019754
+    },
+    "f0aa2601-aee0-4e17-8317-fb9b924f24fd": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scene\\Hall.scene",
+      "time": 1794998710621.6926,
+      "removeTime": 1795069023811
+    },
+    "33495242-99ac-456a-8fec-5adc64013da7": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core\\Profile",
+      "time": 1794811919379.785,
+      "removeTime": 1795069128422
+    },
+    "a9869244-408b-48de-bb2c-6e422aebcf88": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core\\Profile\\PlayerProfile.ts",
+      "time": 1794815104501.1875,
+      "removeTime": 1795069128422
+    },
+    "95b57a25-d43e-4540-8d13-ab704776e698": {
+      "path": "D:\\cocosEdit\\Creator\\starfall-v2\\assets\\scripts\\Core\\Profile\\ProfileStore.ts",
+      "time": 1794815355095.1772,
+      "removeTime": 1795069128422
     }
   }
 }

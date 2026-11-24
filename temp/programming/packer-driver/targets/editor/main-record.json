@@ -619,7 +619,7 @@
       ]
     },
     "cce:/internal/x/prerequisite-imports": {
-      "mTimestamp": 204780448.6986,
+      "mTimestamp": 510900270.82269996,
       "chunkId": "ea123345d436cf7a0706f12eaf4aae73706d6068",
       "imports": [
         {
@@ -2004,7 +2004,7 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts": {
       "mTimestamp": {
-        "mtime": 1794768562665.8389,
+        "mtime": 1794811218355.7048,
         "uuid": "2a2f81e9-c2fc-478c-b33b-4707675bbec9"
       },
       "chunkId": "c6aee05344d533dd44f2f715952903e7c585f69c",
@@ -2570,10 +2570,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts": {
       "mTimestamp": {
-        "mtime": 1794770467001.574,
+        "mtime": 1795075283345.0808,
         "uuid": "dfbb144b-b06c-4f94-8edb-f789e51e115b"
       },
-      "chunkId": "ead4e3c3759f8996717137565d99a5a2ab1d0cbf",
+      "chunkId": "40ffadbdd54312a5c06cea8e2cd12d586417ac6c",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -2730,10 +2730,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts": {
       "mTimestamp": {
-        "mtime": 1794764885799.2422,
+        "mtime": 1795075993547.7969,
         "uuid": "d9b7a528-77fa-4a8a-bae1-565e7aa626e1"
       },
-      "chunkId": "5c357d38c6328fda0f0632f174c862759fb25d02",
+      "chunkId": "3d1223e9f3a75a4d67882e53ad404a8cc4651a46",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -2943,7 +2943,7 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts": {
       "mTimestamp": {
-        "mtime": 1794577229337.527,
+        "mtime": 1795069640842.3667,
         "uuid": "fb5921d5-e96f-4dd5-9d00-bdfa1c32c471"
       },
       "chunkId": "afd34c33e4c094e2853836d8a5b65c680d0be901",
@@ -2959,11 +2959,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 20
+              "column": 21
             },
             "end": {
               "line": 1,
-              "column": 24
+              "column": 25
             }
           }
         }
@@ -2995,10 +2995,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/OutOfBoundsSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794635249013.5417,
+        "mtime": 1795075455092.1804,
         "uuid": "9c042697-f62b-47ec-91b5-a8e8e9b27d37"
       },
-      "chunkId": "c22ac7f6eb5e1c2967a95ed38c42773ec720c088",
+      "chunkId": "a6fe940cb2a4c585b20a9776f85d2e120d57bbec",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3018,6 +3018,20 @@
             "end": {
               "line": 1,
               "column": 51
+            }
+          }
+        },
+        {
+          "value": "../BattleEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 46
             }
           }
         }
@@ -3042,6 +3056,13 @@
           "resolved": {
             "type": "module",
             "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts"
           },
           "messages": []
         }
@@ -3087,10 +3108,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleEvents.ts": {
       "mTimestamp": {
-        "mtime": 1794768862699.716,
+        "mtime": 1795075333738.127,
         "uuid": "916eff54-5058-49e0-88b7-d23716ca5af4"
       },
-      "chunkId": "b6fde78c7131ec21a61428c6b50030f9d4e9ef52",
+      "chunkId": "de297d4609b32d6a1e38d3304968a236c1051295",
       "imports": [
         {
           "value": "cc"
@@ -3252,10 +3273,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleInputHandler.ts": {
       "mTimestamp": {
-        "mtime": 1794730326963.9275,
+        "mtime": 1795074851650.9126,
         "uuid": "21d45283-1e9d-4fc5-8e4c-f70670fb41b0"
       },
-      "chunkId": "1370d88ebd27fc4c7237b8a71f7d6623229e3267",
+      "chunkId": "76da69d52fb335bf3cd49afb2521e7f5329e1b9e",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3272,11 +3293,11 @@
           "loc": {
             "start": {
               "line": 1,
-              "column": 82
+              "column": 83
             },
             "end": {
               "line": 1,
-              "column": 86
+              "column": 87
             }
           }
         },
@@ -3411,10 +3432,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CombatSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794769179770.598,
+        "mtime": 1795076662291.8884,
         "uuid": "be5fe68c-92d9-47ad-bad5-79fddc94ee05"
       },
-      "chunkId": "23649c40211cff50f26c592f9445435b32baadd1",
+      "chunkId": "a65c2b9975d3000dfbfd0caf58631085e2e22274",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3486,10 +3507,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/DamageSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794767261652.4739,
+        "mtime": 1795075226724.3794,
         "uuid": "fc21dab5-45b9-40ac-9a37-88b134a897bc"
       },
-      "chunkId": "2034c51ce76ec2c1aef1f3ab44565c67e78a42ca",
+      "chunkId": "50afc01b91bee2693ef17d831ad49cda6cd5c5db",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3603,10 +3624,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/EnemySpawnSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794770202383.0994,
+        "mtime": 1795075035964.956,
         "uuid": "eea5ab7f-f078-43c8-933e-5f35e2d9adc2"
       },
-      "chunkId": "55936d6ace563025a9268b6f6cfa0f2ee69df178",
+      "chunkId": "4a21e796cc56394ecffa981727f1c082301a432a",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3816,10 +3837,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/BattleStateSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794768790819.2593,
+        "mtime": 1795070437166.1777,
         "uuid": "5080bfe7-a291-44ed-900b-2af99709053e"
       },
-      "chunkId": "2fb3116935c1e22d8f3c0e99d3a0076a64c882f1",
+      "chunkId": "ae0c87c6f1a37d4b47a6187410751f7b787ce27d",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -3870,10 +3891,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/BattleScene.ts": {
       "mTimestamp": {
-        "mtime": 1794770777706.4275,
+        "mtime": 1795076891857.941,
         "uuid": "55357677-2153-4564-8237-c8964591b343"
       },
-      "chunkId": "2e798d800c39dc770d9e6d618fc3ad9bdaac9aca",
+      "chunkId": "a02760be8d749a7d1a473bf88db83749a7c5dd9f",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -5259,7 +5280,7 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Config/LevelConfig.ts": {
       "mTimestamp": {
-        "mtime": 1794738577373.5388,
+        "mtime": 1795071688593.2678,
         "uuid": "ec853638-ba8d-45cc-80e3-5e127612dcdb"
       },
       "chunkId": "7d70160b30e02d29533678395ecb319db2162650",
@@ -5476,10 +5497,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/CardSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794767824824.7383,
+        "mtime": 1795072961983.4495,
         "uuid": "bfa8add5-3801-473b-91b5-2ac5107fbb24"
       },
-      "chunkId": "4f998a70efc1fcf677464ffd68ac4149cc51b5d2",
+      "chunkId": "9984a00f9a97c05fa2548da090d83e3e23217fd8",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -5635,10 +5656,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/System/WaveSystem.ts": {
       "mTimestamp": {
-        "mtime": 1794768967506.2583,
+        "mtime": 1795075498074.8462,
         "uuid": "348e372b-1372-497c-ac4c-823394849343"
       },
-      "chunkId": "0ad76a328370f5e25f3a7a068900f0dd1090d011",
+      "chunkId": "5101e3367e1f6e848448f15a4c6e886677637fa8",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -6428,7 +6449,7 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/PlayerEntity.ts": {
       "mTimestamp": {
-        "mtime": 1794766747419.7566,
+        "mtime": 1794810604612.2527,
         "uuid": "6c370501-7639-4e73-be72-88e34496dacb"
       },
       "chunkId": "9331890c016332a663496d0a92de1abd4e3bcdcb",
@@ -6545,10 +6566,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/EnemyEntity.ts": {
       "mTimestamp": {
-        "mtime": 1794766771641.325,
+        "mtime": 1795072685717.4648,
         "uuid": "19383f8c-dcf5-4513-97d3-4ab752179a8f"
       },
-      "chunkId": "9cc9fdea735a541a5e346f3a08179f93aaedd1e3",
+      "chunkId": "a0653a074111d5a87bc4c29e9098f5b6866a7f17",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -6662,7 +6683,7 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Battle/Entity/BossEntity.ts": {
       "mTimestamp": {
-        "mtime": 1794766797737.2505,
+        "mtime": 1794810594289.1494,
         "uuid": "168d1a25-d7f9-43e6-8ebc-237e494f326d"
       },
       "chunkId": "a5f5e4396b6d8c49e97bcc598d4038349b57c020",
@@ -6833,10 +6854,10 @@
     },
     "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts": {
       "mTimestamp": {
-        "mtime": 1794769832156.8784,
+        "mtime": 1795075009048.9346,
         "uuid": "6b1f1c34-b025-4a3b-83c5-fa6544dfc8e5"
       },
-      "chunkId": "ba5b51f9a1007c741d65882ecc65f2b6f8c4e528",
+      "chunkId": "fa4e1c4506fd74290fcd47717b7f30768a4d21d2",
       "imports": [
         {
           "value": "cce:/internal/code-quality/cr.mjs",
@@ -6885,6 +6906,2277 @@
           "resolved": {
             "type": "module",
             "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Entity/BuildingEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794833557768.7559,
+        "uuid": "0249d547-692c-40a5-90eb-0b8cf5cc47d3"
+      },
+      "chunkId": "7bcfd33feda4266258fc1af2e47e5bc76593ca23",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/GridSystem.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "301f78df8bc01428961423e512145b75f2723194"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/BuildSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794924449909.4033,
+        "uuid": "7810f683-256f-4064-b6d6-ce8342fd4a8e"
+      },
+      "chunkId": "5629fcdae7b48d73acf02ccb517e12ee0e430254",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/BuildingConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 32
+            },
+            "end": {
+              "line": 3,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 25
+            },
+            "end": {
+              "line": 5,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../Config/GridConfig",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 28
+            },
+            "end": {
+              "line": 6,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "../Entity/BuildingEntity",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 31
+            },
+            "end": {
+              "line": 7,
+              "column": 57
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/BuildingConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Entity/BuildingEntity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/EconomySystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794815944245.511,
+        "uuid": "f02f63cb-b4e5-4111-857c-a164f67ca12e"
+      },
+      "chunkId": "6f9fbee9b41821db5dce53b6aa4bf5720d42655e",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 25
+            },
+            "end": {
+              "line": 3,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/ProduceSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794833566470.5847,
+        "uuid": "0f9d27ed-edb8-41ed-8987-6dbe110ba90e"
+      },
+      "chunkId": "99c543ad706e5c8b1119b0e5421640fde2f4ac30",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/HallInputSystem.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "5662395a19589820429ada0f45724f38b97a345b"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/GridView.ts": {
+      "mTimestamp": {
+        "mtime": 1794908993212.5146,
+        "uuid": "ba5358c5-302b-48e3-8b3c-2ddbc5162eca"
+      },
+      "chunkId": "a8b0eaf53ba3a6c803be8a0048ee5b5858010b1c",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 78
+            },
+            "end": {
+              "line": 1,
+              "column": 82
+            }
+          }
+        },
+        {
+          "value": "../Config/GridConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 112
+            },
+            "end": {
+              "line": 2,
+              "column": 134
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/BuildingView.ts": {
+      "mTimestamp": {
+        "mtime": 1794833695186.5544,
+        "uuid": "a5f79735-de48-4799-97f3-b36a367627ae"
+      },
+      "chunkId": "99d9ea95292413a00da10e9160aec779a379ec51",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 59
+            },
+            "end": {
+              "line": 1,
+              "column": 63
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/ViewModel/HallViewModel.ts": {
+      "mTimestamp": {
+        "mtime": 1794816773689.9734,
+        "uuid": "07f5a8dc-4890-41e1-a9c9-5453753ae91d"
+      },
+      "chunkId": "4bd808f196ffd0375187b4d2ddf76b0582a4dffb",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/BuildingConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794813163133.7192,
+        "uuid": "4e7f141b-d487-464f-8846-0055c4d11796"
+      },
+      "chunkId": "dcc2cf0a72a16f0436ce0ebc282fdca27c09bb79",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts": {
+      "mTimestamp": {
+        "mtime": 1794988345239.7622,
+        "uuid": "d3b6a81b-d88a-4ac6-9a76-840888ae2c23"
+      },
+      "chunkId": "7735c68f726a36a60e696bc5e321bc3869c2aac9",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallScene.ts": {
+      "mTimestamp": {
+        "mtime": 1794929964599.8003,
+        "uuid": "4027b3f5-bad5-4492-bbd6-d45f2012e301"
+      },
+      "chunkId": "bdb969890d8acebf6034045bd57a886202acc59a",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 54
+            },
+            "end": {
+              "line": 1,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "../Engine/Bus",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 20
+            },
+            "end": {
+              "line": 2,
+              "column": 35
+            }
+          }
+        },
+        {
+          "value": "../Engine/World",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 39
+            }
+          }
+        },
+        {
+          "value": "../Engine/ViewRegistry",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 29
+            },
+            "end": {
+              "line": 4,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "../Engine/Tick",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 26
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../Core/Pool/EntityPool",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 27
+            },
+            "end": {
+              "line": 6,
+              "column": 52
+            }
+          }
+        },
+        {
+          "value": "../Core/Data/GameData",
+          "resolved": "__unresolved_6",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 25
+            },
+            "end": {
+              "line": 7,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "./HallInputHandler",
+          "resolved": "__unresolved_7",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 33
+            },
+            "end": {
+              "line": 8,
+              "column": 53
+            }
+          }
+        },
+        {
+          "value": "./System/EconomySystem",
+          "resolved": "__unresolved_8",
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 30
+            },
+            "end": {
+              "line": 11,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./System/BuildSystem",
+          "resolved": "__unresolved_9",
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 28
+            },
+            "end": {
+              "line": 12,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./System/ProduceSystem",
+          "resolved": "__unresolved_10",
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 30
+            },
+            "end": {
+              "line": 13,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./System/MonthClockSystem",
+          "resolved": "__unresolved_11",
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 33
+            },
+            "end": {
+              "line": 14,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "./System/UpgradeSystem",
+          "resolved": "__unresolved_12",
+          "loc": {
+            "start": {
+              "line": 15,
+              "column": 30
+            },
+            "end": {
+              "line": 15,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./System/SynergySystem",
+          "resolved": "__unresolved_13",
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 30
+            },
+            "end": {
+              "line": 16,
+              "column": 54
+            }
+          }
+        },
+        {
+          "value": "./System/QuestSystem",
+          "resolved": "__unresolved_14",
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 28
+            },
+            "end": {
+              "line": 17,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./System/SettlementSystem",
+          "resolved": "__unresolved_15",
+          "loc": {
+            "start": {
+              "line": 18,
+              "column": 33
+            },
+            "end": {
+              "line": 18,
+              "column": 60
+            }
+          }
+        },
+        {
+          "value": "./View/BuildingView",
+          "resolved": "__unresolved_16",
+          "loc": {
+            "start": {
+              "line": 21,
+              "column": 29
+            },
+            "end": {
+              "line": 21,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./View/GridView",
+          "resolved": "__unresolved_17",
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 25
+            },
+            "end": {
+              "line": 22,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "./ViewModel/HallViewModel",
+          "resolved": "__unresolved_18",
+          "loc": {
+            "start": {
+              "line": 23,
+              "column": 30
+            },
+            "end": {
+              "line": 23,
+              "column": 57
+            }
+          }
+        },
+        {
+          "value": "./Data/GridMap",
+          "resolved": "__unresolved_19",
+          "loc": {
+            "start": {
+              "line": 28,
+              "column": 24
+            },
+            "end": {
+              "line": 28,
+              "column": 40
+            }
+          }
+        },
+        {
+          "value": "./System/GhostSystem",
+          "resolved": "__unresolved_20",
+          "loc": {
+            "start": {
+              "line": 29,
+              "column": 28
+            },
+            "end": {
+              "line": 29,
+              "column": 50
+            }
+          }
+        },
+        {
+          "value": "./System/GridSyncSystem",
+          "resolved": "__unresolved_21",
+          "loc": {
+            "start": {
+              "line": 30,
+              "column": 31
+            },
+            "end": {
+              "line": 30,
+              "column": 56
+            }
+          }
+        },
+        {
+          "value": "../Engine/ViewPool",
+          "resolved": "__unresolved_22",
+          "loc": {
+            "start": {
+              "line": 32,
+              "column": 25
+            },
+            "end": {
+              "line": 32,
+              "column": 45
+            }
+          }
+        },
+        {
+          "value": "./View/GhostView",
+          "resolved": "__unresolved_23",
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 26
+            },
+            "end": {
+              "line": 34,
+              "column": 44
+            }
+          }
+        },
+        {
+          "value": "./View/WorldViewController",
+          "resolved": "__unresolved_24",
+          "loc": {
+            "start": {
+              "line": 35,
+              "column": 36
+            },
+            "end": {
+              "line": 35,
+              "column": 64
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Bus.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/World.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewRegistry.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Tick.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Pool/EntityPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallInputHandler.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/EconomySystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/BuildSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/ProduceSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/MonthClockSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/UpgradeSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/SynergySystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/QuestSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/SettlementSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/BuildingView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/GridView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/ViewModel/HallViewModel.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Data/GridMap.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/GhostSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/GridSyncSystem.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/ViewPool.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/GhostView.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/WorldViewController.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Profile/PlayerProfile.ts": {
+      "mTimestamp": {
+        "mtime": 1794815104501.1875,
+        "uuid": "a9869244-408b-48de-bb2c-6e422aebcf88"
+      },
+      "chunkId": "897d9c8c9ee1e17dce306b293162bc7d150ed6ab",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Profile/ProfileStore.ts": {
+      "erroneous": true,
+      "mTimestamp": 0,
+      "chunkId": "8096e124dc4405bf0e8d1c82a8f3b07dc7464201"
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/UpgradeSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794813819152.109,
+        "uuid": "7e424ea8-8ef7-4e97-a8d2-5d6451b8e490"
+      },
+      "chunkId": "f3964b3ca32905ed87c0d80bf25f391b75380220",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/BuildingConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/BuildingConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/SynergyConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794814363245.4802,
+        "uuid": "31c3daa9-8150-4243-bb78-b422333ed9e6"
+      },
+      "chunkId": "22a906e6f0b256b6166c95df3efe0afa4caddc37",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/SynergySystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794814681655.7114,
+        "uuid": "3e728e42-a89a-4842-8492-0b40bb140347"
+      },
+      "chunkId": "b8feb2e58c5783f71f9e9cdc39352b0d3171e735",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/BuildingConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "../Config/SynergyConfig",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 48
+            },
+            "end": {
+              "line": 5,
+              "column": 73
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 27
+            },
+            "end": {
+              "line": 6,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/BuildingConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/SynergyConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/QuestConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1794814719389.785,
+        "uuid": "08637cc4-0275-4bac-9392-d26e605c9dfa"
+      },
+      "chunkId": "bc4e884f0b1d2187aac1d90fb987c936e9ed9615",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/QuestSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794814766638.8733,
+        "uuid": "5d82d559-1f89-497b-9e14-23c431c497ed"
+      },
+      "chunkId": "2d135ac24e0cee7320d5ff7e42a385db126fea16",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/QuestConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 49
+            },
+            "end": {
+              "line": 4,
+              "column": 72
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/QuestConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/SettlementSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794814949407.6746,
+        "uuid": "3e239969-2710-4427-8b74-59bc83dc7267"
+      },
+      "chunkId": "0e07b3970987e2b6c8fb3b069444c93109f3060f",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts": {
+      "mTimestamp": {
+        "mtime": 1795000444027.0022,
+        "uuid": "972a361a-3d42-4e01-8171-c328c537b3fb"
+      },
+      "chunkId": "a3a8fa9fab7fd738f6ee8b7078db82545a63c1d6",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/MonthClockSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794816154995.6582,
+        "uuid": "977b233e-234b-4abc-89dd-8aec33e1ce67"
+      },
+      "chunkId": "21da9eacdbf07e05ae546f37d3f556ae546acea1",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/GhostView.ts": {
+      "mTimestamp": {
+        "mtime": 1794914676495.6064,
+        "uuid": "f19a573c-9209-47ff-af70-0dc7240a3f1a"
+      },
+      "chunkId": "4657caca2121b27f03c56dc752cdfd43c2ae10f8",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 53
+            },
+            "end": {
+              "line": 1,
+              "column": 57
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/GhostSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794915977619.0518,
+        "uuid": "42f3bee7-30b0-4639-9df9-fe687096b6f1"
+      },
+      "chunkId": "2cae1e3d0f91de6ae15ef90dae13e385df952732",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/BuildingConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 58
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 27
+            },
+            "end": {
+              "line": 5,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../../Core/Data/GameData",
+          "resolved": "__unresolved_3",
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 25
+            },
+            "end": {
+              "line": 6,
+              "column": 51
+            }
+          }
+        },
+        {
+          "value": "../Config/GridConfig",
+          "resolved": "__unresolved_4",
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 40
+            },
+            "end": {
+              "line": 7,
+              "column": 62
+            }
+          }
+        },
+        {
+          "value": "../Entity/GhostEntity",
+          "resolved": "__unresolved_5",
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 28
+            },
+            "end": {
+              "line": 8,
+              "column": 51
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/BuildingConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Core/Data/GameData.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Entity/GhostEntity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Data/GhostState.ts": {
+      "mTimestamp": {
+        "mtime": 1794827243658.066,
+        "uuid": "628f8103-73c9-4bff-9ca2-8b2c47d3d03e"
+      },
+      "chunkId": "3647afd51aa1efc8c2311c74980250ffdbfb6c28",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallInputHandler.ts": {
+      "mTimestamp": {
+        "mtime": 1794988903599.868,
+        "uuid": "ce3d249f-c466-45c2-a365-8eab22008ccf"
+      },
+      "chunkId": "bb0124e65114a59b4cbc6d925016f805123129f6",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 100
+            },
+            "end": {
+              "line": 1,
+              "column": 104
+            }
+          }
+        },
+        {
+          "value": "./HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 41
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Data/GridMap.ts": {
+      "mTimestamp": {
+        "mtime": 1794990719662.6875,
+        "uuid": "fa67821b-3712-42db-a10f-093a89090c9b"
+      },
+      "chunkId": "fe4c20e069c1f239bc7bc5968a2519856e3fb435",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../Config/GridConfig",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 37
+            },
+            "end": {
+              "line": 1,
+              "column": 59
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Entity/GhostEntity.ts": {
+      "mTimestamp": {
+        "mtime": 1794831784030.204,
+        "uuid": "9470f2a7-6429-468b-be69-4ee7959dcfae"
+      },
+      "chunkId": "b3d5f268f5172ffb3cf557ffe8543363840ef125",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../../Engine/Entity",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 44
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Engine/Entity.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/GridSyncSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794833238130.1191,
+        "uuid": "c0c94804-ca1d-4dbe-afe5-cd3c36fffdf6"
+      },
+      "chunkId": "d3adb361960643ec89cea6b5a5b403d8ba750783",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/WorldViewController.ts": {
+      "mTimestamp": {
+        "mtime": 1794989021227.563,
+        "uuid": "360803ab-4995-4d69-8949-47e43db24705"
+      },
+      "chunkId": "11b250f1d783c173bb7274da1628939d0519ccfd",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 27
+            },
+            "end": {
+              "line": 3,
+              "column": 42
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/System/HallClickSystem.ts": {
+      "mTimestamp": {
+        "mtime": 1794992995757.2222,
+        "uuid": "1a7f4bf9-f70b-481c-ad67-b38059fa2198"
+      },
+      "chunkId": "20aa56cd0d8c3978d64628b4b0b3df7e9b6480d6",
+      "imports": [
+        {
+          "value": "cce:/internal/code-quality/cr.mjs",
+          "resolved": "__unresolved_0"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "../HallEvents",
+          "resolved": "__unresolved_1",
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 42
+            }
+          }
+        },
+        {
+          "value": "../Config/GridConfig",
+          "resolved": "__unresolved_2",
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 39
+            },
+            "end": {
+              "line": 5,
+              "column": 61
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/code-quality/cr.mjs"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/HallEvents.ts"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Config/GridConfig.ts"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/Rules/PlaceRule.ts": {
+      "mTimestamp": {
+        "mtime": 1794998873237.7324,
+        "uuid": "ceb97acb-ba99-4464-9108-9a0561e7c238"
+      },
+      "chunkId": "92b18743bc70b27a8648ceb897baf764a5af9d8d",
+      "imports": [
+        {
+          "value": "cc"
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        }
+      ]
+    },
+    "file:///D:/cocosEdit/Creator/starfall-v2/assets/scripts/Hall/View/ShapePainter.ts": {
+      "mTimestamp": {
+        "mtime": 1794998710190.5625,
+        "uuid": "46cfb3c9-4317-46ca-b40e-d474629bb114"
+      },
+      "chunkId": "1fd08f79b4c74f10ebef9e9efa9376698a4dbf8b",
+      "imports": [
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc"
+        },
+        {
+          "value": "cc",
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 44
+            },
+            "end": {
+              "line": 1,
+              "column": 48
+            }
+          }
+        }
+      ],
+      "type": "esm",
+      "resolutions": [
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
+          },
+          "messages": []
+        },
+        {
+          "resolved": {
+            "type": "module",
+            "url": "cce:/internal/x/cc"
           },
           "messages": []
         },

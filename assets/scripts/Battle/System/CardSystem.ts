@@ -25,9 +25,7 @@ export class CardSystem implements System {
 
     private _onLevelUp(levelsGained: number): void {
         this._pendingUpgradeCount += levelsGained;
-        if (this._pendingUpgradeCount === levelsGained) {
-            this._tryDraw();
-        }
+        this._tryDraw();
     }
 
     private _onCardSelected(_card: CardConfigData): void {

@@ -12,6 +12,7 @@ export class EntityPool {
         const pool = this._pools.get(kind);
         if (pool && pool.length > 0) {
             const e = pool.pop() as T;
+            (e as any).reset?.();
             e.alive = true;
             return e;
         }

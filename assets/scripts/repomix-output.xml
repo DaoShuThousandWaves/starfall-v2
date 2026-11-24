@@ -1,0 +1,3558 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: Battle/**
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+Battle/
+  Config/
+    BossConfig.ts
+    BossConfig.ts.meta
+    CardConfig.ts
+    CardConfig.ts.meta
+    EmitterConfig.ts
+    EmitterConfig.ts.meta
+    ExpConfig.ts
+    ExpConfig.ts.meta
+    LevelConfig.ts
+    LevelConfig.ts.meta
+    TurretConfig.ts
+    TurretConfig.ts.meta
+    WeaponConfig.ts
+    WeaponConfig.ts.meta
+  Entity/
+    Components/
+      AimComp.ts
+      AimComp.ts.meta
+      ExpComp.ts
+      ExpComp.ts.meta
+      HealthComp.ts
+      HealthComp.ts.meta
+      MoveComp.ts
+      MoveComp.ts.meta
+      WeaponComp.ts
+      WeaponComp.ts.meta
+    BossEntity.ts
+    BossEntity.ts.meta
+    Bullet.ts
+    Bullet.ts.meta
+    Components.meta
+    EnemyEntity.ts
+    EnemyEntity.ts.meta
+    PlayerEntity.ts
+    PlayerEntity.ts.meta
+    TurretEntity.ts
+    TurretEntity.ts.meta
+    TurretSchedule.ts
+    TurretSchedule.ts.meta
+    WeaponData.ts
+    WeaponData.ts.meta
+  System/
+    BattleStateSystem.ts
+    BattleStateSystem.ts.meta
+    BossStageSystem.ts
+    BossStageSystem.ts.meta
+    BulletSpawnSystem.ts
+    BulletSpawnSystem.ts.meta
+    CardApplySystem.ts
+    CardApplySystem.ts.meta
+    CardSystem.ts
+    CardSystem.ts.meta
+    CombatSystem.ts
+    CombatSystem.ts.meta
+    DamageSystem.ts
+    DamageSystem.ts.meta
+    EnemySpawnSystem.ts
+    EnemySpawnSystem.ts.meta
+    ExpSystem.ts
+    ExpSystem.ts.meta
+    FireCooldown.ts
+    FireCooldown.ts.meta
+    FireSystem.ts
+    FireSystem.ts.meta
+    InvincibleSystem.ts
+    InvincibleSystem.ts.meta
+    MovementSystem.ts
+    MovementSystem.ts.meta
+    OutOfBoundsSystem.ts
+    OutOfBoundsSystem.ts.meta
+    PlayerControlSystem.ts
+    PlayerControlSystem.ts.meta
+    TurretAimSystem.ts
+    TurretAimSystem.ts.meta
+    TurretScheduleSystem.ts
+    TurretScheduleSystem.ts.meta
+    TurretSpawnSystem.ts
+    TurretSpawnSystem.ts.meta
+    WaveSystem.ts
+    WaveSystem.ts.meta
+  View/
+    BossView.ts
+    BossView.ts.meta
+    BulletView.ts
+    BulletView.ts.meta
+    EnemyView.ts
+    EnemyView.ts.meta
+    PlayerView.ts
+    PlayerView.ts.meta
+    TurretView.ts
+    TurretView.ts.meta
+  ViewModel/
+    BattleViewModel.ts
+    BattleViewModel.ts.meta
+  BattleEvents.ts
+  BattleEvents.ts.meta
+  BattleInputHandler.ts
+  BattleInputHandler.ts.meta
+  BattleScene.ts
+  BattleScene.ts.meta
+  Config.meta
+  Entity.meta
+  System.meta
+  View.meta
+  ViewModel.meta
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="Battle/Config/BossConfig.ts">
+import type { TurretConfig, TurretScheduleConfig } from "./TurretConfig";
+
+
+export interface BossStageConfig {
+    /**
+     * 进入这个阶段的 HP 比例阈值。
+     * - 第一阶段不写（永远是 100% 进入）
+     * - 第二阶段写 0.7（HP ≤ 70% 进入）
+     * - 第三阶段写 0.35（HP ≤ 35% 进入）
+     */
+    hpRatio?: number;
+
+    /** 这个阶段的炮台配置 */
+    turrets: TurretConfig[];
+
+    /** 这个阶段的炮台调度。不填 = volley */
+    turretSchedule?: TurretScheduleConfig;
+}
+
+export interface BossConfigData {
+    id: string;
+    name: string;
+    maxHp: number;
+    collisionRadius: number;
+
+    /** 阶段配置数组。索引 0 = 初始阶段 */
+    stages: BossStageConfig[];
+}
+
+
+export const BOSS_CONFIG: Record<string, BossConfigData> = {
+    whale_boss: {
+        id: 'whale_boss',
+        name: '吴鲸波',
+        maxHp: 3000,
+        collisionRadius: 105,
+        stages: [
+            // ===== 阶段 0：双炮交替（100%） =====
+            {
+                turrets: [
+                    {
+                        offsetX: -80, offsetY: 0,
+                        hp: 200, collisionRadius: 14, 
+                        aimMode: 'target', aimSpeed: 90,
+                        baseAngle: 180, oscRange: 0,
+                        fireInterval: 1.0,
+                        bulletDamage: 8, bulletSpeed: 200, bulletType: 'yellow',
+                        spreadCount: 1, spreadAngle: 0,
+                    },
+                    {
+                        offsetX: 80, offsetY: 0,
+                        hp: 200, collisionRadius: 14, 
+                        aimMode: 'target', aimSpeed: 90,
+                        baseAngle: 180, oscRange: 0,
+                        fireInterval: 1.0,
+                        bulletDamage: 8, bulletSpeed: 200, bulletType: 'yellow',
+                        spreadCount: 1, spreadAngle: 0,
+                    },
+                ],
+                turretSchedule: {
+                    mode: 'sequence',
+                    burstDuration: 2,
+                    burstGap: 1,
+                    loop: true,
+                },
+            },
+
+            // ===== 阶段 1：四炮扇形（70%） =====
+            {
+                hpRatio: 0.7,
+                turrets: [
+                    {
+                        offsetX: -120, offsetY: 20,
+                         hp: 200, collisionRadius: 14,
+                        aimMode: 'target', aimSpeed: 120,
+                        baseAngle: 180, oscRange: 0,
+                        fireInterval: 0.8,
+                        bulletDamage: 10, bulletSpeed: 220, bulletType: 'yellow',
+                        spreadCount: 3, spreadAngle: 30,   // ← 扇形 3 发
+                    },
+                    {
+                        offsetX: 120, offsetY: 20,
+                         hp: 200, collisionRadius: 14,
+                        aimMode: 'target', aimSpeed: 120,
+                        baseAngle: 180, oscRange: 0,
+                        fireInterval: 0.8,
+                        bulletDamage: 10, bulletSpeed: 220, bulletType: 'yellow',
+                        spreadCount: 3, spreadAngle: 30,
+                    },
+                ],
+                turretSchedule: {
+                    mode: 'volley',   // ← 齐射
+                },
+            },
+
+            // ===== 阶段 2：单炮狂射（35%） =====
+            {
+                hpRatio: 0.35,
+                turrets: [
+                    {
+                        offsetX: 0, offsetY: -60,
+                        hp: 200, collisionRadius: 14,
+                        aimMode: 'target', aimSpeed: 180,
+                        baseAngle: 270, oscRange: 0,
+                        fireInterval: 0.4,       // ← 射速翻倍
+                        bulletDamage: 12, bulletSpeed: 260, bulletType: 'yellow',
+                        spreadCount: 2, spreadAngle: 20,
+                    },
+                ],
+                turretSchedule: {
+                    mode: 'volley',
+                },
+            },
+        ],
+    },
+};
+</file>
+
+<file path="Battle/Config/BossConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8ee6fc40-e675-4cb7-8a5e-aace1d5405b9",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/CardConfig.ts">
+export type CardRarity = 'common' | 'rare' | 'epic';
+
+/** 卡牌效果类型。CardSystem 不解释效果，ApplySystem 解释 */
+export type CardEffectType =
+    | 'bullet_damage'      // 子弹伤害倍率
+    | 'fire_rate'          // 开火间隔倍率
+    | 'move_speed'         // 子弹速度倍率
+    | 'bullet_count'       // 每次多发一颗
+    | 'max_hp'             // 最大血量增加
+    | 'heal';              // 立即回复
+
+export interface CardEffect {
+    type: CardEffectType;
+    /** 倍率（1.3 = +30%）或绝对值（bullet_count 用 1 = 多一颗） */
+    value: number;
+}
+
+export interface CardConfigData {
+    id: string;
+    name: string;
+    desc: string;
+    rarity: CardRarity;
+    /** 效果列表。一张卡可以有多个效果 */
+    effects: CardEffect[];
+    /** 最大可叠层数。不填 = 无限 */
+    maxStacks?: number;
+}
+
+export const CARD_POOL: CardConfigData[] = [
+    {
+        id: 'dmg_up',
+        name: '强力弹头',
+        desc: '子弹伤害 +30%',
+        rarity: 'common',
+        effects: [{ type: 'bullet_damage', value: 1.3 }],
+        maxStacks: 5,
+    },
+    {
+        id: 'fire_rate_up',
+        name: '速射装置',
+        desc: '开火间隔 -20%',
+        rarity: 'common',
+        effects: [{ type: 'fire_rate', value: 0.8 }],
+        maxStacks: 4,
+    },
+    {
+        id: 'bullet_count_up',
+        name: '散射模块',
+        desc: '每次多发一颗子弹',
+        rarity: 'rare',
+        effects: [{ type: 'bullet_count', value: 1 }],
+        maxStacks: 3,
+    },
+    {
+        id: 'move_speed_up',
+        name: '弹道加速',
+        desc: '子弹速度 +25%',
+        rarity: 'common',
+        effects: [{ type: 'move_speed', value: 1.25 }],
+        maxStacks: 4,
+    },
+    {
+        id: 'max_hp_up',
+        name: '装甲强化',
+        desc: '最大血量 +30，立即回满',
+        rarity: 'rare',
+        effects: [
+            { type: 'max_hp', value: 30 },
+            { type: 'heal', value: 30 },
+        ],
+        maxStacks: 3,
+    },
+];
+</file>
+
+<file path="Battle/Config/CardConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "1f7da245-d35f-4d86-b8c7-02b2826cb61f",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/EmitterConfig.ts">
+export type BulletType = 'blue' | 'yellow' | 'laser' | 'homing' | 'particle';
+
+/** 发射参数公共部分。纯配置，只读，不含运行时状态 */
+export interface EmitterConfig {
+    /** 开火间隔（秒） */
+    fireInterval: number;
+    bulletType: BulletType;
+    /** 子弹速度（像素/秒） */
+    bulletSpeed: number;
+    /** 子弹伤害 */
+    bulletDamage: number;
+    /** 一次发射几颗。不填 = 1 */
+    spreadCount?: number;
+    /** 扇形总角度（度）。spreadCount > 1 时生效。不填 = 0 */
+    spreadAngle?: number;
+}
+</file>
+
+<file path="Battle/Config/EmitterConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "9bd0939a-985a-4fbb-9feb-31df1d851dff",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/ExpConfig.ts">
+/** 第 level 级升到 level+1 级所需经验 */
+export function expForLevel(level: number): number {
+    return 50 + (level - 1) * 30;
+}
+
+/** 不同击杀给的经验 */
+export const EXP_REWARD = {
+    enemy: 15,
+    boss: 400,
+} as const;
+</file>
+
+<file path="Battle/Config/ExpConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "79a04a0f-cfca-4868-b0a8-baf031a5144c",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/LevelConfig.ts">
+export type EnemyType = 'basic' | 'sine' | 'arc' | 'dive' | 'sprint';
+export type SpawnSide = 'top' | 'left' | 'right';
+
+export interface EnemyGroupConfig {
+    enemyType: EnemyType;
+    count: number;
+    /** 组内间隔（秒）。0 = 一次性全出 */
+    spawnInterval: number;
+    /** 波次开始后延迟几秒才刷这组 */
+    delay: number;
+    spawnSide?: SpawnSide;    // 默认 'top'
+}
+
+export interface BossGroupConfig {
+    bossId: string;           // 对应 BOSS_CONFIG 的 key
+    delay: number;            // 波次开始后延迟几秒出 Boss
+}
+
+export interface WaveConfig {
+    /** 关卡开始后第几秒开始这一波 */
+    startTime: number;
+    enemyGroups: EnemyGroupConfig[];
+    boss?: BossGroupConfig;
+}
+
+export interface LevelConfigData {
+    id: string;
+    name: string;
+    waves: WaveConfig[];
+}
+
+
+
+export const LEVELS: Record<string, LevelConfigData> = {
+    level_1: {
+        id: 'level_1',
+        name: '冰原边境',
+        waves: [
+            {
+                startTime: 0,
+                enemyGroups: [
+                    { enemyType: 'basic', count: 5, spawnInterval: 0.5, delay: 0, spawnSide: 'top' },
+                ],
+            },
+            {
+                startTime: 2,
+                enemyGroups: [
+                    { enemyType: 'basic', count: 4, spawnInterval: 0.4, delay: 0, spawnSide: 'top' },
+                    { enemyType: 'sine',  count: 3, spawnInterval: 0.6, delay: 1.0, spawnSide: 'left' },
+                ],
+            },
+            {
+                startTime: 4,
+                enemyGroups: [],
+                boss: { bossId: 'whale_boss', delay: 1.0 },
+            },
+        ],
+    },
+};
+</file>
+
+<file path="Battle/Config/LevelConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "ec853638-ba8d-45cc-80e3-5e127612dcdb",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/TurretConfig.ts">
+import type { EmitterConfig } from './EmitterConfig';
+
+export type TurretAimMode = 'fixed' | 'target' | 'spin' | 'oscillate';
+
+export interface TurretScheduleConfig {
+    mode: 'volley' | 'sequence';
+    burstDuration?: number;
+    burstGap?: number;
+    loop?: boolean;
+}
+
+export interface TurretConfig extends EmitterConfig {
+    /** 相对 Boss 中心的固定偏移（像素） */
+    offsetX: number;
+    offsetY: number;
+
+    /** 炮台 HP。可被玩家子弹摧毁 */
+    hp: number;
+    /** 碰撞检测半径（像素） */
+    collisionRadius: number;
+
+    aimMode: TurretAimMode;
+    aimSpeed: number;
+    baseAngle: number;
+    oscRange: number;
+
+    spreadCount: number;
+    spreadAngle: number;
+}
+</file>
+
+<file path="Battle/Config/TurretConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "faa92e13-68f3-4a7a-9b6b-bc3fcf44c883",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config/WeaponConfig.ts">
+import type { EmitterConfig } from './EmitterConfig';
+
+export interface WeaponConfig extends EmitterConfig {
+    /** 发射方向（单位向量） */
+    fireDirX: number;
+    fireDirY: number;
+}
+</file>
+
+<file path="Battle/Config/WeaponConfig.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "9c05ba0e-366d-468e-93a7-8761708d9aaa",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components/AimComp.ts">
+export class AimComp {
+    /** 当前炮口朝向（度）。TurretAimSystem 写，FireSystem 读 */
+    aimAngle = 0;
+    /** oscillate 模式相位（弧度） */
+    oscPhase = 0;
+    /** 开火冷却累积（秒）。FireSystem 写 */
+    cooldownTimer = 0;
+    /** 当前是否被编排允许开火。TurretScheduleSystem 写 */
+    active = false;
+}
+</file>
+
+<file path="Battle/Entity/Components/AimComp.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "391253ee-7d65-41e9-a818-5455bf2c59d8",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components/ExpComp.ts">
+export class ExpComp {
+    exp = 0;
+    level = 1;
+    expToNext = 50;
+    cardStacks: Map<string, number> = new Map();
+}
+</file>
+
+<file path="Battle/Entity/Components/ExpComp.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "e25883cf-6388-4dd8-a11b-02dd5d788160",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components/HealthComp.ts">
+export class HealthComp {
+    hp = 100;
+    maxHp = 100;
+    invincibleTimer = 0;
+    /** 受击后的无敌时长。玩家 1.0，敌人 0 */
+    hitInvincibleDuration = 0;
+}
+</file>
+
+<file path="Battle/Entity/Components/HealthComp.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "26779d1c-03ef-4818-a251-eead65721143",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components/MoveComp.ts">
+export type MovePattern = 'none' | 'straight' | 'sine' | 'arc' | 'dive' | 'sprint';
+
+export class MoveComp {
+    pattern: MovePattern = 'none';
+    dirX: -1 | 0 | 1 = 0;
+    dirY: -1 | 0 | 1 = 0;
+    speed = 100;
+    originX = 0;
+    originY = 0;
+    phase = 0;
+    frequency = 3;
+    amplitude = 80;
+}
+</file>
+
+<file path="Battle/Entity/Components/MoveComp.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "0fff28b4-ad5e-4e6b-ae7f-b9ae0603254b",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components/WeaponComp.ts">
+import type { WeaponData } from '../WeaponData';
+
+export class WeaponComp {
+    weapons: WeaponData[] = [];
+
+    // 卡牌修正值。配置只读，修正值写在这里
+    damageMultiplier = 1;
+    fireRateMultiplier = 1;
+    bulletSpeedMultiplier = 1;
+    extraBulletCount = 0;
+}
+</file>
+
+<file path="Battle/Entity/Components/WeaponComp.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "371963a2-11d9-43a2-8398-7d3b2dbb719e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/BossEntity.ts">
+import { Entity } from '../../Engine/Entity';
+import type { BossConfigData } from '../Config/BossConfig';
+import { HealthComp } from './Components/HealthComp';
+import type { TurretScheduleState } from './TurretSchedule';
+
+export class BossEntity extends Entity {
+    readonly kind = 'boss';
+
+    health = new HealthComp();
+
+    config: BossConfigData;
+    stageIndex = 0;
+
+    /** 当前阶段炮台实体的 id 列表。顺序 = 配置顺序，长度 = 配置炮台数。
+     *  死亡槽位 id = 0，不删除，保证 TurretScheduleSystem 的槽位索引稳定。 */
+    turretIds: number[] = [];
+
+    turretSchedule: TurretScheduleState | null = null;
+
+    constructor(config: BossConfigData) {
+        super();
+        this.config = config;
+        this.faction = 'enemy';
+        this.collisionRadius = config.collisionRadius;
+        this.health.hp = config.maxHp;
+        this.health.maxHp = config.maxHp;
+        this.enterStage(0);
+    }
+
+    public enterStage(index: number): void {
+        const stage = this.config.stages[index];
+        if (!stage) {
+            console.warn(`[Boss] 阶段 ${index} 不存在`);
+            return;
+        }
+        this.stageIndex = index;
+        if (stage.turretSchedule) {
+            this.turretSchedule = {
+                config: stage.turretSchedule,
+                activeIndex: 0,
+                burstElapsed: 0,
+                gapTimer: 0,
+            };
+        } else {
+            this.turretSchedule = null;
+        }
+    }
+}
+</file>
+
+<file path="Battle/Entity/BossEntity.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "168d1a25-d7f9-43e6-8ebc-237e494f326d",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Bullet.ts">
+import { Entity } from "../../Engine/Entity";
+import type { BulletType } from "../Config/EmitterConfig";
+
+export class Bullet extends Entity {
+    readonly kind = 'bullet';
+
+    public dirX = 0;
+    public dirY = 1;
+    public speed = 0;
+    public damage = 0;
+    public bulletType: BulletType = 'yellow';
+    public collisionRadius = 8;
+}
+</file>
+
+<file path="Battle/Entity/Bullet.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "3fc35f85-1671-4fd7-8348-b7c4cb03da6e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/Components.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "c2347d2a-47c2-4e8b-8f28-de1dee99f11b",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/EnemyEntity.ts">
+import { Entity } from '../../Engine/Entity';
+import { HealthComp } from './Components/HealthComp';
+import { WeaponComp } from './Components/WeaponComp';
+import { MoveComp } from './Components/MoveComp';
+
+export class EnemyEntity extends Entity {
+    readonly kind = 'enemy';
+
+    health = new HealthComp();
+    weapon = new WeaponComp();
+    move = new MoveComp();
+
+    constructor() {
+        super();
+        this.faction = 'enemy';
+        this.collisionRadius = 20;
+    }
+}
+</file>
+
+<file path="Battle/Entity/EnemyEntity.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "19383f8c-dcf5-4513-97d3-4ab752179a8f",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/PlayerEntity.ts">
+import { Entity } from '../../Engine/Entity';
+import { HealthComp } from './Components/HealthComp';
+import { WeaponComp } from './Components/WeaponComp';
+import { ExpComp } from './Components/ExpComp';
+
+export class PlayerEntity extends Entity {
+    readonly kind = 'player';
+
+    health = new HealthComp();
+    weapon = new WeaponComp();
+    exp = new ExpComp();
+
+    constructor() {
+        super();
+        this.faction = 'player';
+        this.collisionRadius = 20;
+        this.health.hitInvincibleDuration = 1.0;
+    }
+}
+</file>
+
+<file path="Battle/Entity/PlayerEntity.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "6c370501-7639-4e73-be72-88e34496dacb",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/TurretEntity.ts">
+import { Entity } from '../../Engine/Entity';
+import type { TurretConfig } from '../Config/TurretConfig';
+import { HealthComp } from './Components/HealthComp';
+import { AimComp } from './Components/AimComp';
+
+export class TurretEntity extends Entity {
+    readonly kind = 'turret';
+
+    health = new HealthComp();
+    aim = new AimComp();
+
+    /** 所属 Boss 的 id */
+    ownerId = 0;
+
+    /** 配置（只读） */
+    config: TurretConfig = null!;
+
+    constructor() {
+        super();
+        this.faction = 'enemy';
+        this.collisionRadius = 14;
+    }
+}
+</file>
+
+<file path="Battle/Entity/TurretEntity.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8398ead3-d0c2-4ab7-aef7-28dc6eab2fdf",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/TurretSchedule.ts">
+import type { TurretScheduleConfig } from '../Config/TurretConfig';
+
+export interface TurretScheduleState {
+    /** 配置（不变） */
+    config: TurretScheduleConfig;
+
+    /** 当前活跃炮台索引。-1 = 已结束（loop = false 打完一圈） */
+    activeIndex: number;
+
+    /** 当前炮台已持续开火时间（秒） */
+    burstElapsed: number;
+
+    /** 喘息剩余时间（秒）。> 0 时所有炮台停火 */
+    gapTimer: number;
+}
+</file>
+
+<file path="Battle/Entity/TurretSchedule.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "d9d8db47-27e8-4213-841b-c9c344235a19",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity/WeaponData.ts">
+import type { WeaponConfig } from '../Config/WeaponConfig';
+
+
+export interface WeaponData {
+    config: WeaponConfig;
+    cooldownTimer: number;   
+    enabled: boolean;
+}
+</file>
+
+<file path="Battle/Entity/WeaponData.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "2f26123c-78d5-41e8-a897-99a56ea880bb",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/BattleStateSystem.ts">
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+
+
+
+export type GameState = 
+    | 'playing'      // 正常游玩
+    | 'paused'       // 玩家主动暂停
+    | 'upgrading'    // 升级选卡中
+    | 'game_over'    // 玩家死亡
+    | 'level_clear'; // 关卡通关（最高优先级）
+
+
+
+export class BattleStateSystem implements System {
+
+    private _world: World = null!;
+    private _state: GameState = 'playing';
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.PLAYER_DIED, this._onPlayerDied, this);
+        world.bus.on(BATTLE_EVENT.CARDS_DRAWN, this._onCardsDrawn, this);
+        world.bus.on(BATTLE_EVENT.LEVEL_CLEAR, this._onLevelClear, this);
+        world.bus.on(BATTLE_EVENT.PAUSE_TOGGLE_REQUEST, this._onPauseToggle, this);
+        world.bus.on(BATTLE_EVENT.UPGRADE_FINISHED, this._onUpgradeFinished, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.PLAYER_DIED, this._onPlayerDied, this);
+        world.bus.off(BATTLE_EVENT.CARDS_DRAWN, this._onCardsDrawn, this);
+        world.bus.off(BATTLE_EVENT.LEVEL_CLEAR, this._onLevelClear, this);
+        world.bus.off(BATTLE_EVENT.PAUSE_TOGGLE_REQUEST, this._onPauseToggle, this);
+        world.bus.off(BATTLE_EVENT.UPGRADE_FINISHED, this._onUpgradeFinished, this);
+        this._world = null!;
+    }
+
+    onTick(world: World, dt: number): void {
+        
+    }
+
+    get state(): GameState {
+        return this._state;
+    }
+
+     private _changeState(newState: GameState): void {
+        if (this._state === newState) return;
+        this._state = newState;
+        this._world.bus.emit(BATTLE_EVENT.GAME_STATE_CHANGED, newState);
+    }
+
+    private _onPlayerDied(): void {
+        if (this._state === 'game_over' || this._state === 'level_clear') return;
+        this._changeState('game_over');
+    }
+
+    private _onLevelClear(): void {
+        // 通关优先级最高，不管你是在选卡还是游玩，直接强制转为通关
+        this._changeState('level_clear');
+    }
+
+    private _onCardsDrawn(): void {
+        if (this._state === 'game_over' || this._state === 'level_clear') return;
+
+        this._changeState('upgrading');
+    }
+
+    private _onUpgradeFinished(): void {
+        if (this._state === 'upgrading') {
+            this._changeState('playing');
+        }
+    }
+
+    private _onPauseToggle(): void {
+        if (this._state === 'playing') {
+            this._changeState('paused');
+        } else if (this._state === 'paused') {
+            this._changeState('playing');
+        }
+    }
+}
+</file>
+
+<file path="Battle/System/BattleStateSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "5080bfe7-a291-44ed-900b-2af99709053e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/BossStageSystem.ts">
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+import type { BossEntity } from "../Entity/BossEntity";
+
+
+export class BossStageSystem implements System {
+
+
+    onTick(world: World, dt: number): void {
+        for(const boss of world.query<BossEntity>('boss')){
+            this._checkStage(world,boss);
+        }
+    }
+
+    private _checkStage(world: World, boss: BossEntity): void {
+        const stages = boss.config.stages;
+        const nextIndex = boss.stageIndex + 1;
+        if (nextIndex >= stages.length) return;
+
+        const nextStage = stages[nextIndex];
+        if (nextStage.hpRatio === undefined) return;
+        const ratio = boss.health.hp / boss.health.maxHp;
+
+        if (ratio <= nextStage.hpRatio) {
+            boss.enterStage(nextIndex);
+            world.bus.emit(BATTLE_EVENT.BOSS_STAGE_CHANGED, boss, nextIndex);
+            world.bus.emit(BATTLE_EVENT.TURRET_REBUILD_REQUEST, boss, nextIndex);  
+            console.log(`[BossStageSystem] ${boss.config.name} 进入阶段 ${nextIndex}`);
+        }
+    }
+}
+</file>
+
+<file path="Battle/System/BossStageSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "72eab709-eec9-4964-b84b-587c9872ea3d",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/BulletSpawnSystem.ts">
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+import type { BulletType } from "../Config/EmitterConfig";
+import { Bullet } from "../Entity/Bullet";
+
+
+
+export interface BulletFireRequest {
+    x: number;
+    y: number;
+    dirX: number;
+    dirY: number;
+    bulletSpeed: number;
+    bulletDamage: number;
+    bulletType: BulletType;    
+    isPlayerBullet: boolean;     
+    spreadCount?: number;
+    spreadAngle?: number;
+}
+
+export class BulletSpawnSystem implements System {
+
+  
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.WEAPON_FIRE, this._onFire, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.WEAPON_FIRE, this._onFire, this); 
+        this._world = null!;
+    }
+
+    // 事件驱动的，不需要每帧遍历
+    onTick(world: World, dt: number): void {
+        // 留空
+    }
+
+
+    private _onFire(req: BulletFireRequest): void {
+        const count = req.spreadCount ?? 1;
+        const spreadDeg = req.spreadAngle ?? 0;
+
+        if (count <= 1 || spreadDeg <= 0) {
+            this._spawnOne(req.x, req.y, req.dirX, req.dirY, req);
+            return;
+        }
+
+        const baseRad = Math.atan2(req.dirY, req.dirX);
+        const totalRad = spreadDeg * Math.PI / 180;
+        const step = totalRad / (count - 1);
+        const start = baseRad - totalRad / 2;
+
+        for (let i = 0; i < count; i++) {
+            const a = start + step * i;
+            this._spawnOne(req.x, req.y, Math.cos(a), Math.sin(a), req);
+        }
+    }
+
+    private _spawnOne(x: number, y: number, dirX: number, dirY: number, req: BulletFireRequest): void {
+        const b = this._world.acquire('bullet', () => new Bullet());
+        b.x = x;
+        b.y = y;
+        b.dirX = dirX;
+        b.dirY = dirY;
+        b.speed = req.bulletSpeed;
+        b.damage = req.bulletDamage;
+        b.bulletType = req.bulletType;
+        b.faction = req.isPlayerBullet ? 'player' : 'enemy';   // ← 用 faction
+        this._world.add(b);
+    }
+     
+
+}
+</file>
+
+<file path="Battle/System/BulletSpawnSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "24e20ffe-e632-4e4a-b440-95d95235832e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/CardApplySystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+import { BATTLE_EVENT } from '../BattleEvents';
+import type { CardConfigData, CardEffectType } from '../Config/CardConfig';
+
+export class CardApplySystem implements System {
+
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.CARD_SELECTED, this._onCardSelected, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.CARD_SELECTED, this._onCardSelected, this);
+        this._world = null!;
+    }
+
+    onTick(_world: World, _dt: number): void {}
+
+    private _onCardSelected(card: CardConfigData): void {
+        const player = this._findPlayer();
+        if (!player) return;
+
+        for (const effect of card.effects) {
+            this._applyEffect(player, effect.type, effect.value);
+        }
+
+        const stacks = player.exp.cardStacks.get(card.id) ?? 0;
+        player.exp.cardStacks.set(card.id, stacks + 1);
+        console.log(`[CardApplySystem] ${card.name} 生效，叠了 ${stacks + 1} 层`);
+    }
+
+    private _applyEffect(player: PlayerEntity, type: CardEffectType, value: number): void {
+        switch (type) {
+            case 'bullet_damage':
+                player.weapon.damageMultiplier *= value;
+                break;
+            case 'fire_rate':
+                player.weapon.fireRateMultiplier *= value;
+                break;
+            case 'move_speed':
+                player.weapon.bulletSpeedMultiplier *= value;
+                break;
+            case 'bullet_count':
+                player.weapon.extraBulletCount += value;
+                break;
+            case 'max_hp':
+                player.health.maxHp += value;
+                break;
+            case 'heal':
+                player.health.hp = Math.min(player.health.hp + value, player.health.maxHp);
+                break;
+        }
+    }
+
+    private _findPlayer(): PlayerEntity | null {
+        for (const p of this._world.query<PlayerEntity>('player')) return p;
+        return null;
+    }
+}
+</file>
+
+<file path="Battle/System/CardApplySystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "243fedcb-4561-435a-a218-d61178422ab5",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/CardSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+import { BATTLE_EVENT } from '../BattleEvents';
+import { CARD_POOL, type CardConfigData } from '../Config/CardConfig';
+
+export class CardSystem implements System {
+
+    private _world: World = null!;
+    private _pendingUpgradeCount = 0;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.LEVEL_UP, this._onLevelUp, this);
+        world.bus.on(BATTLE_EVENT.CARD_SELECTED, this._onCardSelected, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.LEVEL_UP, this._onLevelUp, this);
+        world.bus.off(BATTLE_EVENT.CARD_SELECTED, this._onCardSelected, this);
+        this._world = null!;
+    }
+
+    onTick(_world: World, _dt: number): void {}
+
+    private _onLevelUp(levelsGained: number): void {
+        this._pendingUpgradeCount += levelsGained;
+        if (this._pendingUpgradeCount === levelsGained) {
+            this._tryDraw();
+        }
+    }
+
+    private _onCardSelected(_card: CardConfigData): void {
+        this._pendingUpgradeCount--;
+        if (this._pendingUpgradeCount > 0) {
+            this._tryDraw();
+        } else {
+            this._world.bus.emit(BATTLE_EVENT.UPGRADE_FINISHED);
+        }
+    }
+
+    private _tryDraw(): void {
+        const player = this._findPlayer();
+        if (!player) {
+            this._pendingUpgradeCount = 0;
+            this._world.bus.emit(BATTLE_EVENT.UPGRADE_FINISHED);
+            return;
+        }
+
+        const cards = this._drawCards(player, 3);
+        if (cards.length === 0) {
+            this._pendingUpgradeCount = 0;
+            this._world.bus.emit(BATTLE_EVENT.UPGRADE_FINISHED);
+            return;
+        }
+
+        this._world.bus.emit(BATTLE_EVENT.CARDS_DRAWN, cards);
+    }
+
+    private _drawCards(player: PlayerEntity, count: number): CardConfigData[] {
+        const available = CARD_POOL.filter(card => {
+            const stacks = player.exp.cardStacks.get(card.id) ?? 0;
+            const max = card.maxStacks ?? Infinity;
+            return stacks < max;
+        });
+
+        const pool = available.slice();
+        for (let i = pool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [pool[i], pool[j]] = [pool[j], pool[i]];
+        }
+        return pool.slice(0, count);
+    }
+
+    private _findPlayer(): PlayerEntity | null {
+        for (const p of this._world.query<PlayerEntity>('player')) return p;
+        return null;
+    }
+}
+</file>
+
+<file path="Battle/System/CardSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "bfa8add5-3801-473b-91b5-2ac5107fbb24",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/CombatSystem.ts">
+import { GameData } from "../../Core/Data/GameData";
+import type { Entity } from "../../Engine/Entity";
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+import type { Bullet } from "../Entity/Bullet";
+
+
+
+interface GridCell {
+    bullets: Bullet[];
+    planes: Entity[];
+    dirty: boolean;
+}
+
+interface CircleBody extends Entity {
+    collisionRadius: number;
+}
+
+
+export class CombatSystem implements System {
+
+    private _cellSize = 64;
+    private _cols = 0;
+    private _rows = 0;
+    private _halfW = 0;
+    private _halfH = 0;
+    private _cells: GridCell[][] = [];
+    private _dirtyCells: GridCell[] = [];
+
+    onStart(world: World): void {
+        this._halfW = GameData.viewW / 2;
+        this._halfH = GameData.viewH / 2;
+        // 网格覆盖屏幕范围，外扩 2 格
+        this._cols = Math.ceil(GameData.viewW / this._cellSize) + 2;
+        this._rows = Math.ceil(GameData.viewH / this._cellSize) + 2;
+
+        // 预分配：一次性创建所有 cell，之后只复用不清空
+        for (let c = 0; c < this._cols; c++) {
+            this._cells[c] = [];
+            for (let r = 0; r < this._rows; r++) {
+                this._cells[c][r] = { bullets: [], planes: [], dirty: false };
+            }
+        }
+    }
+
+    onTick(world: World, dt: number): void {
+
+        // 1. 清理上一帧用过的 cell（只清 dirty 的）
+        for (let i = 0; i < this._dirtyCells.length; i++) {
+            const cell = this._dirtyCells[i];
+            cell.bullets.length = 0;
+            cell.planes.length = 0;
+            cell.dirty = false;
+        }
+        this._dirtyCells.length = 0;
+
+        // 子弹和敌机
+        this._insertAllPlanes(world, 'enemy');
+        this._insertAllPlanes(world, 'player');
+        this._insertAllPlanes(world, 'boss');
+        this._insertAllPlanes(world, 'turret');
+
+        //3.检测子弹碰撞
+        for (const bullet of world.query<Bullet>('bullet')) {
+            this._insertBullet(bullet);
+            const targetFaction = bullet.faction === 'player' ? 'enemy' : 'player';
+            this._detectBulletCollision(bullet, targetFaction, 
+                (target) => {world.bus.emit(BATTLE_EVENT.BULLET_HIT,bullet,target);}
+            );
+        }
+
+   }
+
+    private _insertBullet(bullet: Bullet): void{
+        const c = Math.floor((bullet.x + this._halfW) / this._cellSize);
+        const r = Math.floor((bullet.y + this._halfH) / this._cellSize);
+        if(!this._isValidCell(c,r)){
+            return;
+        }
+        const cell = this._cells[c][r];
+        cell.bullets.push(bullet);
+        this._markDirty(cell);
+    }
+
+    private _insertAllPlanes(world: World, kind: string): void{
+        for(const plane of world.query<Entity>(kind)){
+            this._insertPlane(plane);
+        }
+    }
+
+    private _insertPlane(plane: Entity): void {
+        if (plane.health && plane.health.hp <= 0) return;
+        const radius = plane.collisionRadius;
+        const minC = Math.floor((plane.x - radius + this._halfW) / this._cellSize);
+        const maxC = Math.floor((plane.x + radius + this._halfW) / this._cellSize);
+        const minR = Math.floor((plane.y - radius + this._halfH) / this._cellSize);
+        const maxR = Math.floor((plane.y + radius + this._halfH) / this._cellSize);
+
+        for (let c = minC; c <= maxC; c++) {
+            for (let r = minR; r <= maxR; r++) {
+                if (!this._isValidCell(c, r)) continue;
+                const cell = this._cells[c][r];
+                cell.planes.push(plane);
+                this._markDirty(cell);
+            }
+        }
+    }
+
+    private _markDirty(cell: GridCell): void{
+        if(!cell.dirty){
+            cell.dirty = true;
+            this._dirtyCells.push(cell);
+        }
+    }
+
+    private _detectBulletCollision(
+        bullet: Bullet, 
+        targetFaction: 'player' | 'enemy',
+        onHit: (target: Entity) => void): void {
+
+        const c = Math.floor((bullet.x + this._halfW) / this._cellSize);
+        const r = Math.floor((bullet.y + this._halfH) / this._cellSize);
+
+        for (let dc = -1; dc <= 1; dc++) {
+            for (let dr = -1; dr <= 1; dr++) {
+                const cc = c + dc;
+                const rr = r + dr;
+                if (!this._isValidCell(cc, rr)) continue;
+                const cell = this._cells[cc][rr];
+                for (let i = 0; i < cell.planes.length; i++) {
+                    const plane = cell.planes[i];
+                    if (plane.health && plane.health.hp <= 0) continue;
+                    if (plane.faction !== targetFaction) continue;
+                    if (this._isCircleOverlap(bullet, plane)) {
+                        onHit(plane);
+                        return;   // 一颗子弹最多命中一个目标
+                    }
+                }
+            }
+        }
+    }
+
+    private _isCircleOverlap(body1 : CircleBody, body2: CircleBody): boolean{
+        const dx = body1.x - body2.x;
+        const dy = body1.y - body2.y;
+        const r = body1.collisionRadius + body2.collisionRadius;
+        return dx * dx + dy * dy < r *  r
+    }
+
+
+
+    private _isValidCell(c: number, r: number): boolean{
+        return c >= 0 && c < this._cols && r >= 0 && r < this._rows;
+    }
+}
+</file>
+
+<file path="Battle/System/CombatSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "be5fe68c-92d9-47ad-bad5-79fddc94ee05",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/DamageSystem.ts">
+import type { Entity } from "../../Engine/Entity";
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+import type { Bullet } from "../Entity/Bullet";
+
+
+export class DamageSystem implements System {
+
+    private _world: World = null!;
+  
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.BULLET_HIT, this._onBulletHit, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.BULLET_HIT, this._onBulletHit, this);
+        this._world = null!;
+    }
+
+    onTick(world: World, dt: number): void {
+        
+    }
+
+    private _onBulletHit(bullet: Bullet, target: Entity): void {
+        this._world.remove(bullet);
+
+        const health = target.health;
+        if (!health) return;
+        if (health.invincibleTimer > 0) return;
+
+        health.hp -= bullet.damage;
+
+        if (target.kind === 'boss') {
+            this._world.bus.emit(BATTLE_EVENT.BOSS_HP_CHANGED, health.hp / health.maxHp);
+        }
+        if (target.kind === 'player') {
+            this._world.bus.emit(BATTLE_EVENT.PLAYER_HP_CHANGED, health.hp / health.maxHp);
+        }
+        // turret 目前没有 HP UI，不 emit
+
+         if (health.hitInvincibleDuration > 0) {
+            health.invincibleTimer = health.hitInvincibleDuration;
+        }
+
+        if (health.hp  <= 0) {
+            this._world.remove(target);
+            switch (target.kind) {
+                case 'enemy':
+                    this._world.bus.emit(BATTLE_EVENT.ENEMY_KILLED, target);
+                    break;
+                case 'boss':
+                    this._world.bus.emit(BATTLE_EVENT.BOSS_KILLED, target);
+                    break;
+                case 'player':
+                    this._world.bus.emit(BATTLE_EVENT.PLAYER_DIED);
+                    break;
+                case 'turret':
+                    this._world.bus.emit(BATTLE_EVENT.TURRET_KILLED, target);
+                    break;
+            }
+        }
+    }
+
+
+
+}
+</file>
+
+<file path="Battle/System/DamageSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "fc21dab5-45b9-40ac-9a37-88b134a897bc",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/EnemySpawnSystem.ts">
+import { GameData } from '../../Core/Data/GameData';
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import { BATTLE_EVENT } from '../BattleEvents';
+import { BOSS_CONFIG } from '../Config/BossConfig';
+import type { EnemyType, SpawnSide } from '../Config/LevelConfig';
+import { BossEntity } from '../Entity/BossEntity';
+import { EnemyEntity } from '../Entity/EnemyEntity';
+
+
+export class EnemySpawnSystem implements System {
+
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.ENEMY_SPAWN_REQUEST, this._onSpawnEnemy, this);
+        world.bus.on(BATTLE_EVENT.BOSS_SPAWN_REQUEST, this._onSpawnBoss, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.ENEMY_SPAWN_REQUEST, this._onSpawnEnemy, this);
+        world.bus.off(BATTLE_EVENT.BOSS_SPAWN_REQUEST, this._onSpawnBoss, this);
+        this._world = null!;
+    }
+
+    onTick(_world: World, _dt: number): void {
+        // 事件驱动，无需每帧
+    }
+
+    private _onSpawnEnemy(enemyType: EnemyType, spawnSide: SpawnSide): void {
+        const e = this._world.acquire('enemy', () => new EnemyEntity());
+        this._resetEnemy(e);
+        this._setSpawnPosition(e, spawnSide);
+        e.move.originX = e.x;
+        e.move.originY = e.y;
+        this._configureEnemy(e, enemyType, spawnSide);
+        this._world.add(e);
+    }
+
+    private _resetEnemy(e: EnemyEntity): void {
+        e.alive = true;
+        // health
+        e.health.hp = 100;
+        e.health.maxHp = 100;
+        e.health.invincibleTimer = 0;
+        e.health.hitInvincibleDuration = 0;
+        // move
+        e.move.pattern = 'none';
+        e.move.dirX = 0;
+        e.move.dirY = 0;
+        e.move.speed = 100;
+        e.move.originX = 0;
+        e.move.originY = 0;
+        e.move.phase = 0;
+        e.move.frequency = 3;
+        e.move.amplitude = 80;
+        // weapon：清空，_configureEnemy 会重新 push
+        e.weapon.weapons.length = 0;
+    }
+
+    private _setSpawnPosition(e: EnemyEntity, side: SpawnSide): void {
+        const halfW = GameData.viewW / 2;
+        const halfH = GameData.viewH / 2;
+
+        if (side === 'left') {
+            e.x = -halfW - 30;
+            e.y = -halfH * 0.6 + Math.random() * halfH * 0.6;
+            e.move.dirX = 1;
+            e.move.dirY = 0;
+        } else if (side === 'right') {
+            e.x = halfW + 30;
+            e.y = -halfH * 0.6 + Math.random() * halfH * 0.6;
+            e.move.dirX = -1;
+            e.move.dirY = 0;
+        } else {
+            e.x = -halfW + Math.random() * GameData.viewW;
+            e.y = halfH + 30;
+            e.move.dirX = 0;
+            e.move.dirY = -1;
+        }
+    }
+
+    private _configureEnemy(e: EnemyEntity, type: EnemyType, side: SpawnSide): void {
+        switch (type) {
+            case 'sine':
+                e.health.hp = 25;
+                e.health.maxHp = 25;
+                e.move.speed = 120;
+                e.move.pattern = 'sine';
+                e.move.frequency = 3;
+                e.move.amplitude = 80;
+                break;
+            case 'basic':
+            default:
+                e.health.hp = 30;
+                e.health.maxHp = 30;
+                e.move.speed = 100;
+                e.move.pattern = (side === 'top' && Math.random() < 0.5) ? 'sine' : 'straight';
+                break;
+        }
+
+        e.weapon.weapons.push({
+            config: {
+                fireInterval: 2.0,
+                bulletType: 'yellow',
+                bulletSpeed: 200,
+                bulletDamage: 8,
+                fireDirX: 0,
+                fireDirY: -1,
+            },
+            cooldownTimer: Math.random() * 2.0,
+            enabled: true,
+        });
+    }
+
+
+    private _onSpawnBoss(bossId: string): void {
+        const config = BOSS_CONFIG[bossId];
+        if (!config) {
+            console.warn(`[EnemySpawnSystem] 未知 Boss: ${bossId}`);
+            return;
+        }
+        const boss = new BossEntity(config);
+        boss.x = 0;
+        boss.y = GameData.viewH / 2 - 300;
+        this._world.add(boss);
+        this._world.bus.emit(BATTLE_EVENT.BOSS_SPAWNED, config.name);
+        this._world.bus.emit(BATTLE_EVENT.TURRET_REBUILD_REQUEST, boss, 0);
+    }
+}
+</file>
+
+<file path="Battle/System/EnemySpawnSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "eea5ab7f-f078-43c8-933e-5f35e2d9adc2",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/ExpSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+import { BATTLE_EVENT } from '../BattleEvents';
+import { EXP_REWARD, expForLevel } from '../Config/ExpConfig';
+
+export class ExpSystem implements System {
+
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.ENEMY_KILLED, this._onEnemyKilled, this);
+        world.bus.on(BATTLE_EVENT.BOSS_KILLED, this._onBossKilled, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.ENEMY_KILLED, this._onEnemyKilled, this);
+        world.bus.off(BATTLE_EVENT.BOSS_KILLED, this._onBossKilled, this);
+        this._world = null!;
+    }
+
+    onTick(_world: World, _dt: number): void {}
+
+    private _onEnemyKilled(): void { this._addExp(EXP_REWARD.enemy); }
+    private _onBossKilled(): void  { this._addExp(EXP_REWARD.boss); }
+
+    private _addExp(amount: number): void {
+        const player = this._findPlayer();
+        if (!player) return;
+
+        const e = player.exp;
+        e.exp += amount;
+
+        let levelsGained = 0;
+        while (e.exp >= e.expToNext) {
+            e.exp -= e.expToNext;
+            e.level++;
+            e.expToNext = expForLevel(e.level);
+            levelsGained++;
+        }
+
+        if (levelsGained > 0) {
+            console.log(`[ExpSystem] 升级到 Lv.${e.level}`);
+            this._world.bus.emit(BATTLE_EVENT.LEVEL_UP, levelsGained);
+        }
+
+        this._world.bus.emit(BATTLE_EVENT.EXP_CHANGED, e.exp, e.expToNext, e.level);
+    }
+
+    private _findPlayer(): PlayerEntity | null {
+        for (const p of this._world.query<PlayerEntity>('player')) return p;
+        return null;
+    }
+}
+</file>
+
+<file path="Battle/System/ExpSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "59bbb166-36a7-4393-8926-d17a90af4386",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/FireCooldown.ts">
+/**
+ * 推进冷却并返回本帧应发射次数。
+ * 发射器计时规则的唯一实现。接受任何带 cooldownTimer 字段的对象。
+ */
+export function advanceCooldown(
+    state: { cooldownTimer: number },
+    fireInterval: number,
+    dt: number,
+): number {
+    state.cooldownTimer += dt;
+    let count = 0;
+    let guard = 0;
+    while (state.cooldownTimer >= fireInterval && guard++ < 16) {
+        state.cooldownTimer -= fireInterval;
+        count++;
+    }
+    return count;
+}
+</file>
+
+<file path="Battle/System/FireCooldown.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "c7a3f82a-be5e-49ca-b47e-29d39f68c230",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/FireSystem.ts">
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import { BATTLE_EVENT } from "../BattleEvents";
+import { EnemyEntity } from "../Entity/EnemyEntity";
+import type { PlayerEntity } from "../Entity/PlayerEntity";
+import type { TurretEntity } from "../Entity/TurretEntity";
+import { BulletFireRequest } from "./BulletSpawnSystem";
+import { advanceCooldown } from "./FireCooldown";
+
+export class FireSystem implements System {
+
+    onTick(world: World, dt: number): void {
+        for (const p of world.query<PlayerEntity>('player')) this._tickPlayer(world, p, dt);
+        for (const p of world.query<EnemyEntity>('enemy'))  this._tickEnemy(world, p, dt);
+        for (const t of world.query<TurretEntity>('turret')) this._tickTurret(world, t, dt);
+    }
+
+    private _tickPlayer(world: World, p: PlayerEntity, dt: number): void {
+        for (const w of p.weapon.weapons) {
+            if (!w.enabled) continue;
+
+            const interval = w.config.fireInterval * p.weapon.fireRateMultiplier;
+            const n = advanceCooldown(w, interval, dt);
+
+            const spreadCount = (w.config.spreadCount ?? 1) + p.weapon.extraBulletCount;
+            const baseAngle = w.config.spreadAngle ?? 0;
+            const spreadAngle = baseAngle > 0 ? baseAngle : (spreadCount > 1 ? 20 : 0);
+
+            for (let i = 0; i < n; i++) {
+                const req: BulletFireRequest = {
+                    x: p.x + w.config.fireDirX * 20,
+                    y: p.y + w.config.fireDirY * 20,
+                    dirX: w.config.fireDirX,
+                    dirY: w.config.fireDirY,
+                    bulletSpeed: w.config.bulletSpeed * p.weapon.bulletSpeedMultiplier,
+                    bulletDamage: w.config.bulletDamage * p.weapon.damageMultiplier,
+                    bulletType: w.config.bulletType,
+                    isPlayerBullet: true,
+                    spreadCount,
+                    spreadAngle,
+                };
+                world.bus.emit(BATTLE_EVENT.WEAPON_FIRE, req);
+            }
+        }
+    }
+
+    private _tickEnemy(world: World, p: EnemyEntity, dt: number): void {
+        for (const w of p.weapon.weapons) {
+            if (!w.enabled) continue;
+            const n = advanceCooldown(w, w.config.fireInterval, dt);
+            for (let i = 0; i < n; i++) {
+                const req: BulletFireRequest = {
+                    x: p.x + w.config.fireDirX * 20,
+                    y: p.y + w.config.fireDirY * 20,
+                    dirX: w.config.fireDirX,
+                    dirY: w.config.fireDirY,
+                    bulletSpeed: w.config.bulletSpeed,
+                    bulletDamage: w.config.bulletDamage,
+                    bulletType: w.config.bulletType,
+                    isPlayerBullet: false,
+                    spreadCount: w.config.spreadCount,
+                    spreadAngle: w.config.spreadAngle,
+                };
+                world.bus.emit(BATTLE_EVENT.WEAPON_FIRE, req);
+            }
+        }
+    }
+
+    private _tickTurret(world: World, t: TurretEntity, dt: number): void {
+        if (!t.aim.active || !t.alive || t.health.hp <= 0) return;
+        const c = t.config;
+        const n = advanceCooldown(t.aim, c.fireInterval, dt);
+        for (let i = 0; i < n; i++) {
+            const rad = t.aim.aimAngle * Math.PI / 180;
+            const req: BulletFireRequest = {
+                x: t.x,
+                y: t.y,
+                dirX: Math.cos(rad),
+                dirY: Math.sin(rad),
+                bulletSpeed: c.bulletSpeed,
+                bulletDamage: c.bulletDamage,
+                bulletType:  c.bulletType,
+                isPlayerBullet: false,
+                spreadCount: c.spreadCount,
+                spreadAngle: c.spreadAngle,
+            };
+            world.bus.emit(BATTLE_EVENT.WEAPON_FIRE, req);
+        }
+    }
+
+}
+</file>
+
+<file path="Battle/System/FireSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "c048d764-d4ca-43e4-852e-84049c8fa32e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/InvincibleSystem.ts">
+import type { Entity } from '../../Engine/Entity';
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+
+
+export class InvincibleSystem implements System {
+
+    onTick(world: World, dt: number): void {
+        this._tickKind(world, 'player', dt);
+        this._tickKind(world, 'enemy', dt);
+        this._tickKind(world, 'boss', dt);
+        this._tickKind(world, 'turret', dt);
+    }
+
+    private _tickKind(world: World, kind: string, dt: number): void {
+        for (const p of world.query<Entity>(kind)) {
+            const h = p.health;
+            if (!h || h.invincibleTimer <= 0) continue;
+            h.invincibleTimer -= dt;
+            if (h.invincibleTimer < 0) h.invincibleTimer = 0;
+        }
+    }
+}
+</file>
+
+<file path="Battle/System/InvincibleSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "71168fd7-6fc1-4175-a5df-d6e3d972bfd6",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/MovementSystem.ts">
+import type { System } from "../../Engine/System";
+import type { World } from "../../Engine/World";
+import type { Bullet } from "../Entity/Bullet";
+import type { EnemyEntity } from "../Entity/EnemyEntity";
+
+
+export class MovementSystem implements System{
+    
+    onTick(world:World,dt:number): void{
+        this._tickBullets(world, dt);
+        this._tickEnemies(world, dt);
+    }
+
+    private _tickBullets(world: World, dt: number): void {
+        for(const b of world.query<Bullet>('bullet')){
+            b.x +=  b.dirX * b.speed * dt;
+            b.y +=  b.dirY * b.speed * dt;
+        }
+    }
+
+    private _tickEnemies(world: World, dt: number): void {
+        for(const p of world.query<EnemyEntity>('enemy')){
+            switch(p.move.pattern){
+                case 'straight':
+                    this._moveStraight(p, dt);
+                    break;
+                case 'sine':
+                    this._moveSine(p, dt);
+                    break;
+                case 'none':
+                default:
+                    // 不动
+                    break;
+            }
+        }
+    }
+
+    private _moveStraight(p: EnemyEntity, dt: number): void {
+        p.x += p.move.dirX * p.move.speed * dt;
+        p.y += p.move.dirY * p.move.speed * dt;
+    }
+
+    private _moveSine(p: EnemyEntity, dt: number): void{
+        p.y -= p.move.speed * dt;
+        p.move.phase += p.move.frequency * dt;
+        p.x = p.move.originX + Math.sin(p.move.phase) * p.move.amplitude;
+    }
+}
+</file>
+
+<file path="Battle/System/MovementSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "99150354-e7db-455a-b566-d8c9de760b06",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/OutOfBoundsSystem.ts">
+import { GameData } from '../../Core/Data/GameData';
+import type { Entity } from '../../Engine/Entity';
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+
+
+
+
+
+export class OutOfBoundsSystem implements System{
+    
+    private _margin = 50; 
+    
+    onTick(world:World,dt:number): void{
+
+        const halfW = GameData.viewW / 2 + this._margin;
+        const halfH = GameData.viewH / 2 + this._margin;
+        this._checkKind(world, 'bullet', halfW, halfH);
+        this._checkKind(world, 'enemy', halfW, halfH);
+    }
+
+    private _checkKind(world: World, kind: string, halfW: number, halfH: number): void {
+        for (const e of world.query<Entity>(kind)) {
+            if (this._isOutOfBounds(e, halfW, halfH)) {
+                world.remove(e);
+            }
+        }
+    }
+
+    private _isOutOfBounds(e: Entity, halfW: number, halfH: number): boolean {
+        return e.x < -halfW || e.x > halfW || e.y < -halfH || e.y > halfH;
+    }
+}
+</file>
+
+<file path="Battle/System/OutOfBoundsSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "9c042697-f62b-47ec-91b5-a8e8e9b27d37",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/PlayerControlSystem.ts">
+import type { World } from '../../Engine/World';
+import type { System } from '../../Engine/System';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+import { BATTLE_EVENT } from '../BattleEvents';
+import { GameData } from '../../Core/Data/GameData';
+
+export class PlayerControlSystem implements System {
+
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.PLAYER_MOVE, this._onPlayerMove, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.PLAYER_MOVE, this._onPlayerMove, this);
+        this._world = null!;
+    }
+
+    onTick(_world: World, _dt: number): void {}
+
+    private _onPlayerMove(dx: number, dy: number): void {
+        for (const p of this._world.query<PlayerEntity>('player')) {
+            p.x += dx;
+            p.y += dy;
+            this._clampToScreen(p);
+        }
+    }
+
+    private _clampToScreen(p: PlayerEntity): void {
+        const halfW = GameData.viewW / 2;
+        const halfH = GameData.viewH / 2;
+        const margin = 20;
+        p.x = Math.max(-halfW + margin, Math.min(halfW - margin, p.x));
+        p.y = Math.max(-halfH + margin, Math.min(halfH - margin, p.y));
+    }
+}
+</file>
+
+<file path="Battle/System/PlayerControlSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8b54f33b-2a41-43b4-af93-a753b79ef305",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/TurretAimSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+import type { TurretEntity } from '../Entity/TurretEntity';
+
+export class TurretAimSystem implements System {
+
+    onTick(world: World, dt: number): void {
+        for (const turret of world.query<TurretEntity>('turret')) {
+            if (!turret.alive || turret.health.hp <= 0) continue;
+            this._tickAim(world, turret, dt);
+        }
+    }
+
+    private _tickAim(world: World, turret: TurretEntity, dt: number): void {
+        const c = turret.config;
+        switch (c.aimMode) {
+            case 'fixed':
+                turret.aim.aimAngle = c.baseAngle;
+                break;
+            case 'target':
+                this._aimAtPlayer(world, turret, dt);
+                break;
+            case 'spin':
+                turret.aim.aimAngle = (turret.aim.aimAngle + c.aimSpeed * dt) % 360;
+                break;
+            case 'oscillate':
+                turret.aim.oscPhase += (c.aimSpeed * Math.PI / 180) * dt;
+                turret.aim.aimAngle = c.baseAngle + Math.sin(turret.aim.oscPhase) * c.oscRange;
+                break;
+        }
+    }
+
+    private _aimAtPlayer(world: World, turret: TurretEntity, dt: number): void {
+        const player = this._findPlayer(world);
+        if (!player) return;
+
+        const c = turret.config;
+        const targetAngle = Math.atan2(player.y - turret.y, player.x - turret.x) * 180 / Math.PI;
+
+        let diff = targetAngle - turret.aim.aimAngle;
+        diff = ((diff + 180) % 360 + 360) % 360 - 180;
+
+        const maxStep = c.aimSpeed * dt;
+        if (Math.abs(diff) <= maxStep) {
+            turret.aim.aimAngle = targetAngle;
+        } else {
+            turret.aim.aimAngle += Math.sign(diff) * maxStep;
+        }
+    }
+
+    private _findPlayer(world: World): PlayerEntity | null {
+        for (const p of world.query<PlayerEntity>('player')) return p;
+        return null;
+    }
+}
+</file>
+
+<file path="Battle/System/TurretAimSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "8dad98eb-c040-46b0-b288-90592addfa58",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/TurretScheduleSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { BossEntity } from '../Entity/BossEntity';
+import type { TurretEntity } from '../Entity/TurretEntity';
+import type { TurretScheduleState } from '../Entity/TurretSchedule';
+
+export class TurretScheduleSystem implements System {
+
+    onTick(world: World, dt: number): void {
+        for (const boss of world.query<BossEntity>('boss')) {
+            if (!boss.alive || boss.health.hp <= 0) continue;
+            this._tickSchedule(world, boss, dt);
+        }
+    }
+
+    private _tickSchedule(world: World, boss: BossEntity, dt: number): void {
+        const turrets = this._collectTurrets(world, boss);
+        const schedule = boss.turretSchedule;
+
+        if (!schedule || schedule.config.mode === 'volley') {
+            for (const t of turrets) if (t) t.aim.active = true;
+            return;
+        }
+
+        this._tickSequence(boss, schedule, turrets, dt);
+    }
+
+    private _collectTurrets(world: World, boss: BossEntity): (TurretEntity | null)[] {
+        const result: (TurretEntity | null)[] = [];
+        for (const id of boss.turretIds) {
+            if (id === 0) { result.push(null); continue; }
+            result.push(this._findTurretById(world, boss, id));
+        }
+        return result;
+    }
+
+    private _findTurretById(world: World, boss: BossEntity, id: number): TurretEntity | null {
+        for (const t of world.query<TurretEntity>('turret')) {
+            if (t.id === id && t.ownerId === boss.id && t.alive && t.health.hp > 0) {
+                return t;
+            }
+        }
+        return null;
+    }
+
+    private _tickSequence(
+        boss: BossEntity,
+        schedule: TurretScheduleState,
+        turrets: (TurretEntity | null)[],
+        dt: number,
+    ): void {
+        for (const t of turrets) if (t) t.aim.active = false;
+        if (schedule.activeIndex < 0) return;
+
+        if (schedule.gapTimer > 0) {
+            schedule.gapTimer -= dt;
+            if (schedule.gapTimer <= 0) {
+                schedule.gapTimer = 0;
+                schedule.burstElapsed = 0;
+            }
+            return;
+        }
+
+        const turret = turrets[schedule.activeIndex];
+        if (!turret) {
+            this._advanceTurret(turrets, schedule);
+            return;
+        }
+        turret.aim.active = true;
+
+        schedule.burstElapsed += dt;
+        const burstDuration = schedule.config.burstDuration ?? 2;
+        if (schedule.burstElapsed >= burstDuration) {
+            this._advanceTurret(turrets, schedule);
+        }
+    }
+
+    private _advanceTurret(
+        turrets: (TurretEntity | null)[],
+        schedule: TurretScheduleState,
+    ): void {
+        const n = turrets.length;
+        if (n === 0) { schedule.activeIndex = -1; return; }
+
+        const loop = schedule.config.loop ?? true;
+        let next = schedule.activeIndex;
+        let guard = 0;
+
+        do {
+            next++;
+            if (next >= n) {
+                if (!loop) {
+                    schedule.activeIndex = -1;
+                    schedule.burstElapsed = 0;
+                    schedule.gapTimer = 0;
+                    return;
+                }
+                next = 0;
+            }
+            if (guard++ > n) { schedule.activeIndex = -1; return; }
+        } while (!turrets[next]);
+
+        schedule.activeIndex = next;
+        const t = turrets[next];
+        if (t) t.aim.cooldownTimer = 0;
+        schedule.gapTimer = schedule.config.burstGap ?? 1;
+        schedule.burstElapsed = 0;
+    }
+}
+</file>
+
+<file path="Battle/System/TurretScheduleSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "924a2f0c-ec3d-466d-974c-80db00b3ed02",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/TurretSpawnSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import type { BossEntity } from '../Entity/BossEntity';
+import { TurretEntity } from '../Entity/TurretEntity';
+import { BATTLE_EVENT } from '../BattleEvents';
+
+export class TurretSpawnSystem implements System {
+
+    private _world: World = null!;
+
+    onStart(world: World): void {
+        this._world = world;
+        world.bus.on(BATTLE_EVENT.TURRET_REBUILD_REQUEST, this._onRebuild, this);
+        world.bus.on(BATTLE_EVENT.BOSS_KILLED, this._onBossKilled, this);
+        world.bus.on(BATTLE_EVENT.TURRET_KILLED, this._onTurretKilled, this);
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.TURRET_REBUILD_REQUEST, this._onRebuild, this);
+        world.bus.off(BATTLE_EVENT.BOSS_KILLED, this._onBossKilled, this);
+        world.bus.off(BATTLE_EVENT.TURRET_KILLED, this._onTurretKilled, this);
+        this._world = null!;
+    }
+
+    onTick(): void {}
+
+    private _onRebuild(boss: BossEntity, stageIndex: number): void {
+        const oldIds = new Set(boss.turretIds.filter(id => id !== 0));
+        for (const t of this._world.query<TurretEntity>('turret')) {
+            if (oldIds.has(t.id)) this._world.remove(t);
+        }
+        boss.turretIds = [];
+
+        const stage = boss.config.stages[stageIndex];
+        if (!stage) return;
+
+        for (const cfg of stage.turrets) {
+            const turret = new TurretEntity();
+            turret.ownerId = boss.id;
+            turret.config = cfg;
+            turret.health.hp = cfg.hp;
+            turret.health.maxHp = cfg.hp;
+            turret.collisionRadius = cfg.collisionRadius;
+            turret.aim.aimAngle = cfg.baseAngle;
+            turret.x = boss.x + cfg.offsetX;
+            turret.y = boss.y + cfg.offsetY;
+            this._world.add(turret);
+            boss.turretIds.push(turret.id);
+        }
+    }
+
+    private _onTurretKilled(turret: TurretEntity): void {
+        for (const boss of this._world.query<BossEntity>('boss')) {
+            const idx = boss.turretIds.indexOf(turret.id);
+            if (idx >= 0) boss.turretIds[idx] = 0;
+        }
+    }
+
+    private _onBossKilled(boss: BossEntity): void {
+        const oldIds = new Set(boss.turretIds.filter(id => id !== 0));
+        for (const t of this._world.query<TurretEntity>('turret')) {
+            if (oldIds.has(t.id)) this._world.remove(t);
+        }
+    }
+}
+</file>
+
+<file path="Battle/System/TurretSpawnSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "421c241f-c35e-4ef9-88b7-227b68eb8b82",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System/WaveSystem.ts">
+import type { System } from '../../Engine/System';
+import type { World } from '../../Engine/World';
+import { BATTLE_EVENT } from '../BattleEvents';
+import { LEVELS, type LevelConfigData, type EnemyGroupConfig } from '../Config/LevelConfig';
+
+
+type WaveState = 'idle' | 'running' | 'finished';
+
+interface RunningGroup {
+    config: EnemyGroupConfig;
+    remain: number;
+    timer: number;
+    started: boolean;
+}
+
+interface RunningWave {
+    startTime: number;
+    bossId: string | null;
+    bossDelay: number;
+    bossSpawned: boolean;
+    groups: RunningGroup[];
+    started: boolean;
+}
+
+export class WaveSystem implements System {
+
+    private _world: World = null!;
+    private _level: LevelConfigData | null = null;
+    private _state: WaveState = 'idle';
+    private _levelTime = 0;
+    private _runningWaves: RunningWave[] = [];
+
+
+    onStart(world: World): void {
+        this._world = world;
+        this._level = LEVELS['level_1'];
+        world.bus.on(BATTLE_EVENT.ENEMY_KILLED, this._checkClear, this);
+        world.bus.on(BATTLE_EVENT.BOSS_KILLED, this._checkClear, this);
+        this.begin();
+    }
+
+    onDestroy(world: World): void {
+        world.bus.off(BATTLE_EVENT.ENEMY_KILLED, this._checkClear, this);
+        world.bus.off(BATTLE_EVENT.BOSS_KILLED, this._checkClear, this);
+        this._world = null!;
+    }
+
+  
+    public begin(): void {
+        if (this._state !== 'idle') return;
+        if (!this._level || this._level.waves.length === 0) {
+            console.warn('[WaveSystem] 关卡没有波次');
+            return;
+        }
+
+        this._levelTime = 0;
+        this._runningWaves = [];
+        this._state = 'running';
+
+        for (const wave of this._level.waves) {
+            this._runningWaves.push({
+                startTime: wave.startTime,
+                bossId: wave.boss?.bossId ?? null,
+                bossDelay: wave.boss?.delay ?? 0,
+                bossSpawned: false,
+                groups: wave.enemyGroups.map(cfg => ({
+                    config: cfg,
+                    remain: cfg.count,
+                    timer: cfg.delay,
+                    started: cfg.delay <= 0,
+                })),
+                started: false,
+            });
+        }
+
+        console.log(`[WaveSystem] 关卡 ${this._level.name} 开始`);
+    }
+
+    onTick(_world: World, dt: number): void {
+        if (this._state !== 'running') return;
+        this._levelTime += dt;
+
+        for (const wave of this._runningWaves) {
+            if (!wave.started) {
+                if (this._levelTime >= wave.startTime) {
+                    wave.started = true;
+                    console.log(`[WaveSystem] 第 ${this._runningWaves.indexOf(wave) + 1} 波开始`);
+                } else {
+                    continue;
+                }
+            }
+            this._tickWave(wave, dt);
+        } 
+    }
+
+    private _tickWave(wave: RunningWave, dt: number): void {
+        for (let i = wave.groups.length - 1; i >= 0; i--) {
+            const g = wave.groups[i];
+
+            if (!g.started) {
+                g.timer -= dt;
+                if (g.timer > 0) continue; // 还没到时间，跳过
+                g.started = true;
+                g.timer = 0; // 保证归零
+            }else{
+                g.timer -= dt;
+            }
+            let guard = 0;
+            while (g.timer <= 0 && g.remain > 0 && guard++ < 16) {
+                this._world.bus.emit(
+                    BATTLE_EVENT.ENEMY_SPAWN_REQUEST,
+                    g.config.enemyType,
+                    g.config.spawnSide ?? 'top',
+                );
+                g.remain--;
+
+                if (g.config.spawnInterval <= 0) {
+                    while (g.remain > 0) {
+                        this._world.bus.emit(
+                            BATTLE_EVENT.ENEMY_SPAWN_REQUEST,
+                            g.config.enemyType,
+                            g.config.spawnSide ?? 'top',
+                        );
+                        g.remain--;
+                    }
+                    g.timer = Infinity;
+                } else {
+                    g.timer += g.config.spawnInterval;
+                }
+            }
+
+            if (g.remain <= 0) wave.groups.splice(i, 1);
+        }
+
+
+        if (wave.bossId && !wave.bossSpawned) {
+            wave.bossDelay -= dt;
+            if (wave.bossDelay <= 0) {
+                this._world.bus.emit(BATTLE_EVENT.BOSS_SPAWN_REQUEST, wave.bossId);
+                wave.bossSpawned = true;
+            }
+        }
+    }
+
+
+
+
+    private _checkClear(): void {
+        if (this._state !== 'running') return;
+
+        const allSpawned = this._runningWaves.every(w => w.started && w.groups.length === 0);
+        if (!allSpawned) return;
+
+        const hasEnemies = this._world.hasAny('enemy') || this._world.hasAny('boss');
+        if (!hasEnemies) {
+            this._state = 'finished';
+            // 在ExpSystem给经验之前，先发出通关信号
+            this._world.bus.emit(BATTLE_EVENT.LEVEL_CLEAR);
+        }
+    }
+}
+</file>
+
+<file path="Battle/System/WaveSystem.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "348e372b-1372-497c-ac4c-823394849343",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View/BossView.ts">
+import { _decorator, Color, Component, Graphics,  } from 'cc';
+import type { EntityView } from '../../Engine/ViewRegistry';
+import type { Entity } from '../../Engine/Entity';
+import type { BossEntity } from '../Entity/BossEntity';
+
+const { ccclass} = _decorator;
+
+@ccclass('BossView')
+export class BossView extends Component implements EntityView{
+
+    private _boss: BossEntity | null = null;
+
+
+    onLoad() {
+        const g = this.node.addComponent(Graphics);
+        g.fillColor = new Color(220, 60, 60, 255);
+        // 先画个占位方块，大小按 collisionRadius 后续可调
+        g.rect(-50, -50, 100, 100);
+        g.fill();
+    }
+
+    bind(entity: Entity): void {
+        this._boss = entity as BossEntity;
+        this.sync(0);
+    }
+
+    sync(dt: number): void {
+        if(!this._boss){return;}
+        this.node.setPosition(this._boss.x,this._boss.y);
+
+    }   
+
+
+    unbind(): void {
+        this._boss = null;
+    }
+}
+</file>
+
+<file path="Battle/View/BossView.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "6f787971-e9b1-4c42-8bb0-8ea598ce24a9",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View/BulletView.ts">
+import { _decorator, Color, Component, Graphics } from 'cc';
+import type { EntityView } from '../../Engine/ViewRegistry';
+import type { Entity } from '../../Engine/Entity';
+import type { Bullet } from '../Entity/Bullet';
+
+const { ccclass } = _decorator;
+
+const BULLET_COLORS: Record<string, Color> = {
+    blue:     new Color(80, 160, 255, 255),
+    yellow:   new Color(255, 220, 80, 255),
+    laser:    new Color(255, 80, 200, 255),
+    homing:   new Color(180, 80, 255, 255),
+    particle: new Color(255, 255, 255, 255),
+};
+
+@ccclass('BulletView')
+export class BulletView extends Component implements EntityView {
+
+    private _bullet: Bullet | null = null;
+    private _g: Graphics | null = null;
+
+    bind(entity: Entity): void {
+        this._bullet = entity as Bullet;
+        this._draw();
+        this.sync(0);
+    }
+
+    sync(_dt: number): void {
+        if (!this._bullet) return;
+        this.node.setPosition(this._bullet.x, this._bullet.y);
+    }
+
+    private _draw(): void {
+        if (!this._bullet) return;
+        if (!this._g) {
+            this._g = this.node.getComponent(Graphics) ?? this.node.addComponent(Graphics);
+        }
+        this._g.clear();
+        this._g.fillColor = BULLET_COLORS[this._bullet.bulletType] ?? BULLET_COLORS.yellow;
+        this._g.circle(0, 0, 8);
+        this._g.fill();
+    }
+
+    unbind(): void {
+        this._bullet = null;
+    }
+}
+</file>
+
+<file path="Battle/View/BulletView.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "7b76884d-bca6-49d6-94b8-4a5cd71034d2",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View/EnemyView.ts">
+import { _decorator, Color, Component, Graphics, Node } from 'cc';
+import type { EntityView } from '../../Engine/ViewRegistry';
+import type { Entity } from '../../Engine/Entity';
+import type { EnemyEntity } from '../Entity/EnemyEntity';
+
+const { ccclass, } = _decorator;
+
+@ccclass('EnemyView')
+export class EnemyView extends Component implements EntityView {
+
+    private _plane: EnemyEntity | null = null;
+
+    onLoad() {
+        const g = this.node.addComponent(Graphics);
+        g.fillColor = new Color(255, 80, 80, 255);
+        g.rect(-18, -18, 36, 36);
+        g.fill();
+    }
+
+
+    bind(entity: Entity): void {
+        this._plane = entity as EnemyEntity;    
+        this.sync(0);
+    }
+
+    sync(dt: number): void {
+        if(!this._plane) return;
+        this.node.setPosition(this._plane.x, this._plane.y);
+    }
+
+    unbind(): void {
+        this._plane = null;
+    }
+}
+</file>
+
+<file path="Battle/View/EnemyView.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "5180b713-521f-4aba-ab5d-5a037f7e87fe",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View/PlayerView.ts">
+import { _decorator, Color, Component, Graphics } from 'cc';
+import type { EntityView } from '../../Engine/ViewRegistry';
+import type { Entity } from '../../Engine/Entity';
+import type { PlayerEntity } from '../Entity/PlayerEntity';
+const { ccclass } = _decorator;
+
+@ccclass('PlayerView')
+export class PlayerView extends Component implements EntityView {
+
+    private _plane: PlayerEntity | null = null;
+
+    onLoad() {
+        const g = this.node.addComponent(Graphics);
+        g.fillColor = new Color(80, 200, 255, 255);
+        g.moveTo(0, 20);
+        g.lineTo(-15, -10);
+        g.lineTo(15, -10);
+        g.close();
+        g.fill();
+    }
+
+    bind(entity: Entity): void {
+        this._plane = entity as PlayerEntity;
+        this.sync(0);
+    }
+
+    sync(_dt: number): void {
+        if (!this._plane) return;
+        this.node.setPosition(this._plane.x, this._plane.y);
+
+        const h = this._plane.health;
+        if (h.invincibleTimer > 0) {
+            const flash = Math.floor(h.invincibleTimer * 10) % 2 === 0;
+            this.node.active = flash;
+        } else if (!this.node.active) {
+            this.node.active = true;
+        }
+    }
+
+    unbind(): void {
+        this._plane = null;
+    }
+}
+</file>
+
+<file path="Battle/View/PlayerView.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "afd8df7a-3618-445b-8b80-93096225aa27",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View/TurretView.ts">
+import { _decorator, Color, Component, Graphics, Node } from 'cc';
+import type { EntityView } from '../../Engine/ViewRegistry';
+import type { Entity } from '../../Engine/Entity';
+import type { TurretEntity } from '../Entity/TurretEntity';
+const { ccclass,  } = _decorator;
+
+@ccclass('TurretView')
+export class TurretView extends Component implements EntityView{
+
+    private _turret: TurretEntity | null = null;
+
+    onLoad() {
+        const g = this.node.addComponent(Graphics);
+        g.fillColor = new Color(180, 40, 40, 255);
+        g.circle(0, 0, 14);
+        g.fill();
+
+        g.strokeColor = new Color(255, 200, 100, 255);
+        g.lineWidth = 4;
+        g.moveTo(0, 0);
+        g.lineTo(0, 24);
+        g.stroke();
+    }
+
+    bind(entity: Entity): void {
+        this._turret = entity as TurretEntity;
+        this.sync(0);
+    }
+
+    sync(dt: number): void {
+        if (!this._turret) return;
+        this.node.setPosition(this._turret.x, this._turret.y);
+        this.node.angle = this._toCocosAngle(this._turret.aim.aimAngle);
+    }
+
+    /**
+     * 数学角度 → Cocos node.angle。
+     * 数学：0° = 右，90° = 上（Math.atan2 的约定）
+     * Cocos：0° = 上，正数 = 逆时针
+     * 转换：cocosAngle = mathAngle - 90
+     */
+    private _toCocosAngle(mathAngle: number): number {
+        return mathAngle - 90;
+    }
+
+    unbind(): void {
+        this._turret = null;
+    }
+}
+</file>
+
+<file path="Battle/View/TurretView.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "7eaef9ae-6e64-4d9e-a4ef-f3bb85e82f87",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/ViewModel/BattleViewModel.ts">
+// Battle/ViewModel/BattleViewModel.ts
+import type { Bus } from '../../Engine/Bus';
+import type { GameState } from '../System/BattleStateSystem';
+import type { CardConfigData } from '../Config/CardConfig';
+import { BATTLE_EVENT } from '../BattleEvents';
+
+export class BattleViewModel {
+    private _cards: CardConfigData[] = [];
+    private _gameState: GameState = 'playing';
+    private _levelCleared = false;
+
+    // 选卡面板意图
+    public get shouldShowUpgradePanel(): boolean {
+        if (this._levelCleared || this._gameState === 'level_clear' || this._gameState === 'game_over') {
+            return false;
+        }
+        return this._gameState === 'upgrading' && this._cards.length > 0;
+    }
+
+    public get currentCards(): CardConfigData[] {
+        return this._cards;
+    }
+
+    // === 【新增】结果面板（暂停/胜利/失败）意图 ===
+    public get shouldShowResultPanel(): boolean {
+        return this._gameState === 'paused' || 
+               this._gameState === 'level_clear' || 
+               this._gameState === 'game_over';
+    }
+
+    public get resultTitle(): string {
+        if (this._gameState === 'paused') return '游戏暂停';
+        if (this._gameState === 'level_clear') return '关卡胜利';
+        if (this._gameState === 'game_over') return '挑战失败';
+        return '';
+    }
+
+    public get resultCanResume(): boolean {
+        // 只有暂停状态才允许“继续游戏”，胜利/失败不允许
+        return this._gameState === 'paused';
+    }
+
+    constructor(private _bus: Bus) {
+        this._bus.on(BATTLE_EVENT.CARDS_DRAWN, this._onCardsDrawn, this);
+        this._bus.on(BATTLE_EVENT.GAME_STATE_CHANGED, this._onGameStateChanged, this);
+        this._bus.on(BATTLE_EVENT.LEVEL_CLEAR, this._onLevelClear, this);
+    }
+
+    onDestroy(): void {
+        this._bus.off(BATTLE_EVENT.CARDS_DRAWN, this._onCardsDrawn, this);
+        this._bus.off(BATTLE_EVENT.GAME_STATE_CHANGED, this._onGameStateChanged, this);
+        this._bus.off(BATTLE_EVENT.LEVEL_CLEAR, this._onLevelClear, this);
+    }
+
+    private _onCardsDrawn(cards: CardConfigData[]): void {
+        this._cards = cards;
+        this._notifyStateChange(); 
+    }
+
+    private _onGameStateChanged(state: GameState): void {
+        this._gameState = state;
+        this._notifyStateChange();
+    }
+
+    private _onLevelClear(): void {
+        this._levelCleared = true;
+        this._cards = [];
+        this._notifyStateChange(); 
+    }
+
+    private _notifyStateChange(): void {
+        // 广播选卡的显示意图
+        this._bus.emit(BATTLE_EVENT.UI_UPGRADE_PANEL_STATE_CHANGED, this.shouldShowUpgradePanel);
+        
+        this._bus.emit(BATTLE_EVENT.UI_RESULT_PANEL_STATE_CHANGED, this.shouldShowResultPanel);
+    }
+}
+</file>
+
+<file path="Battle/ViewModel/BattleViewModel.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "e96e375f-bf37-43a7-9c65-0fa86514f56e",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/BattleEvents.ts">
+export const BATTLE_EVENT = {
+    // ==========================================
+    // 1. 输入与操作请求 (Input & Requests)
+    // ==========================================
+    PLAYER_MOVE: 'player-move',                     // (dx: number, dy: number)
+    PAUSE_TOGGLE_REQUEST: 'pause-toggle-request',   // ()
+    RESTART_REQUEST: 'restart-request',             // ()
+    QUIT_REQUEST: 'quit-request', 
+
+    // ==========================================
+    // 2. 实体生成与重建请求 (Spawn Requests)
+    // ==========================================
+    WEAPON_FIRE: 'weapon-fire',                     // (req: BulletFireRequest)
+    ENEMY_SPAWN_REQUEST: 'enemy-spawn-request',     // (enemyType: EnemyType, spawnSide: SpawnSide)
+    BOSS_SPAWN_REQUEST: 'boss-spawn-request',       // (bossId: string)
+    TURRET_REBUILD_REQUEST: 'turret-rebuild-request', // (boss: Boss, stageIndex: number)
+
+    // ==========================================
+    // 3. 战斗与击杀事实 (Combat Facts)
+    // ==========================================
+    BULLET_HIT: 'bullet-hit',                       // (bullet: Bullet, target: Plane | Turret)
+    ENEMY_KILLED: 'enemy-killed',                   // (enemy: Plane)
+    BOSS_KILLED: 'boss-killed',                     // (boss: Boss)
+    TURRET_KILLED: 'turret-killed',                 // (turret: Turret)
+    PLAYER_DIED: 'player-died',                     // ()
+    BOSS_SPAWNED: 'boss-spawned',                   // (bossName: string)
+    BOSS_STAGE_CHANGED: 'boss-stage-changed',       // (boss: Boss, stageIndex: number)
+
+    // ==========================================
+    // 4. 数据变化事实 (Data Changed Facts - 供 UI 监听)
+    // ==========================================
+    PLAYER_HP_CHANGED: 'player-hp-changed',         // (ratio: number)
+    BOSS_HP_CHANGED: 'boss-hp-changed',             // (ratio: number)
+    EXP_CHANGED: 'exp-changed',                     // (currentExp: number, expToNext: number, level: number)
+    
+    /** 升级了（游戏事实）。参数：(levelsGained: number) */
+    LEVEL_UP: 'level-up',                           
+
+    // ==========================================
+    // 5. 游戏状态机流转 (Game State Flow)
+    // ==========================================
+    GAME_STATE_CHANGED: 'game-state-changed',       // (state: GameState)
+    LEVEL_CLEAR: 'level-clear',                     // ()
+  
+
+    // ==========================================
+    // 6. 选卡与 UI 交互 (Upgrade & UI)
+    // ==========================================
+    CARDS_DRAWN: 'cards-drawn',                     // (cards: CardConfigData[])
+    CARD_SELECTED: 'card-selected',                 // (card: CardConfigData)
+    UPGRADE_FINISHED: 'upgrade-finished',           // ()
+    UI_UPGRADE_PANEL_STATE_CHANGED: 'ui-upgrade-panel-state-changed', // (visible: boolean)
+     // 结果面板（暂停/胜利/失败）意图
+    UI_RESULT_PANEL_STATE_CHANGED: 'ui-result-panel-state-changed', // (visible: boolean)
+} as const;
+</file>
+
+<file path="Battle/BattleEvents.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "916eff54-5058-49e0-88b7-d23716ca5af4",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/BattleInputHandler.ts">
+import { _decorator, Component, EventMouse, EventTouch, Input, input, Vec2 } from 'cc';
+import type { Bus } from '../Engine/Bus';
+import { BATTLE_EVENT } from './BattleEvents';
+
+const { ccclass } = _decorator;
+
+@ccclass('BattleInputHandler')
+export class BattleInputHandler extends Component {
+
+    private _bus: Bus = null!;
+    private _isDragging = false;
+    private _activeSource: 'none' | 'touch' | 'mouse' = 'none';   // ← 新增
+    private _tempDelta = new Vec2();
+
+    setup(bus: Bus): void {
+        this._bus = bus;
+    }
+
+    onEnable() {
+        input.on(Input.EventType.TOUCH_START, this._onTouchStart, this);
+        input.on(Input.EventType.TOUCH_MOVE, this._onTouchMove, this);
+        input.on(Input.EventType.TOUCH_END, this._onTouchEnd, this);
+        input.on(Input.EventType.TOUCH_CANCEL, this._onTouchEnd, this);
+
+        input.on(Input.EventType.MOUSE_DOWN, this._onMouseDown, this);
+        input.on(Input.EventType.MOUSE_MOVE, this._onMouseMove, this);
+        input.on(Input.EventType.MOUSE_UP, this._onMouseUp, this);
+    }
+
+    onDisable() {
+        input.off(Input.EventType.TOUCH_START, this._onTouchStart, this);
+        input.off(Input.EventType.TOUCH_MOVE, this._onTouchMove, this);
+        input.off(Input.EventType.TOUCH_END, this._onTouchEnd, this);
+        input.off(Input.EventType.TOUCH_CANCEL, this._onTouchEnd, this);
+
+        input.off(Input.EventType.MOUSE_DOWN, this._onMouseDown, this);
+        input.off(Input.EventType.MOUSE_MOVE, this._onMouseMove, this);
+        input.off(Input.EventType.MOUSE_UP, this._onMouseUp, this);
+    }
+
+    // ===== 触摸 =====
+    private _onTouchStart(e: EventTouch): void {
+        this._activeSource = 'touch';     // ← 锁定触摸
+        this._isDragging = true;
+    }
+
+    private _onTouchMove(e: EventTouch): void {
+        if (this._activeSource !== 'touch') return;   // ← 只有触摸源才处理
+        if (!this._isDragging || !this._bus) return;
+        e.getUIDelta(this._tempDelta);
+        this._bus.emit(BATTLE_EVENT.PLAYER_MOVE, this._tempDelta.x, this._tempDelta.y);
+    }
+
+    private _onTouchEnd(e: EventTouch): void {
+        if (this._activeSource !== 'touch') return;
+        this._isDragging = false;
+        this._activeSource = 'none';
+    }
+
+    // ===== 鼠标 =====
+    private _onMouseDown(e: EventMouse): void {
+        if (e.getButton() !== EventMouse.BUTTON_LEFT) return;
+        this._activeSource = 'mouse';     // ← 锁定鼠标
+        this._isDragging = true;
+    }
+
+    private _onMouseMove(e: EventMouse): void {
+        if (this._activeSource !== 'mouse') return;   // ← 只有鼠标源才处理
+        if (!this._isDragging || !this._bus) return;
+        e.getUIDelta(this._tempDelta);
+        this._bus.emit(BATTLE_EVENT.PLAYER_MOVE, this._tempDelta.x, this._tempDelta.y);
+    }
+
+    private _onMouseUp(e: EventMouse): void {
+        if (e.getButton() !== EventMouse.BUTTON_LEFT) return;
+        if (this._activeSource !== 'mouse') return;
+        this._isDragging = false;
+        this._activeSource = 'none';
+    }
+}
+</file>
+
+<file path="Battle/BattleInputHandler.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "21d45283-1e9d-4fc5-8e4c-f70670fb41b0",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/BattleScene.ts">
+import { _decorator, Component, Node } from 'cc';
+import { World } from '../Engine/World';
+import { Bus } from '../Engine/Bus';
+import { ViewRegistry } from '../Engine/ViewRegistry';
+import { FixedTick } from '../Engine/Tick';
+import { GameData } from '../Core/Data/GameData';
+
+import { BulletView } from './View/BulletView';
+import { PlayerView } from './View/PlayerView';
+import { EnemyView } from './View/EnemyView';
+import { BossView } from './View/BossView';
+import { TurretView } from './View/TurretView';
+
+import { BattleStateSystem, GameState } from './System/BattleStateSystem';
+import { BossStageSystem } from './System/BossStageSystem';
+import { TurretSpawnSystem } from './System/TurretSpawnSystem';
+import { TurretScheduleSystem } from './System/TurretScheduleSystem';
+import { TurretAimSystem } from './System/TurretAimSystem';
+import { FireSystem } from './System/FireSystem';
+import { BulletSpawnSystem } from './System/BulletSpawnSystem';
+import { PlayerControlSystem } from './System/PlayerControlSystem';
+import { EnemySpawnSystem } from './System/EnemySpawnSystem';
+import { WaveSystem } from './System/WaveSystem';
+import { MovementSystem } from './System/MovementSystem';
+import { CombatSystem } from './System/CombatSystem';
+import { DamageSystem } from './System/DamageSystem';
+import { InvincibleSystem } from './System/InvincibleSystem';
+import { ExpSystem } from './System/ExpSystem';
+import { CardApplySystem } from './System/CardApplySystem';
+import { CardSystem } from './System/CardSystem';
+import { OutOfBoundsSystem } from './System/OutOfBoundsSystem';
+
+
+import { expForLevel } from './Config/ExpConfig';
+import { BATTLE_EVENT } from './BattleEvents';
+import { BattleInputHandler } from './BattleInputHandler';
+import { BattleViewModel } from './ViewModel/BattleViewModel';
+
+import { PauseButton } from '../UI/Common/PauseButton';
+import { BossHealthUI } from '../UI/Battle/BossHealthUI';
+import { PlayerHealthUI } from '../UI/Battle/PlayerHealthUI';
+import { ExpBarUI } from '../UI/Battle/ExpBarUI';
+import { UpgradePanel } from '../UI/Battle/UpgradePanel';
+import { ResultPanel } from '../UI/Battle/ResultPanel';
+import { PlayerEntity } from './Entity/PlayerEntity';
+import { EntityPool } from '../Core/Pool/EntityPool';
+import { ViewPool } from '../Engine/ViewPool';
+
+const { ccclass, property } = _decorator;
+
+@ccclass('BattleScene')
+export class BattleScene extends Component {
+
+    // ===== UI 引用（Inspector 注入）=====
+    @property(PauseButton)    pauseButton: PauseButton = null!;
+    @property(BossHealthUI)   bossHealthUI: BossHealthUI = null!;
+    @property(PlayerHealthUI) playerHealthUI: PlayerHealthUI = null!;
+    @property(ExpBarUI)       expBarUI: ExpBarUI = null!;
+    @property(UpgradePanel)   upgradePanel: UpgradePanel = null!;
+    @property(ResultPanel)    resultPanel: ResultPanel = null!;
+
+    // ===== 运行时核心 =====
+    private _bus: Bus = null!;
+    private _world: World = null!;
+    private _views: ViewRegistry = null!;
+    private _tick: FixedTick = null!;
+    private _inputHandler: BattleInputHandler = null!;
+    private _viewModel: BattleViewModel = null!;
+    private _stateSystem: BattleStateSystem = null!;
+    private _waveSystem: WaveSystem = null!;
+
+    // =========================================================
+    //  生命周期
+    // =========================================================
+    protected start(): void {
+        GameData.init();
+        this._createBus();
+        this._rebuildViewModel();
+        this._setupHUD();
+        this._setupInput();
+        this._registerSceneListeners();
+        this._launchBattle();
+    }
+
+    onDestroy(): void {
+        this._unregisterSceneListeners();
+        this._haltBattle();
+        this._viewModel?.onDestroy();
+    }
+
+    // =========================================================
+    //  创建总线 / ViewModel / HUD / 输入
+    // =========================================================
+    private _createBus(): void {
+        this._bus = new Bus();
+    }
+
+    /** 销毁旧 ViewModel，重建并把两个 Panel 重新挂到新的 ViewModel 上 */
+    private _rebuildViewModel(): void {
+        this._viewModel?.onDestroy();
+        this._viewModel = new BattleViewModel(this._bus);
+        this.upgradePanel.setup(this._bus, this._viewModel);
+        this.resultPanel.setup(this._bus, this._viewModel);
+    }
+
+    private _setupHUD(): void {
+        this.pauseButton.setup(this._bus);
+        this.bossHealthUI.setup(this._bus);
+        this.playerHealthUI.setup(this._bus);
+        this.expBarUI.setup(this._bus);
+    }
+
+    private _setupInput(): void {
+        this._inputHandler = this.node.addComponent(BattleInputHandler);
+        this._inputHandler.setup(this._bus);
+    }
+
+    // =========================================================
+    //  Scene 层监听（跨 World 生命周期的操作）
+    // =========================================================
+    private _registerSceneListeners(): void {
+        this._bus.on(BATTLE_EVENT.RESTART_REQUEST, this._onRestartRequest, this);
+        this._bus.on(BATTLE_EVENT.QUIT_REQUEST,    this._onQuitRequest,    this);
+        this._bus.on(BATTLE_EVENT.GAME_STATE_CHANGED, this._onGameStateChanged, this);
+    }
+
+    private _unregisterSceneListeners(): void {
+        this._bus?.off(BATTLE_EVENT.RESTART_REQUEST, this._onRestartRequest, this);
+        this._bus?.off(BATTLE_EVENT.QUIT_REQUEST,    this._onQuitRequest,    this);
+        this._bus?.off(BATTLE_EVENT.GAME_STATE_CHANGED, this._onGameStateChanged, this);
+    }
+
+    // =========================================================
+    //  启动 / 终止 一局战斗（首次和重开共用）
+    // =========================================================
+    private _launchBattle(): void {
+        this._buildWorld();
+        this._createPlayer();
+        this._startTick();
+    }
+
+    private _haltBattle(): void {
+        this._stopTick();
+        this._world?.destroy();
+        this._world = null!;
+        this._views = null!;
+        this._stateSystem = null!;
+        this._waveSystem = null!;
+    }
+
+    // =========================================================
+    //  建立世界
+    // =========================================================
+    private _buildWorld(): void {
+        this._views = new ViewRegistry(this.node, new ViewPool(256));
+        const pool = new EntityPool(512);
+        this._world = new World(this._bus, this._views,pool);
+        this._registerViewFactories();
+        this._installSystems();
+    }
+
+    private _registerViewFactories(): void {
+        this._views.registerFactory('bullet', (e) => {
+            const node = new Node(`bullet_${e.id}`);
+            return node.addComponent(BulletView);
+        });
+        this._views.registerFactory('player', (e) => {
+            const node = new Node(`player_${e.id}`);
+            return node.addComponent(PlayerView);
+        });
+        this._views.registerFactory('enemy', (e) => {
+            const node = new Node(`enemy_${e.id}`);
+            return node.addComponent(EnemyView);
+        });
+        this._views.registerFactory('boss', (e) => {
+            const node = new Node(`boss_${e.id}`);
+            return node.addComponent(BossView);
+        });
+        this._views.registerFactory('turret', (e) => {
+            const node = new Node(`turret_${e.id}`);
+            return node.addComponent(TurretView);
+        });
+    }
+
+    /**
+     * 装配 System：按"业务域 + 时序依赖"分组
+     *
+     * 【关键时序约束】
+     *  - BossStage / TurretSchedule / TurretAim 必须在 Fire 之前（Fire 读 active + aimAngle）
+     *  - Wave 必须在 Exp / Card 之前（先通关再结算经验，防止打死最终 Boss 后弹选卡）
+     *  - Combat 必须在 Damage 之前（Combat 发 BULLET_HIT，Damage 消费它）
+     */
+    private _installSystems(): void {
+        const w = this._world;
+
+        // ── ① Boss 生命周期：阶段切换 → 炮台重建 → 编排 → 瞄准 ──
+        w.addSystem(new BossStageSystem());
+        w.addSystem(new TurretSpawnSystem());
+        w.addSystem(new TurretScheduleSystem());
+        w.addSystem(new TurretAimSystem());
+
+        // ── ② 发射：武器/炮台计时 + 统一造子弹 ──
+        w.addSystem(new FireSystem());
+        w.addSystem(new BulletSpawnSystem());
+
+        // ── ③ 输入驱动 ──
+        w.addSystem(new PlayerControlSystem());
+
+        // ── ④ 实体刷新 ──
+        w.addSystem(new InvincibleSystem());
+        w.addSystem(new EnemySpawnSystem());
+
+        // ── ⑤ 波次（必须在 Exp/Card 之前，让 LEVEL_CLEAR 先于 LEVEL_UP） ──
+        this._waveSystem = new WaveSystem();
+        w.addSystem(this._waveSystem);
+
+        // ── ⑥ 移动 → 碰撞 → 伤害 ──
+        w.addSystem(new MovementSystem());
+        w.addSystem(new CombatSystem());
+        w.addSystem(new DamageSystem());
+
+        // ── ⑦ 数据结算：经验、卡牌生效、抽卡 ──
+        w.addSystem(new ExpSystem());
+        w.addSystem(new CardApplySystem());
+        w.addSystem(new CardSystem());
+
+        // ── ⑧ 状态机（全局裁决者） ──
+        this._stateSystem = new BattleStateSystem();
+        w.addSystem(this._stateSystem);
+
+        // ── ⑨ 清理 ──
+        w.addSystem(new OutOfBoundsSystem());
+    }
+
+    // =========================================================
+    //  创建玩家
+    // =========================================================
+    private _createPlayer(): void {
+        const player = new PlayerEntity();
+        player.x = 0;
+        player.y = -GameData.viewH / 2 + 100;
+        player.health.hp = 100;
+        player.health.maxHp = 100;
+        player.exp.exp = 0;
+        player.exp.level = 1;
+        player.exp.expToNext = expForLevel(1);
+        player.weapon.weapons.push({
+            config: {
+                fireInterval: 0.2,
+                bulletType: 'blue',
+                bulletSpeed: 400,
+                bulletDamage: 10,
+                fireDirX: 0,
+                fireDirY: 1,
+            },
+            cooldownTimer: 0,
+            enabled: true,
+        });
+        this._world.add(player);
+        this._bus.emit(BATTLE_EVENT.PLAYER_HP_CHANGED, player.health.hp / player.health.maxHp);
+        this._bus.emit(BATTLE_EVENT.EXP_CHANGED, player.exp.exp, player.exp.expToNext, player.exp.level);
+    }
+
+    // =========================================================
+    //  Tick 启停
+    // =========================================================
+    private _startTick(): void {
+        if (!this._tick) {
+            this._tick = this.node.addComponent(FixedTick);
+        }
+        this._tick.setup(this._world, this._views);
+        this._tick.begin();
+    }
+
+    private _stopTick(): void {
+        this._tick?.stop();
+    }
+
+    private _resumeTick(){
+        this._tick?.resume();
+    }
+
+    // =========================================================
+    //  Scene 层事件响应
+    // =========================================================
+    private _onGameStateChanged(state: GameState): void {
+        const shouldRun = state === 'playing';
+
+        if (shouldRun) {
+            if (this._tick && !this._tick.isRunning) {
+                this._resumeTick();
+            }
+        } else {
+            this._stopTick();
+        }
+
+        if (this._inputHandler) this._inputHandler.enabled = shouldRun;
+        if (this.pauseButton) {
+            this.pauseButton.setEnabled(shouldRun || state === 'paused');
+        }
+    }
+
+    private _onRestartRequest(): void {
+        console.log('[BattleScene] 重开');
+        this._haltBattle();
+        this._rebuildViewModel();
+        this._launchBattle();
+    }
+
+    private _onQuitRequest(): void {
+        console.log('[BattleScene] 退出战斗');
+        this._haltBattle();
+        this._viewModel?.onDestroy();
+        // TODO: director.loadScene('HallScene');
+    }
+}
+</file>
+
+<file path="Battle/BattleScene.ts.meta">
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "55357677-2153-4564-8237-c8964591b343",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Config.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "62d935be-bb19-491a-b1e9-46832ec4ba33",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/Entity.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "bf641e4c-f8e8-4529-b4c3-eb3368f158b3",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/System.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "4af04ef0-d6a7-4c4c-a80f-fffdf486c139",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/View.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "78abba7b-f7cb-47eb-a05e-5fa2d95e786d",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+<file path="Battle/ViewModel.meta">
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "ebc7e0bf-e10c-4f20-af0f-9240d63f7976",
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+}
+</file>
+
+</files>

@@ -1,4 +1,4 @@
-import { _decorator, Component, EventMouse, EventTouch, Input, input, Vec2 } from 'cc';
+import { _decorator, Component, EventMouse, EventTouch, NodeEventType, Vec2 } from 'cc';
 import type { Bus } from '../Engine/Bus';
 import { BATTLE_EVENT } from './BattleEvents';
 
@@ -17,25 +17,25 @@ export class BattleInputHandler extends Component {
     }
 
     onEnable() {
-        input.on(Input.EventType.TOUCH_START, this._onTouchStart, this);
-        input.on(Input.EventType.TOUCH_MOVE, this._onTouchMove, this);
-        input.on(Input.EventType.TOUCH_END, this._onTouchEnd, this);
-        input.on(Input.EventType.TOUCH_CANCEL, this._onTouchEnd, this);
+        this.node.on(NodeEventType.TOUCH_START, this._onTouchStart, this);
+        this.node.on(NodeEventType.TOUCH_MOVE, this._onTouchMove, this);
+        this.node.on(NodeEventType.TOUCH_END, this._onTouchEnd, this);
+        this.node.on(NodeEventType.TOUCH_CANCEL, this._onTouchEnd, this);
 
-        input.on(Input.EventType.MOUSE_DOWN, this._onMouseDown, this);
-        input.on(Input.EventType.MOUSE_MOVE, this._onMouseMove, this);
-        input.on(Input.EventType.MOUSE_UP, this._onMouseUp, this);
+        this.node.on(NodeEventType.MOUSE_DOWN, this._onMouseDown, this);
+        this.node.on(NodeEventType.MOUSE_MOVE, this._onMouseMove, this);
+        this.node.on(NodeEventType.MOUSE_UP, this._onMouseUp, this);
     }
 
     onDisable() {
-        input.off(Input.EventType.TOUCH_START, this._onTouchStart, this);
-        input.off(Input.EventType.TOUCH_MOVE, this._onTouchMove, this);
-        input.off(Input.EventType.TOUCH_END, this._onTouchEnd, this);
-        input.off(Input.EventType.TOUCH_CANCEL, this._onTouchEnd, this);
+        this.node.off(NodeEventType.TOUCH_START, this._onTouchStart, this);
+        this.node.off(NodeEventType.TOUCH_MOVE, this._onTouchMove, this);
+        this.node.off(NodeEventType.TOUCH_END, this._onTouchEnd, this);
+        this.node.off(NodeEventType.TOUCH_CANCEL, this._onTouchEnd, this);
 
-        input.off(Input.EventType.MOUSE_DOWN, this._onMouseDown, this);
-        input.off(Input.EventType.MOUSE_MOVE, this._onMouseMove, this);
-        input.off(Input.EventType.MOUSE_UP, this._onMouseUp, this);
+        this.node.off(NodeEventType.MOUSE_DOWN, this._onMouseDown, this);
+        this.node.off(NodeEventType.MOUSE_MOVE, this._onMouseMove, this);
+        this.node.off(NodeEventType.MOUSE_UP, this._onMouseUp, this);
     }
 
     // ===== 触摸 =====

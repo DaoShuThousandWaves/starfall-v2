@@ -137,7 +137,7 @@ export class BattleScene extends Component {
         this._buildWorld();
         this._createPlayer();
         this._startTick();
-        this._waveSystem.begin();
+        this._inputHandler.enabled = true;
     }
 
     private _haltBattle(): void {
@@ -277,6 +277,10 @@ export class BattleScene extends Component {
         this._tick?.stop();
     }
 
+    private _resumeTick(){
+        this._tick?.resume();
+    }
+
     // =========================================================
     //  Scene 层事件响应
     // =========================================================
@@ -285,10 +289,10 @@ export class BattleScene extends Component {
 
         if (shouldRun) {
             if (this._tick && !this._tick.isRunning) {
-                this._tick.begin();
+                this._resumeTick();
             }
         } else {
-            this._tick?.stop();
+            this._stopTick();
         }
 
         if (this._inputHandler) this._inputHandler.enabled = shouldRun;

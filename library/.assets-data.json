@@ -44,7 +44,7 @@
     "value": {}
   },
   "77cf1abd-9c99-45b5-b768-81706fff2b1a": {
-    "url": "db://assets/scene/test.scene",
+    "url": "db://assets/scene/Battle.scene",
     "value": {
       "depends": [
         "77cf1abd-9c99-45b5-b768-81706fff2b1a",
@@ -199,16 +199,7 @@
   },
   "2010aca7-75c2-46f7-86c9-f6155cafd2ad": {
     "url": "db://assets/scripts/repomix-output.xml",
-    "value": {
-      "depends": [
-        "ad993be9-c07b-48b8-8b89-ffbbcfd8b20d",
-        "2a2f81e9-c2fc-478c-b33b-4707675bbec9",
-        "a87e6db2-cc33-46ee-b1ab-3e261e0e2df2",
-        "d9b7a528-77fa-4a8a-bae1-565e7aa626e1",
-        "747a0d80-46c0-449d-be6c-7e99404ffd18",
-        "dfbb144b-b06c-4f94-8edb-f789e51e115b"
-      ]
-    }
+    "value": {}
   },
   "8ee6fc40-e675-4cb7-8a5e-aace1d5405b9": {
     "url": "db://assets/scripts/Battle/Config/BossConfig.ts",
@@ -396,6 +387,268 @@
   },
   "6d92ff60-d67d-4c5a-8d6b-ea19c1271f02": {
     "url": "db://assets/scripts/Engine/ViewPool.ts",
+    "value": {}
+  },
+  "f0aa2601-aee0-4e17-8317-fb9b924f24fd": {
+    "url": "db://assets/scene/Hall.scene",
+    "value": {}
+  },
+  "807fe9f6-995f-420e-b1d4-dd58ee1c12f0": {
+    "url": "db://assets/scripts/Hall/Entity",
+    "value": {}
+  },
+  "a488d229-0435-463c-8f68-6430beb2c8cf": {
+    "url": "db://assets/scripts/Hall/System",
+    "value": {}
+  },
+  "05d84b89-a96f-4ef3-ba2b-74cc2664501e": {
+    "url": "db://assets/scripts/Hall/View",
+    "value": {}
+  },
+  "7e2d9f2c-94ac-4923-b678-07c297404d7e": {
+    "url": "db://assets/scripts/Hall/ViewModel",
+    "value": {}
+  },
+  "46d85123-5380-41b7-b379-4971cf3de3d4": {
+    "url": "db://assets/scripts/Hall/Config",
+    "value": {}
+  },
+  "0249d547-692c-40a5-90eb-0b8cf5cc47d3": {
+    "url": "db://assets/scripts/Hall/Entity/BuildingEntity.ts",
+    "value": {}
+  },
+  "aa4da92d-eb4d-457b-be52-bdb90c1446a5": {
+    "url": "db://assets/scripts/Hall/System/GridSystem.ts",
+    "value": {}
+  },
+  "7810f683-256f-4064-b6d6-ce8342fd4a8e": {
+    "url": "db://assets/scripts/Hall/System/BuildSystem.ts",
+    "value": {}
+  },
+  "f02f63cb-b4e5-4111-857c-a164f67ca12e": {
+    "url": "db://assets/scripts/Hall/System/EconomySystem.ts",
+    "value": {}
+  },
+  "0f9d27ed-edb8-41ed-8987-6dbe110ba90e": {
+    "url": "db://assets/scripts/Hall/System/ProduceSystem.ts",
+    "value": {}
+  },
+  "fbf08bef-bda8-4d83-a1e5-03828e12991a": {
+    "url": "db://assets/scripts/Hall/System/HallInputSystem.ts",
+    "value": {}
+  },
+  "ba5358c5-302b-48e3-8b3c-2ddbc5162eca": {
+    "url": "db://assets/scripts/Hall/View/GridView.ts",
+    "value": {}
+  },
+  "a5f79735-de48-4799-97f3-b36a367627ae": {
+    "url": "db://assets/scripts/Hall/View/BuildingView.ts",
+    "value": {}
+  },
+  "07f5a8dc-4890-41e1-a9c9-5453753ae91d": {
+    "url": "db://assets/scripts/Hall/ViewModel/HallViewModel.ts",
+    "value": {}
+  },
+  "4e7f141b-d487-464f-8846-0055c4d11796": {
+    "url": "db://assets/scripts/Hall/Config/BuildingConfig.ts",
+    "value": {}
+  },
+  "d3b6a81b-d88a-4ac6-9a76-840888ae2c23": {
+    "url": "db://assets/scripts/Hall/HallEvents.ts",
+    "value": {}
+  },
+  "4027b3f5-bad5-4492-bbd6-d45f2012e301": {
+    "url": "db://assets/scripts/Hall/HallScene.ts",
+    "value": {}
+  },
+  "33495242-99ac-456a-8fec-5adc64013da7": {
+    "url": "db://assets/scripts/Core/Profile",
+    "value": {}
+  },
+  "a9869244-408b-48de-bb2c-6e422aebcf88": {
+    "url": "db://assets/scripts/Core/Profile/PlayerProfile.ts",
+    "value": {}
+  },
+  "95b57a25-d43e-4540-8d13-ab704776e698": {
+    "url": "db://assets/scripts/Core/Profile/ProfileStore.ts",
+    "value": {}
+  },
+  "72e1db12-3bc2-490e-8b18-fb7562bb364e": {
+    "url": "db://assets/scripts/repomix-output.xml",
+    "value": {
+      "depends": [
+        "8ee6fc40-e675-4cb7-8a5e-aace1d5405b9",
+        "1f7da245-d35f-4d86-b8c7-02b2826cb61f",
+        "9bd0939a-985a-4fbb-9feb-31df1d851dff",
+        "79a04a0f-cfca-4868-b0a8-baf031a5144c",
+        "ec853638-ba8d-45cc-80e3-5e127612dcdb",
+        "faa92e13-68f3-4a7a-9b6b-bc3fcf44c883",
+        "9c05ba0e-366d-468e-93a7-8761708d9aaa",
+        "391253ee-7d65-41e9-a818-5455bf2c59d8",
+        "e25883cf-6388-4dd8-a11b-02dd5d788160",
+        "26779d1c-03ef-4818-a251-eead65721143",
+        "0fff28b4-ad5e-4e6b-ae7f-b9ae0603254b",
+        "371963a2-11d9-43a2-8398-7d3b2dbb719e",
+        "168d1a25-d7f9-43e6-8ebc-237e494f326d",
+        "3fc35f85-1671-4fd7-8348-b7c4cb03da6e",
+        "c2347d2a-47c2-4e8b-8f28-de1dee99f11b",
+        "19383f8c-dcf5-4513-97d3-4ab752179a8f",
+        "6c370501-7639-4e73-be72-88e34496dacb",
+        "8398ead3-d0c2-4ab7-aef7-28dc6eab2fdf",
+        "d9d8db47-27e8-4213-841b-c9c344235a19",
+        "2f26123c-78d5-41e8-a897-99a56ea880bb",
+        "5080bfe7-a291-44ed-900b-2af99709053e",
+        "72eab709-eec9-4964-b84b-587c9872ea3d",
+        "24e20ffe-e632-4e4a-b440-95d95235832e",
+        "243fedcb-4561-435a-a218-d61178422ab5",
+        "bfa8add5-3801-473b-91b5-2ac5107fbb24",
+        "be5fe68c-92d9-47ad-bad5-79fddc94ee05",
+        "fc21dab5-45b9-40ac-9a37-88b134a897bc",
+        "eea5ab7f-f078-43c8-933e-5f35e2d9adc2",
+        "59bbb166-36a7-4393-8926-d17a90af4386",
+        "c7a3f82a-be5e-49ca-b47e-29d39f68c230",
+        "c048d764-d4ca-43e4-852e-84049c8fa32e",
+        "71168fd7-6fc1-4175-a5df-d6e3d972bfd6",
+        "99150354-e7db-455a-b566-d8c9de760b06",
+        "9c042697-f62b-47ec-91b5-a8e8e9b27d37",
+        "8b54f33b-2a41-43b4-af93-a753b79ef305",
+        "8dad98eb-c040-46b0-b288-90592addfa58",
+        "924a2f0c-ec3d-466d-974c-80db00b3ed02",
+        "421c241f-c35e-4ef9-88b7-227b68eb8b82",
+        "348e372b-1372-497c-ac4c-823394849343",
+        "6f787971-e9b1-4c42-8bb0-8ea598ce24a9",
+        "7b76884d-bca6-49d6-94b8-4a5cd71034d2",
+        "5180b713-521f-4aba-ab5d-5a037f7e87fe",
+        "afd8df7a-3618-445b-8b80-93096225aa27",
+        "7eaef9ae-6e64-4d9e-a4ef-f3bb85e82f87",
+        "e96e375f-bf37-43a7-9c65-0fa86514f56e",
+        "916eff54-5058-49e0-88b7-d23716ca5af4",
+        "21d45283-1e9d-4fc5-8e4c-f70670fb41b0",
+        "55357677-2153-4564-8237-c8964591b343",
+        "62d935be-bb19-491a-b1e9-46832ec4ba33",
+        "bf641e4c-f8e8-4529-b4c3-eb3368f158b3",
+        "4af04ef0-d6a7-4c4c-a80f-fffdf486c139",
+        "78abba7b-f7cb-47eb-a05e-5fa2d95e786d",
+        "ebc7e0bf-e10c-4f20-af0f-9240d63f7976"
+      ]
+    }
+  },
+  "7e424ea8-8ef7-4e97-a8d2-5d6451b8e490": {
+    "url": "db://assets/scripts/Hall/System/UpgradeSystem.ts",
+    "value": {}
+  },
+  "31c3daa9-8150-4243-bb78-b422333ed9e6": {
+    "url": "db://assets/scripts/Hall/Config/SynergyConfig.ts",
+    "value": {}
+  },
+  "3e728e42-a89a-4842-8492-0b40bb140347": {
+    "url": "db://assets/scripts/Hall/System/SynergySystem.ts",
+    "value": {}
+  },
+  "08637cc4-0275-4bac-9392-d26e605c9dfa": {
+    "url": "db://assets/scripts/Hall/Config/QuestConfig.ts",
+    "value": {}
+  },
+  "5d82d559-1f89-497b-9e14-23c431c497ed": {
+    "url": "db://assets/scripts/Hall/System/QuestSystem.ts",
+    "value": {}
+  },
+  "3e239969-2710-4427-8b74-59bc83dc7267": {
+    "url": "db://assets/scripts/Hall/System/SettlementSystem.ts",
+    "value": {}
+  },
+  "972a361a-3d42-4e01-8171-c328c537b3fb": {
+    "url": "db://assets/scripts/Hall/Config/GridConfig.ts",
+    "value": {}
+  },
+  "977b233e-234b-4abc-89dd-8aec33e1ce67": {
+    "url": "db://assets/scripts/Hall/System/MonthClockSystem.ts",
+    "value": {}
+  },
+  "f19a573c-9209-47ff-af70-0dc7240a3f1a": {
+    "url": "db://assets/scripts/Hall/View/GhostView.ts",
+    "value": {}
+  },
+  "42f3bee7-30b0-4639-9df9-fe687096b6f1": {
+    "url": "db://assets/scripts/Hall/System/GhostSystem.ts",
+    "value": {}
+  },
+  "736918d3-35a3-484d-9a2a-542ae9c652d2": {
+    "url": "db://assets/scripts/Hall/Data",
+    "value": {}
+  },
+  "628f8103-73c9-4bff-9ca2-8b2c47d3d03e": {
+    "url": "db://assets/scripts/Hall/Data/GhostState.ts",
+    "value": {}
+  },
+  "ce3d249f-c466-45c2-a365-8eab22008ccf": {
+    "url": "db://assets/scripts/Hall/HallInputHandler.ts",
+    "value": {}
+  },
+  "fa67821b-3712-42db-a10f-093a89090c9b": {
+    "url": "db://assets/scripts/Hall/Data/GridMap.ts",
+    "value": {}
+  },
+  "9470f2a7-6429-468b-be69-4ee7959dcfae": {
+    "url": "db://assets/scripts/Hall/Entity/GhostEntity.ts",
+    "value": {}
+  },
+  "c0c94804-ca1d-4dbe-afe5-cd3c36fffdf6": {
+    "url": "db://assets/scripts/Hall/System/GridSyncSystem.ts",
+    "value": {}
+  },
+  "018ed548-0ab2-4ef5-b03e-a418003c0014": {
+    "url": "db://assets/Prefabs",
+    "value": {}
+  },
+  "35c1c1c8-d88d-4c6b-9419-d6fdb2adfdfa": {
+    "url": "db://assets/textures",
+    "value": {}
+  },
+  "45a80b7e-e71f-4775-889f-b5de80451fe4": {
+    "url": "db://assets/textures/grid.png",
+    "value": {
+      "depends": []
+    }
+  },
+  "45a80b7e-e71f-4775-889f-b5de80451fe4@6c48a": {
+    "url": "db://assets/textures/grid.png@6c48a",
+    "value": {
+      "depends": [
+        "45a80b7e-e71f-4775-889f-b5de80451fe4"
+      ]
+    }
+  },
+  "45a80b7e-e71f-4775-889f-b5de80451fe4@f9941": {
+    "url": "db://assets/textures/grid.png@f9941",
+    "value": {
+      "depends": [
+        "45a80b7e-e71f-4775-889f-b5de80451fe4@6c48a"
+      ]
+    }
+  },
+  "49f90bfb-b9f0-4ca3-8b4b-300ce3ef36a8": {
+    "url": "db://assets/scripts/Prefabs/GridView.prefab",
+    "value": {}
+  },
+  "360803ab-4995-4d69-8949-47e43db24705": {
+    "url": "db://assets/scripts/Hall/View/WorldViewController.ts",
+    "value": {}
+  },
+  "1a7f4bf9-f70b-481c-ad67-b38059fa2198": {
+    "url": "db://assets/scripts/Hall/System/HallClickSystem.ts",
+    "value": {}
+  },
+  "31e729d6-e5d0-4c1d-b0f0-81577cca2d8f": {
+    "url": "db://assets/scripts/Hall/Rules",
+    "value": {}
+  },
+  "ceb97acb-ba99-4464-9108-9a0561e7c238": {
+    "url": "db://assets/scripts/Hall/Rules/PlaceRule.ts",
+    "value": {}
+  },
+  "46cfb3c9-4317-46ca-b40e-d474629bb114": {
+    "url": "db://assets/scripts/Hall/View/ShapePainter.ts",
     "value": {}
   }
 }
